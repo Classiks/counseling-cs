@@ -21,10 +21,14 @@ class PAGES {
 }
 
 export {
-    PAGES
+    PAGES,
+    MOBILE_PX_CUTOFF
 }
 
 interface PageInfo {
     name: string;
     path: string;
 }
+
+
+const MOBILE_PX_CUTOFF: number = 768;

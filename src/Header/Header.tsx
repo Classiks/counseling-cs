@@ -6,11 +6,11 @@ import Mode from "../components/Mode";
 import LoadingAnimation from "./LoadingAnimation"
 
 import { SwitchButtonStep, SwitchButtonTcm } from "../components/SwitchButton";
-import HeaderLinks from "../HeaderLinks/HeaderLinks";
+import HeaderLinks from "./HeaderLinks";
 import LogoAndTitle from "./LogoAndTItle";
 
 
-export default function Header({ className }: { className: string }) {
+export default function Header({ className }: { className?: string }) {
     const [ mode, setMode ] = useState(ModeController.getMode());
     useEffect(() => {
         ModeController.subscribe(setMode);
