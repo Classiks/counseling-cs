@@ -1,26 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Outlet } from 'react-router-dom';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Header from "./Header/Header";
+import Router from "./Routing/Router";
+
+import ModeController from './ModeController';
+
+import BackgroundImage from './BackgroundImage/BackgroundImage';
+
+
+ModeController.setInstance();
+
+export default function App() {
+  return <Router>
+    <Layout />
+  </Router>;
 }
 
-export default App;
+
+function Layout() {
+  return <div className="h-screen flex flex-col">
+    <Header className="h-14" />
+    <BackgroundImage className="flex-1">
+      <div className="flex justify-center overflow-auto min-h-full" >
+        <div className="border-x-8 bg-gray-100 bg-opacity-60 min-h-full w-1/2">
+          <Outlet />
+        </div>
+      </div>
+    </BackgroundImage>
+  </div>
+}
+
+
+
+
+
