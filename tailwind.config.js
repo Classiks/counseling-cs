@@ -16,7 +16,9 @@ module.exports = {
           "tertiary": "#FFC107",
           "background": "#FFFFFF",
           "text": "#2c2c2c",
-          "textInverted": "#FFFFFF"
+          "textInverted": "#FFFFFF",
+          "complementary": "#3300ff",
+          "complementary-400": "#6944ff",
         },
         "tcm": {
           DEFAULT: "#1b51c5",
@@ -24,7 +26,8 @@ module.exports = {
           "tertiary": "#6c99e7",
           "background": "#FFFFFF",
           "text": "#FFFFFF",
-          "textInverted": "#000000"
+          "textInverted": "#000000",
+          "complementary": "#c5621b"
         },
         "tcmgreen": {
           DEFAULT: "#54df72",

@@ -12,6 +12,7 @@ import useMobile from './components/useMobile';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import Mode from './components/Mode';
+import UrlParser from './components/UrlParser';
 
 ModeController.setInstance();
 
@@ -27,12 +28,7 @@ function Layout() {
   const isMobile = useMobile();
 
   useEffect(() => {
-    const pathArray: string[] = location.pathname.split("/");
-
-    const mode: Mode = pathArray[1] as Mode;
-
-    if (!mode) return;
-
+    const mode: Mode = UrlParser.getModeFromUrl(location);
     ModeController.setMode(mode);
   }, []);
 
@@ -40,7 +36,7 @@ function Layout() {
     { !isMobile && <Header /> }
     <BackgroundImage className="flex-1">
       <div className="flex justify-center overflow-auto min-h-full" >
-        <div className="bg-gray-100 bg-opacity-60 min-h-full lg:w-1/2">
+        <div className="bg-gray-100 bg-opacity-60 min-h-full w-full lg:w-1/2">
           <Outlet />
         </div>
       </div>
