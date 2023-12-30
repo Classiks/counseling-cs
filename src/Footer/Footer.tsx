@@ -25,7 +25,7 @@ interface ITemplateFooterProps {
 }
 function TemplateFooter({ className }: ITemplateFooterProps) {
     return <div className={className}>
-            <FooterLinks className="justify-center" />
+            <FooterLinks className="justify-center p-3" />
         </div>
 }
 

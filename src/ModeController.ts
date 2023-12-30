@@ -37,8 +37,6 @@ export default class ModeController {
         ModeController.subscribers.forEach(callback => {
             callback(mode);
         });
-
-        console.log('Mode set to', mode);
     }
 
     static getInstance(): ModeController {

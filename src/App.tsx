@@ -9,6 +9,9 @@ import ModeController from './ModeController';
 import BackgroundImage from './BackgroundImage/BackgroundImage';
 
 import useMobile from './components/useMobile';
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+import Mode from './components/Mode';
 
 ModeController.setInstance();
 
@@ -20,7 +23,18 @@ export default function App() {
 
 
 function Layout() {
+  const location = useLocation();
   const isMobile = useMobile();
+
+  useEffect(() => {
+    const pathArray: string[] = location.pathname.split("/");
+
+    const mode: Mode = pathArray[1] as Mode;
+
+    if (!mode) return;
+
+    ModeController.setMode(mode);
+  }, []);
 
   return <div className="h-screen flex flex-col">
     { !isMobile && <Header /> }

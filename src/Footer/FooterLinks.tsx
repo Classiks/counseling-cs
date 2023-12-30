@@ -37,7 +37,7 @@ interface IFooterItemProps {
 function FooterItem({ icon, target, mode }: IFooterItemProps) {
     return <Link to={target}>
         <div className={`flex flex-row-items-center justify-start hover:bg-${mode}-tertiary hover:cursor-pointer select-none py-1 px-2 rounded-lg`}>
-            <div className="mr-2">{icon}</div>
+            <div className="mx-3 scale-150">{icon}</div>
         </div>
     </Link>
 }
