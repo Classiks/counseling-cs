@@ -8,6 +8,7 @@ import { LocationOn, CalendarMonth } from '@mui/icons-material';
 import icon from 'leaflet/dist/images/marker-icon.png';
 import iconShadow from 'leaflet/dist/images/marker-shadow.png';
 import { ReactNode } from 'react';
+import BlendingInDiv from '../components/BlendingInDiv';
 let DefaultIcon = L.icon({
     iconUrl: icon,
     shadowUrl: iconShadow
@@ -44,18 +45,18 @@ export default function Courses() {
         },
     ];
 
-    return <div className="p-5">
+    return <BlendingInDiv className="p-5">
         <h1 className="text-3xl mb-2">
             Termine
         </h1>
         <p className="mb-2">
-            Termine können Sie auch telefonisch unter <a href="tel:+497819665460">0781 9664560</a> oder per Email an <a href="mailto:danielschulz1906@gmail.com">danielschulz1906@gmail.com</a> vereinbaren.
+            Termine können Sie auch telefonisch unter <a href="tel:+497811234567">0781 1234567</a> oder per Email an <a href="mailto:danielschulz1906@gmail.com">danielschulz1906@gmail.com</a> vereinbaren.
         </p>
         <hr />
         {
             dates.map((date, i) => <Date key={i} {...date} />)
         }
-    </div>
+    </BlendingInDiv>
 }
 
 

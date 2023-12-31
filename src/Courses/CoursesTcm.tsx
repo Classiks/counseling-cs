@@ -1,3 +1,7 @@
+import BlendingInDiv from "../components/BlendingInDiv";
+
 export default function CoursesTcm() {
-    return <p>TCM: Courses</p>
+    return <BlendingInDiv>
+        <p>TCM: Courses</p>
+    </BlendingInDiv>
 }

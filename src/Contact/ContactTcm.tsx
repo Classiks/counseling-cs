@@ -1,5 +1,5 @@
-import ContactStep from "./ContactStep"
+import ContactDefault from "./ContactDefault";
 
 export default function ContactTcm() {
-    return <ContactStep />
+    return <ContactDefault />
 }

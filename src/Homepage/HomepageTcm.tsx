@@ -1,3 +1,7 @@
+import BlendingInDiv from "../components/BlendingInDiv";
+
 export default function Homepage() {
-    return <div>Dude</div>
+    return <BlendingInDiv>
+        Dude
+    </BlendingInDiv>
 }
