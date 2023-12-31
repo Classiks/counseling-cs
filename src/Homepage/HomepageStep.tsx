@@ -12,7 +12,7 @@ export default function Homepage() {
         <div className="flex justify-end">
                 <img
                     src={StepLogo}
-                    className="w-40  m-5 bg-step-complementary-400 rounded-[50%] mx-5 my-2"
+                    className="w-40  m-5 bg-step-complementary-300 rounded-[50%] mx-5 my-2"
                     alt=""
                 />
             

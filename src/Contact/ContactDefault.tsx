@@ -35,7 +35,7 @@ export default function ContactDefault() {
 
             <motion.li className="mb-2" >
                 <LocationOn className="inline mr-2" />
-                <a href="https://goo.gl/maps/4N2jVw7r8n1Yc2bA9" target="_blank">Schillerstraße 4, 77652 Offenburg</a>
+                <a href="https://goo.gl/maps/4N2jVw7r8n1Yc2bA9" target="_blank" rel="noopener noreferrer">Schillerstraße 4, 77652 Offenburg</a>
             </motion.li>
 
         </motion.ul>

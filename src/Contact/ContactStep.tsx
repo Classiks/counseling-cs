@@ -1,4 +1,3 @@
-import BlendingInDiv from "../components/BlendingInDiv";
 import ContactDefault from "./ContactDefault";
 
 
