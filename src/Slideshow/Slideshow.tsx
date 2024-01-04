@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, ReactNode } from 'react';
 import { NavigateBefore, NavigateNext } from "@mui/icons-material";
 
 import BackgroundImageDiv from './BackgroundImageDiv';
@@ -7,20 +7,20 @@ import TabButton from './TabButton';
 
 interface ISlideshowProps {
     className?: string,
-    images: string[]
+    contents: Content[]
     interval?: number
 }
-export default function Slideshow({ images, className, interval }: ISlideshowProps) {
+export default function Slideshow({ contents, className, interval }: ISlideshowProps) {
     const [currentSlide, setCurrentSlide] = useState(0);
 
     const handlePrev = useCallback(
-        () => setCurrentSlide((prev) => (prev === 0 ? images.length - 1 : prev - 1)),
-        [images.length]
+        () => setCurrentSlide((prev) => (prev === 0 ? contents.length - 1 : prev - 1)),
+        [contents.length]
     );
 
     const handleNext = useCallback(
-        () => setCurrentSlide((prev) => (prev === images.length - 1 ? 0 : prev + 1)),
-        [images.length]
+        () => setCurrentSlide((prev) => (prev === contents.length - 1 ? 0 : prev + 1)),
+        [contents.length]
     );
 
     useEffect(() => {
@@ -30,14 +30,18 @@ export default function Slideshow({ images, className, interval }: ISlideshowPro
         }
 
         return () => clearInterval(imageChangeInterval);
-    }, [images.length, interval, handleNext]);
+    }, [contents.length, interval, handleNext]);
 
 
     className = "relative " + className;
 
-    return <BackgroundImageDiv className={className} image={images[currentSlide]}>
+    return <BackgroundImageDiv className={className} image={contents[currentSlide].image}>
+        {
+            contents[currentSlide].content
+        }
+
         <div className="absolute bottom-0 left-0 right-0 mb-4 flex justify-center">
-            {images.map((_, index) => <TabButton
+            {contents.map((_, index) => <TabButton
                 key={`tab-button-${index}`}
                 isSelected={currentSlide === index}
                 onClick={() => setCurrentSlide(index)}
@@ -57,4 +61,9 @@ export default function Slideshow({ images, className, interval }: ISlideshowPro
             <NavigateNext />
         </NavigationButton>
     </BackgroundImageDiv> ;
+}
+
+interface Content {
+    image?: string;
+    content?: ReactNode
 }
