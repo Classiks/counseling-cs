@@ -1,19 +1,127 @@
+import { ReactNode } from "react";
+
 import StepLogo from "../assets/images/step_logo_cut.png";
 import Slideshow from "../Slideshow/Slideshow";
 import BlendingInDiv from "../components/BlendingInDiv";
+import { ContentBubble, ContentBubbleSlideshow } from "./ContentBubble";
+import Accordeon from "../Accordeon/Accordeon";
 
 import GirlsInHammock from "../assets/images/girls-hammock.jpg";
 import ParentChildConcrete from "../assets/images/parent-child-concrete.jpg";
 import ChildOnArm from "../assets/images/adult-child-on-arm-black-white.jpg";
 import NewbornFist from "../assets/images/adult-child-fist.jpg";
 
-const elternmeinungen: string[]= [
+const elternmeinungen: string[] = [
     "Je mehr ein Kind beginnt Grenzen auszutesten, desto klarer muss man sie abstecken. Aber mit Respekt und Freundlichkeit – das ist die Basis des STEP Programms.“\n- Natalie Bettermann, Interview in „Eltern“",
-    "„Heute kann ich sagen: Erziehung macht Spaß! Durch den STEP Kurs kann ich kreativer an eine Situation herangehen. Ich beziehe bei Konflikten nicht sofort alles auf mich, sondern habe gelernt, die Sache auch aus dem Blickwinkel des Kindes anzuschauen.“\n- Monika Norz, Spielgruppenleiterin, zwei Kinder, Kloten, Schweiz",
     "„Meine Erwartungen wurden übertroffen, da es eine nette, offene Elternrunde war mit einer tollen Atmosphäre und viel Zeit zum Austausch über aktuelle Alltagsthemen.“\n- Teilnehmerin, STEP Kurs, Kita Rübenkamp, Hamburg",
     "„STEP ermöglicht mir eine zeitgemäße Kindererziehung, bei der jedes Kind mit seinen Stärken und Schwächen respektiert und gefördert wird.“\n- Dr. Astrid Hilgenstock, zwei Kinder, Dinslaken, NRW",
     "„Der Kurs hat mein Familienleben bereichert, den Alltag erleichtert und die Bindung zu meinen Kindern nachhaltig gestärkt.“\n- Kursteilnehmerin, Wedel, Schleswig-Holstein"
 ]
+
+// STEP ist für alle Eltern geeignet! 
+// STEP hilft  Eltern, den Herausforderungen der 
+// Kindererziehung in unserer Zeit nachhaltig gerecht 
+// zu werden – sowohl präventiv als auch bei größeren 
+// Erziehungsproblemen. 
+// Denn alle Eltern wollen das Beste für ihre Kinder.
+// Mehr Erziehungskompetenz durch ...
+//   ermutigende Atmosphäre  Neues erlernen und ausprobieren  reflektieren und üben  Beispiele aus dem Alltag  klare Struktur
+// unter der professionellen Leitung des/r zertifizierten 
+// Kursleiters/in und im Austausch mit anderen Eltern 
+// in der Gruppe. 
+// Wissenschaftliche Evaluation  
+// Die Wirksamkeit von STEP wurde durch die 
+// wissenschaftliche Evaluation von Klaus Hurrelmann, 
+// Professor für Sozial- und Gesundheitswissenschaften, 
+// bestätigt. 
+// Das Bundesministerium für Bildung und Forschung 
+// in Deutschland förderte die Evaluation im Rahmen 
+// der Präventionsforschung.
+// Was können Eltern tun, damit ...
+//   Hausaufgaben kein Problem sind?  Geschwister ihre Konflikte miteinander lösen?  ihre Kinder zuhause mithelfen?  ihre Kinder lernen, mit Medien sinnvoll  umzugehen?
+// Der STEP Kurs hilft Eltern, ein kooperatives, stress-
+// freieres Zusammenleben in der Familie zu erreichen 
+// und dauerhaft gute Beziehungen aufzubauen. 
+// Mit STEP finden Eltern Antworten auf ihre 
+// Fragen zum Umgang mit ihren Kindern
+// z.B. wie sie   das Verhalten der Kinder aus einer neuen  Perspektive verstehen können;  die Stärken ihrer Kinder fördern ohne Druck  auszuüben und ihr Selbstwertgefühl steigern;  so zuhören, dass die Kinder mit ihnen sprechen,   und so mit den Kindern reden, dass sie ihnen  zuhören;  ihre Kinder zu verantwortungsbewusstem  Handeln und respektvollem Umgang anleiten;  Disziplin sinnvoll ausüben und die Kinder  innerhalb gesetzter Grenzen entscheiden lassen;  freundlich  und bestimmt sein können und ihre   Kinder aus ihren Fehlern lernen lassen.
+// Wertschätzend und 
+// konsequent handeln!
+// STEP macht Mut und gibt Sicherheit!
+// Organisatorisches
+//   Kurse differenziert nach Alter der Kinder  (bis 6, ab 6, 13-18 Jahre)   Professionelles Trainingsmaterial,  STEP Elternbücher, Beltz Verlag   8-10 wöchentliche Treffen   Kompaktkurse möglich!
+// www.instep-online.de
+// www.instep-online.ch   www.instep-online.at
+
+const stepHelps: IHeadingAndContent[] = [
+    {
+        heading: "Step ist für alle Eltern geeignet!",
+        children: <div>
+            <p>STEP hilft  Eltern, den Herausforderungen der Kindererziehung in unserer Zeit nachhaltig gerecht zu werden – sowohl präventiv als auch bei größeren Erziehungsproblemen. Denn alle Eltern wollen das Beste für ihre Kinder.</p>
+        </div>
+    },
+    {
+        heading: "Mehr Erziehungskompetenz durch ...",
+        children: <div>
+            <ul>
+                <li>ermutigende Atmosphäre</li>
+                <li>Neues erlernen und ausprobieren</li>
+                <li>reflektieren und üben</li>
+                <li>Beispiele aus dem Alltag</li>
+                <li>klare Struktur</li>
+            </ul>
+            <p>unter der professionellen Leitung des/r zertifizierten Kursleiters/in und im Austausch mit anderen Eltern in der Gruppe.</p>
+        </div>
+    },
+    {
+        heading: "Was können Eltern tun, damit ...",
+        children: <div>
+            <ul>
+                <li>Hausaufgaben kein Problem sind?</li>
+                <li>Geschwister ihre Konflikte miteinander lösen?</li>
+                <li>ihre Kinder zuhause mithelfen?</li>
+                <li>ihre Kinder lernen, mit Medien sinnvoll umzugehen?</li>
+            </ul>
+            <p>Der STEP Kurs hilft Eltern, ein kooperatives, stressfreieres Zusammenleben in der Familie zu erreichen und dauerhaft gute Beziehungen aufzubauen.</p>
+        </div>
+    },
+    {
+        heading: "Mit STEP finden Eltern Antworten auf ihre Fragen zum Umgang mit ihren Kindern",
+        children: <div>
+            <p>z.B wie sie</p>
+            <ul>
+                <li>wie sie das Verhalten der Kinder aus einer neuen Perspektive verstehen können;</li>
+                <li>die Stärken ihrer Kinder fördern ohne Druck auszuüben und ihr Selbstwertgefühl steigern;</li>
+                <li>so zuhören, dass die Kinder mit ihnen sprechen, und so mit den Kindern reden, dass sie ihnen zuhören;</li>
+                <li>ihre Kinder zu verantwortungsbewusstem Handeln und respektvollem Umgang anleiten;</li>
+                <li>Disziplin sinnvoll ausüben und die Kinder innerhalb gesetzter Grenzen entscheiden lassen;</li>
+                <li>freundlich und bestimmt sein können und ihre Kinder aus ihren Fehlern lernen lassen.</li>
+            </ul>
+        </div>
+    },
+]
+
+const otherContent: IHeadingAndContent[] = [
+    {
+        heading: "Wissenschaftliche Evaluation",
+        children: <div>
+            <p>Die Wirksamkeit von STEP wurde durch die wissenschaftliche Evaluation von Klaus Hurrelmann, Professor für Sozial- und Gesundheitswissenschaften, bestätigt.</p>
+            <p>Das Bundesministerium für Bildung und Forschung in Deutschland förderte die Evaluation im Rahmen der Präventionsforschung.</p>
+        </div>
+    },
+    {
+        heading: "Organisatorisches",
+        children: <div>
+            <ul>
+                <li>Kurse differenziert nach Alter der Kinder (bis 6, ab 6, 13-18 Jahre)</li>
+                <li>Professionelles Trainingsmaterial, STEP Elternbücher, Beltz Verlag</li>
+                <li>8-10 wöchentliche Treffen</li>
+                <li>Kompaktkurse möglich!</li>
+            </ul>
+        </div>
+    },
+]
+
 
 export default function Homepage() {
     return <BlendingInDiv>
@@ -21,12 +129,23 @@ export default function Homepage() {
             <StepLogoHomepage />
         </div>
 
+        <Accordeon {...stepHelps[0]} />
+
         <div className="flex lg:flex-row flex-col justify-between py-5 px-5">
-            {/* <div>Hello</div>
-            <div>World</div> */}
-            <ContentBubble>
-                {elternmeinungen[0].split("\n").map((line, i) => <p key={i}>{line}</p>)}
-            </ContentBubble>
+            <ContentBubbleSlideshow
+                contents={
+                    elternmeinungen.map(meinung => {
+                        return {
+                            content: <div>
+                                {meinung.split("\n").map((line, i) => <p key={i}>{line}</p>)}
+                            </div>
+                        }
+
+                    })
+                }
+                interval={15000}
+            />
+
             <ContentBubble>
                 World
             </ContentBubble>
@@ -34,17 +153,44 @@ export default function Homepage() {
 
 
         <div className="w-full flex justify-center">
-                <Slideshow 
-                    className="w-1/2 aspect-square rounded-full"
-                    contents={[
-                        { image: GirlsInHammock, },
-                        { image: ParentChildConcrete },
-                        { image: ChildOnArm },
-                        { image: NewbornFist },
-                    ]} 
-                    interval={15000}
-                />
+            <Slideshow
+                className="w-1/2 aspect-square rounded-full"
+                contents={[
+                    { image: GirlsInHammock, },
+                    { image: ParentChildConcrete },
+                    { image: ChildOnArm },
+                    { image: NewbornFist },
+                ]}
+                interval={15000}
+            />
         </div>
+
+        <div className="my-10 p-5 [&_ul]:ml-5 [&_ul]:list-disc bg-step-200 rounded-lg m-3">
+            <SectionHeading>Step hilft bei:</SectionHeading>
+            {
+                stepHelps.map((help, i) => <Accordeon 
+                    key={i} 
+                    {...help} 
+                    className="bg-gray-200 bg-opacity-30 mt-4 p-4 rounded-lg"
+                    headingClassName="text-3xl font-bold p-2"
+                />)
+            }
+
+            <SectionHeading>Weiteres</SectionHeading>
+
+            {
+                otherContent.map((help, i) => <HeadingWithContent 
+                    key={i} 
+                    {...help} 
+                    className="bg-gray-200 bg-opacity-30 mt-4 p-4 rounded-lg"
+                    headingClassName="text-3xl font-bold p-2"
+                />)
+            }
+            
+        </div>
+
+
+
     </BlendingInDiv>
 }
 
@@ -56,17 +202,26 @@ function StepLogoHomepage() {
     />
 }
 
-interface IContentBubbleProps {
-    className?: string
-    children: React.ReactNode
+function SectionHeading({ children }: { children: ReactNode }) {
+    return <p className="text-5xl m-5">
+        {children}
+    </p>
 }
 
-function ContentBubble({ className, children }: IContentBubbleProps) {
-    className = "bg-step bg-opacity-70 rounded-[50%] p-10 lg:w-[45%] w-4/5 h-60 my-5 " + className;
+interface IHeadingAndContent {
+    className?: string,
+    headingClassName?: string,
+    childrenClassName?: string,
+    heading: string,
+    children: ReactNode,
+}
+function HeadingWithContent({ heading, children, className, headingClassName, childrenClassName }: IHeadingAndContent) {
     return <div className={className}>
-        <div className="text-center">
+        <p className={headingClassName}>
+            {heading}
+        </p>
+        <div className={childrenClassName}>
             {children}
         </div>
-    </div>
-
+    </div>;
 }

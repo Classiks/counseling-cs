@@ -5,7 +5,7 @@ import BackgroundImageDiv from './BackgroundImageDiv';
 import NavigationButton from './NavigationButton';
 import TabButton from './TabButton';
 
-interface ISlideshowProps {
+export interface ISlideshowProps {
     className?: string,
     contents: Content[]
     interval?: number

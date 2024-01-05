@@ -1,11 +1,12 @@
 import { ReactNode } from "react";
 
-import { Home, Bookmark, DateRange, Email } from "@mui/icons-material";
+import { Home, Bookmark, DateRange, Email, ContactPage } from "@mui/icons-material";
 
 import HomepageStep from "../Homepage/HomepageStep";
 import ReadingTipsStep from "../ReadingTips/ReadingTipsStep";
 import ContactStep from "../Contact/ContactStep";
 import CoursesStep from "../Courses/CoursesStep";
+import AboutMeStep from "../AboutMe/AboutMeStep";
 
 import HomepageTcm from "../Homepage/HomepageTcm";
 import ReadingTipsTcm from "../ReadingTips/ReadingTipsTcm";
@@ -28,6 +29,12 @@ const step_routes: IRoute[] = [
         element: <CoursesStep />,
         icon: <DateRange />,
         title: PAGES.COURSES.name,
+    },
+    {
+        path: `${Mode.STEP}/${PAGES.ABOUT.path}`,
+        element: <AboutMeStep />,
+        icon: <ContactPage />,
+        title: PAGES.ABOUT.name,
     },
     {
         path: `/${Mode.STEP}/${PAGES.READING_TIPS.path}`,

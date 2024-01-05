@@ -4,6 +4,11 @@ class PAGES {
         path: ""
     };
 
+    public static ABOUT: PageInfo = {
+        name: "Über mich",
+        path: "about"
+    };
+
     public static READING_TIPS: PageInfo = {
         name: "Lesetipps",
         path: "reading-tips"

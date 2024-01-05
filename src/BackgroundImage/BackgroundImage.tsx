@@ -17,7 +17,7 @@ export default function BackgroundImage({ children, className }: { children: Rea
     return <div className={className} style={{
         backgroundImage: `url(${image})`,
         backgroundSize: "cover",
-        backgroundPosition: "center",
+        backgroundPosition: "top",
     }}>
         {children}
     </div>

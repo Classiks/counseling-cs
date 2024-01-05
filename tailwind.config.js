@@ -62,7 +62,7 @@ module.exports = {
           "text": "#000000",
           "textInverted": "#FFFFFF"
         },
-      }
+      },
     }
   }
 }
