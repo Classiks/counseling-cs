@@ -17,8 +17,16 @@ export default function AboutMeStep() {
 
 function Mobile() {
     return <div className="flex flex-col">
-        <Image />
-        <Description />
+        {/* <Image />
+        <Description /> */}
+        <div className="w-full flex justify-center mt-10">
+            <div className="w-72 h-72 rounded-full overflow-hidden">
+                <Image className="-translate-y-8" />
+            </div>
+        </div>
+        <div className="w-full p-4">
+            <Description className="bg-step-300 p-4 rounded-lg" />
+        </div>
     </div>
 }
 
@@ -47,31 +55,6 @@ interface IDescriptionProps {
 }
 function Description({ className }: IDescriptionProps) {
     return <div className={"[&_p]:mb-4 " + className}>
-        {/* Hallo und herzlich willkommen auf meiner Profilseite!
-
-        Ich heiße Cordelia Schulz, bin 1967 in Madrid/Spanien als dritte von sechs Geschwistern geboren und zum Medizinstudium nach Heidelberg gegangen – dort habe ich meinen Mann kennengelernt und lebe seitdem in Deutschland.
-
-        Die Betreuung und Arbeit mit Kindern und Jugendlichen war und ist ein zentraler Teil meines (privaten und beruflichen) Lebens. Ich erfahre täglich, wie wichtig es ist, früh eine stabile Basis für ein gesundes, verantwortungsvolles und selbstbestimmtes Leben zu ermöglichen.
-
-        Diese Erfahrung bezieht sich sowohl auf das Miteinander in meiner Familie (mit 4 erwachsenen Söhnen), als auch auf meine Tätigkeit als Ärztin.
-
-        Warum ich mich für STEP entschieden habe?
-
-        Das Programm baut auf fundierten wissenschaftlichen Erkenntnissen auf, ist gut strukturiert und arbeitet mit vielen praktischen Übungen. Der Erfahrungsaustausch innerhalb der Kursgruppe ist ein wichtiger Baustein; dabei wird berücksichtigt, dass jede Familie ihre individuellen Wertvorstellungen hat. Es macht richtig Freude, mithilfe des Kurses Schritt für Schritt ein vertrauensvolles und entspanntes Miteinander in der Familie umzusetzen, Humor ist dabei sehr willkommen!
-
-        Das Konzept überzeugt mich, weil es klar und einfach einen Weg aufzeigt, wie wir
-
-        - gut zuhören,
-        - respektvoll miteinander umgehen,
-        - Kooperation leben,
-        - die Perspektive wechseln,
-        - freundlich und bestimmt Grenzen setzen,
-        - uns und unsere Kinder ermutigen können.
-
-        Auf diesem Weg möchte ich Sie gerne begleiten.
-
-        Wenn auch Sie den Mut haben, nicht perfekt zu sein, freue ich mich, Sie in meinem Kurs begrüßen zu dürfen. */}
-
         <p className="font-bold">
             Hallo und herzlich willkommen auf meiner Profilseite!
         </p>
