@@ -2,7 +2,7 @@ import { ReactNode, useState } from "react";
 
 import { KeyboardArrowDown, KeyboardArrowUp } from "@mui/icons-material";
 
-interface IAccordeon {
+export interface IAccordeon {
     className?: string,
     headingClassName?: string,
     childrenClassName?: string,

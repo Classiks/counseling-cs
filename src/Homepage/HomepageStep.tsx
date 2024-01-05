@@ -4,7 +4,8 @@ import StepLogo from "../assets/images/step_logo_cut.png";
 import Slideshow from "../Slideshow/Slideshow";
 import BlendingInDiv from "../components/BlendingInDiv";
 import { ContentBubble, ContentBubbleSlideshow } from "./ContentBubble";
-import Accordeon from "../Accordeon/Accordeon";
+import Accordeon, { IAccordeon } from "../components/Accordeon";
+import HeadingAndContent, { IHeadingAndContent } from "../components/HeadingAndContent";
 
 import GirlsInHammock from "../assets/images/girls-hammock.jpg";
 import ParentChildConcrete from "../assets/images/parent-child-concrete.jpg";
@@ -18,7 +19,7 @@ const elternmeinungen: string[] = [
     "„Der Kurs hat mein Familienleben bereichert, den Alltag erleichtert und die Bindung zu meinen Kindern nachhaltig gestärkt.“\n- Kursteilnehmerin, Wedel, Schleswig-Holstein"
 ]
 
-const stepHelps: IHeadingAndContent[] = [
+const stepHelps: IAccordeon[] = [
     {
         heading: "Step ist für alle Eltern geeignet!",
         children: <div>
@@ -99,9 +100,9 @@ export default function Homepage() {
                 contents={
                     elternmeinungen.map(meinung => {
                         return {
-                            content: <div>
-                                {meinung.split("\n").map((line, i) => <p key={i}>{line}</p>)}
-                            </div>
+                            content: <div>{
+                                meinung.split("\n").map((line, i) => <p key={i}>{line}</p>)
+                            }</div>
                         }
 
                     })
@@ -142,7 +143,7 @@ export default function Homepage() {
             <SectionHeading>Weiteres</SectionHeading>
 
             {
-                otherContent.map((help, i) => <HeadingWithContent 
+                otherContent.map((help, i) => <HeadingAndContent 
                     key={i} 
                     {...help} 
                     className="bg-gray-200 bg-opacity-30 mt-4 p-4 rounded-lg"
@@ -169,22 +170,4 @@ function SectionHeading({ children }: { children: ReactNode }) {
     return <p className="text-5xl m-5">
         {children}
     </p>
-}
-
-interface IHeadingAndContent {
-    className?: string,
-    headingClassName?: string,
-    childrenClassName?: string,
-    heading: string,
-    children: ReactNode,
-}
-function HeadingWithContent({ heading, children, className, headingClassName, childrenClassName }: IHeadingAndContent) {
-    return <div className={className}>
-        <p className={headingClassName}>
-            {heading}
-        </p>
-        <div className={childrenClassName}>
-            {children}
-        </div>
-    </div>;
 }
