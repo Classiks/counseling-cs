@@ -18,41 +18,6 @@ const elternmeinungen: string[] = [
     "„Der Kurs hat mein Familienleben bereichert, den Alltag erleichtert und die Bindung zu meinen Kindern nachhaltig gestärkt.“\n- Kursteilnehmerin, Wedel, Schleswig-Holstein"
 ]
 
-// STEP ist für alle Eltern geeignet! 
-// STEP hilft  Eltern, den Herausforderungen der 
-// Kindererziehung in unserer Zeit nachhaltig gerecht 
-// zu werden – sowohl präventiv als auch bei größeren 
-// Erziehungsproblemen. 
-// Denn alle Eltern wollen das Beste für ihre Kinder.
-// Mehr Erziehungskompetenz durch ...
-//   ermutigende Atmosphäre  Neues erlernen und ausprobieren  reflektieren und üben  Beispiele aus dem Alltag  klare Struktur
-// unter der professionellen Leitung des/r zertifizierten 
-// Kursleiters/in und im Austausch mit anderen Eltern 
-// in der Gruppe. 
-// Wissenschaftliche Evaluation  
-// Die Wirksamkeit von STEP wurde durch die 
-// wissenschaftliche Evaluation von Klaus Hurrelmann, 
-// Professor für Sozial- und Gesundheitswissenschaften, 
-// bestätigt. 
-// Das Bundesministerium für Bildung und Forschung 
-// in Deutschland förderte die Evaluation im Rahmen 
-// der Präventionsforschung.
-// Was können Eltern tun, damit ...
-//   Hausaufgaben kein Problem sind?  Geschwister ihre Konflikte miteinander lösen?  ihre Kinder zuhause mithelfen?  ihre Kinder lernen, mit Medien sinnvoll  umzugehen?
-// Der STEP Kurs hilft Eltern, ein kooperatives, stress-
-// freieres Zusammenleben in der Familie zu erreichen 
-// und dauerhaft gute Beziehungen aufzubauen. 
-// Mit STEP finden Eltern Antworten auf ihre 
-// Fragen zum Umgang mit ihren Kindern
-// z.B. wie sie   das Verhalten der Kinder aus einer neuen  Perspektive verstehen können;  die Stärken ihrer Kinder fördern ohne Druck  auszuüben und ihr Selbstwertgefühl steigern;  so zuhören, dass die Kinder mit ihnen sprechen,   und so mit den Kindern reden, dass sie ihnen  zuhören;  ihre Kinder zu verantwortungsbewusstem  Handeln und respektvollem Umgang anleiten;  Disziplin sinnvoll ausüben und die Kinder  innerhalb gesetzter Grenzen entscheiden lassen;  freundlich  und bestimmt sein können und ihre   Kinder aus ihren Fehlern lernen lassen.
-// Wertschätzend und 
-// konsequent handeln!
-// STEP macht Mut und gibt Sicherheit!
-// Organisatorisches
-//   Kurse differenziert nach Alter der Kinder  (bis 6, ab 6, 13-18 Jahre)   Professionelles Trainingsmaterial,  STEP Elternbücher, Beltz Verlag   8-10 wöchentliche Treffen   Kompaktkurse möglich!
-// www.instep-online.de
-// www.instep-online.ch   www.instep-online.at
-
 const stepHelps: IHeadingAndContent[] = [
     {
         heading: "Step ist für alle Eltern geeignet!",
@@ -128,8 +93,6 @@ export default function Homepage() {
         <div className="flex justify-end">
             <StepLogoHomepage />
         </div>
-
-        <Accordeon {...stepHelps[0]} />
 
         <div className="flex lg:flex-row flex-col justify-between py-5 px-5">
             <ContentBubbleSlideshow
