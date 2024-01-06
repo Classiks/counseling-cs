@@ -36,7 +36,7 @@ function Layout() {
     { !isMobile && <Header /> }
     <BackgroundImage className="flex-1">
       <div className="flex justify-center overflow-auto min-h-full" >
-        <div className="bg-gray-100 bg-opacity-60 min-h-full w-full lg:w-1/2">
+        <div className="bg-gray-100 bg-opacity-60 min-h-full w-full lg:w-3/4 2xl:w-1/2">
           <Outlet />
         </div>
       </div>

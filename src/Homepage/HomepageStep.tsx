@@ -6,6 +6,7 @@ import BlendingInDiv from "../components/BlendingInDiv";
 import { ContentBubble, ContentBubbleSlideshow } from "./ContentBubble";
 import Accordeon, { IAccordeon } from "../components/Accordeon";
 import HeadingAndContent, { IHeadingAndContent } from "../components/HeadingAndContent";
+import { Content } from "../Slideshow/Slideshow";
 
 import GirlsInHammock from "../assets/images/girls-hammock.jpg";
 import ParentChildConcrete from "../assets/images/parent-child-concrete.jpg";
@@ -67,70 +68,70 @@ const stepHelps: IAccordeon[] = [
     },
 ]
 
-const otherContent: IHeadingAndContent[] = [
-    {
-        heading: "Wissenschaftliche Evaluation",
-        children: <div>
-            <p>Die Wirksamkeit von STEP wurde durch die wissenschaftliche Evaluation von Klaus Hurrelmann, Professor für Sozial- und Gesundheitswissenschaften, bestätigt.</p>
-            <p>Das Bundesministerium für Bildung und Forschung in Deutschland förderte die Evaluation im Rahmen der Präventionsforschung.</p>
-        </div>
-    },
-    {
-        heading: "Organisatorisches",
-        children: <div>
-            <ul>
-                <li>Kurse differenziert nach Alter der Kinder (bis 6, ab 6, 13-18 Jahre)</li>
-                <li>Professionelles Trainingsmaterial, STEP Elternbücher, Beltz Verlag</li>
-                <li>8-10 wöchentliche Treffen</li>
-                <li>Kompaktkurse möglich!</li>
-            </ul>
-        </div>
-    },
+const scientificEvaluation: string[] = [
+    "Die Wirksamkeit von STEP wurde durch die wissenschaftliche Evaluation von Klaus Hurrelmann, Professor für Sozial- und Gesundheitswissenschaften, bestätigt.",
+    "Das Bundesministerium für Bildung und Forschung in Deutschland förderte die Evaluation im Rahmen der Präventionsforschung."
 ]
 
 
 export default function Homepage() {
+    const opinionContents: ReactNode[] = elternmeinungen.map(meinung => {
+        return <div>
+            <p className="text-xl font-bold mb-2">
+                Meinung von Kursteilnehmenden
+            </p>
+            {
+                meinung.split("\n").map((line, i) => <p key={i}>{line}</p>)
+            }
+        </div>
+    });
+    const opinionInterfaces: Content[] = opinionContents.map(meinung => {return {content: meinung}});
+
+    const scientificContent: ReactNode[] = scientificEvaluation.map(evaluation => {
+        return <div>
+            <p className="text-xl font-bold mb-2">
+                Wissenschaftliche Evaluation
+            </p>
+            <p>{evaluation}</p>
+        </div>
+    });
+    const scientificInterfaces: Content[] = scientificContent.map(evaluation => {return {content: evaluation}});
+
     return <BlendingInDiv>
         <div className="flex justify-end">
             <StepLogoHomepage />
         </div>
 
-        <div className="flex lg:flex-row flex-col justify-between py-5 px-5">
-            <ContentBubbleSlideshow
-                contents={
-                    elternmeinungen.map(meinung => {
-                        return {
-                            content: <div>{
-                                meinung.split("\n").map((line, i) => <p key={i}>{line}</p>)
-                            }</div>
-                        }
-
-                    })
-                }
-                interval={15000}
-            />
-
-            <ContentBubble>
-                World
-            </ContentBubble>
-        </div>
+        <div className="flex flex-col p-5 w-full justify-center xl:flex-row xl:justify-between [&_div]:mx-auto [&_div]:xl:mx-5">{
+            [
+                [opinionInterfaces, 15000], 
+                [scientificInterfaces, 14000]
+            ].map((interfacesWithInterval, i) => {
+                return <div key={i} className="mx-auto xl:mx-5 w-4/5 xl:w-[45%]">
+                    <ContentBubbleSlideshow
+                        className="bg-step bg-opacity-70 rounded-[50%] p-12 my-5 text-md"
+                        contents={interfacesWithInterval[0] as Content[]}
+                        interval={interfacesWithInterval[1] as number}
+                        />
+                    </div>
+            })
+        }</div>
 
 
         <div className="w-full flex justify-center">
             <Slideshow
-                className="w-1/2 aspect-square rounded-full"
+                className="lg:w-1/2 w-3/4 aspect-square rounded-full"
                 contents={[
                     { image: GirlsInHammock, },
                     { image: ParentChildConcrete },
                     { image: ChildOnArm },
                     { image: NewbornFist },
                 ]}
-                interval={15000}
+                interval={12000}
             />
         </div>
 
         <div className="my-10 p-5 [&_ul]:ml-5 [&_ul]:list-disc bg-step-200 rounded-lg m-3">
-            <SectionHeading>Step hilft bei:</SectionHeading>
             {
                 stepHelps.map((help, i) => <Accordeon 
                     key={i} 
@@ -140,17 +141,18 @@ export default function Homepage() {
                 />)
             }
 
-            <SectionHeading>Weiteres</SectionHeading>
+            <div className="h-20" />
 
-            {
-                otherContent.map((help, i) => <HeadingAndContent 
-                    key={i} 
-                    {...help} 
-                    className="bg-gray-200 bg-opacity-30 mt-4 p-4 rounded-lg"
-                    headingClassName="text-3xl font-bold p-2"
-                />)
-            }
-            
+            <SectionHeading>Organisatorisches</SectionHeading>
+
+            <div className="bg-gray-200 bg-opacity-30 mt-4 p-4 rounded-lg">
+                <ul>
+                    <li>Kurse differenziert nach Alter der Kinder (bis 6, ab 6, 13-18 Jahre)</li>
+                    <li>Professionelles Trainingsmaterial, STEP Elternbücher, Beltz Verlag</li>
+                    <li>8-10 wöchentliche Treffen</li>
+                    <li>Kompaktkurse möglich!</li>
+                </ul>
+            </div>
         </div>
 
 

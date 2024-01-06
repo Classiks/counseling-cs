@@ -36,9 +36,9 @@ export default function Slideshow({ contents, className, interval }: ISlideshowP
     className = "relative " + className;
 
     return <BackgroundImageDiv className={className} image={contents[currentSlide].image}>
-        {
+        <div className="px-2">{
             contents[currentSlide].content
-        }
+        }</div>
 
         <div className="absolute bottom-0 left-0 right-0 mb-4 flex justify-center">
             {contents.map((_, index) => <TabButton
@@ -63,7 +63,7 @@ export default function Slideshow({ contents, className, interval }: ISlideshowP
     </BackgroundImageDiv> ;
 }
 
-interface Content {
+export interface Content {
     image?: string;
     content?: ReactNode
 }

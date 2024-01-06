@@ -17,8 +17,6 @@ export default function AboutMeStep() {
 
 function Mobile() {
     return <div className="flex flex-col">
-        {/* <Image />
-        <Description /> */}
         <div className="w-full flex justify-center mt-10">
             <div className="w-72 h-72 rounded-full overflow-hidden">
                 <Image className="-translate-y-8" />
