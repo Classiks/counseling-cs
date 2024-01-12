@@ -1,11 +1,8 @@
 import BlendingInDiv from "../components/BlendingInDiv"
-import useMobile from "../components/useMobile"
 
 import Portrait from "../assets/images/cs-portrait-standing.jpg";
 
 export default function AboutMeStep() {
-    const isMobile: boolean = useMobile();
-
     return <BlendingInDiv>
         {/* {
             isMobile

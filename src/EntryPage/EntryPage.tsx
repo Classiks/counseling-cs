@@ -51,7 +51,7 @@ interface ButtonFrameProps {
     className?: string;
 }
 function ButtonFrame({ children, className }: ButtonFrameProps) {
-    return <div className="bg-gray-200 rounded-[50%] px-14 py-10 hover:scale-110 transition-transform duration-1000">
+    return <div className={"bg-gray-200 rounded-[50%] px-14 py-10 hover:scale-110 transition-transform duration-1000 " + className}>
         {children}
     </div>
 }

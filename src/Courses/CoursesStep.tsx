@@ -5,8 +5,8 @@
 
 import { LocationOn, CalendarMonth } from '@mui/icons-material';
 
-import icon from 'leaflet/dist/images/marker-icon.png';
-import iconShadow from 'leaflet/dist/images/marker-shadow.png';
+// import icon from 'leaflet/dist/images/marker-icon.png';
+// import iconShadow from 'leaflet/dist/images/marker-shadow.png';
 import { ReactNode } from 'react';
 import BlendingInDiv from '../components/BlendingInDiv';
 // let DefaultIcon = L.icon({
