@@ -9,6 +9,10 @@ export default class UrlParser {
     public static getPageFromUrl(location: Location): string {
         return UrlParser.parseUrl(location).page;
     }
+
+    public static getPathFromUrl(location: Location): string {
+        return location.pathname;
+    }
     
     private static parseUrl(location: Location): { mode: Mode, page: string } {
         const pathArray: string[] = location.pathname.split("/");

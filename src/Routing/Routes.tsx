@@ -13,7 +13,6 @@ import ReadingTipsTcm from "../ReadingTips/ReadingTipsTcm";
 import ContactTcm from "../Contact/ContactTcm";
 import CoursesTcm from "../Courses/CoursesTcm";
 
-
 import Mode from "../components/Mode";
 import { PAGES } from "../Constants";
 
@@ -31,7 +30,7 @@ const step_routes: IRoute[] = [
         title: PAGES.COURSES.name,
     },
     {
-        path: `${Mode.STEP}/${PAGES.ABOUT.path}`,
+        path: `/${Mode.STEP}/${PAGES.ABOUT.path}`,
         element: <AboutMeStep />,
         icon: <ContactPage />,
         title: PAGES.ABOUT.name,
@@ -81,6 +80,7 @@ const routes: Map<Mode, IRoute[]> = new Map([
     [Mode.STEP, step_routes],
     [Mode.TCM, tcm_routes],
 ],);
+
 
 export default routes;
 

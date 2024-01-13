@@ -5,7 +5,12 @@ import { useState, ReactNode, useEffect } from "react";
 
 import ModeController from "../ModeController";
 
-export default function BackgroundImage({ children, className }: { children: ReactNode, className?: string }) {
+interface IBackgroundImage {
+    children: ReactNode,
+    className?: string,
+    style?: React.CSSProperties,
+}
+export default function BackgroundImage({ children, className, style }: IBackgroundImage) {
     const [ mode, setMode ] = useState(ModeController.getMode());
     useEffect(() => {
         ModeController.subscribe(setMode);
@@ -15,6 +20,7 @@ export default function BackgroundImage({ children, className }: { children: Rea
 
 
     return <div className={className} style={{
+        ...style,
         backgroundImage: `url(${image})`,
         backgroundSize: "cover",
         backgroundPosition: "top",

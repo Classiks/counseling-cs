@@ -9,7 +9,7 @@ export default function AboutMeStep() {
                 ? <Mobile />
                 : <Desktop />
         } */}
-        <div className="flex flex-col md:flex-row items-center md:items-start gap-10 p-10 shadow-lg">
+        <div className="flex flex-col md:flex-row items-center md:items-start gap-10 p-10">
             <div className="w-96 h-96 md:w-1/3 md:h-auto rounded-full overflow-hidden">
                 <Image className="-translate-y-8 md:translate-y-0" />
             </div>

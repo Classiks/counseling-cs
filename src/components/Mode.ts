@@ -1,6 +1,6 @@
 enum Mode {
-    STEP = 'step',
-    TCM = 'tcm',
+    STEP = "step",
+    TCM = "tcm",
 }
 
 export default Mode;

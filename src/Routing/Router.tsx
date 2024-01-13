@@ -5,6 +5,7 @@ import { Route, BrowserRouter, Routes } from 'react-router-dom';
 import Mode from '../components/Mode';
 import existingRoutes, { IRoute } from './Routes';
 import EntryPage from '../EntryPage/EntryPage';
+import Test from '../Test';
 
 
 export default function Router({ children }: { children: ReactNode}) {
@@ -31,5 +32,10 @@ export default function Router({ children }: { children: ReactNode}) {
                 />)
             }</Route>
         </Routes>
+        
+        <Routes>
+            <Route path="/test" element={<Test />} />
+        </Routes>
+
     </BrowserRouter>
 }
