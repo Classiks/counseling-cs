@@ -4,13 +4,8 @@ import Portrait from "../assets/images/cs-portrait-standing.jpg";
 
 export default function AboutMeStep() {
     return <BlendingInDiv>
-        {/* {
-            isMobile
-                ? <Mobile />
-                : <Desktop />
-        } */}
         <div className="flex flex-col md:flex-row items-center md:items-start gap-10 p-10">
-            <div className="w-96 h-96 md:w-1/3 md:h-auto rounded-full overflow-hidden">
+            <div className="w-80 h-80 xs:w-96 xs:h-96 md:w-1/3 md:h-auto rounded-full overflow-hidden">
                 <Image className="-translate-y-8 md:translate-y-0" />
             </div>
             <div className="md:w-2/3 bg-step rounded-lg p-4 shadow-lg">

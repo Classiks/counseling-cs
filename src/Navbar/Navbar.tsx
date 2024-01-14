@@ -24,7 +24,7 @@ export default function Navbar({ className }: INavbar) {
         ModeController.subscribe(setMode);
     }, []);
 
-    return <div className={`w-screen fixed bottom-0 md:top-0 z-10 flex items-center shadow-lg border-t md:border-b md:border-t-0 border-white justify-between bg-${mode} ` + className}>
+    return <div className={`w-screen fixed bottom-0 md:top-0 z-10 flex items-center shadow-lg border-t md:border-b md:border-t-0 border-white justify-between bg-gradient-to-l ${getBackgroundGradient(mode)} ` + className}>
         <div className="flex gap-4 items-center">
             <img src={Logo} alt="logo" className="h-12" />
             <p className="text-3xl font-bold hidden 2xl:block">Dr. med. Cordelia Schulz</p>
@@ -34,6 +34,17 @@ export default function Navbar({ className }: INavbar) {
             <ModeSwitchButton mode={mode} />
         </div>
     </div>
+}
+
+function getBackgroundGradient(mode: Mode): string {
+    switch (mode) {
+        case Mode.STEP:
+            return "from-step-400 to-step-500";
+        case Mode.TCM:
+            return "from-tcm-400 to-tcm-500";
+        default:
+            return "";
+    }
 }
 
 interface IModeSwitchButton {
@@ -62,7 +73,7 @@ function HeaderLinks({ className }: IHeaderLinksProps) {
 
     className = "flex " + className;
 
-    return <div className={className}>{
+    return <nav className={className}>{
         routes.get(mode)?.map(route => <HeaderItem 
             key={`$header-item-${route.path}`}
             mode={mode}
@@ -71,7 +82,7 @@ function HeaderLinks({ className }: IHeaderLinksProps) {
         >
             {route.title}
         </HeaderItem>)
-    }</div>
+    }</nav>
 }
 
 interface IHeaderItemProps {

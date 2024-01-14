@@ -107,7 +107,7 @@ export default function Homepage() {
                     key={i} 
                     {...help} 
                     className="bg-gray-200 bg-opacity-30 mt-4 p-4 rounded-lg"
-                    headingClassName="text-3xl font-bold p-2"
+                    headingClassName="text-xl md:text-3xl font-bold p-2"
                 />)
             }
         </div>
@@ -174,7 +174,7 @@ function StepLogoHomepage() {
 }
 
 function SectionHeading({ children }: { children: ReactNode }) {
-    return <p className="text-5xl m-5">
+    return <p className="text-3xl md:text-5xl m-5">
         {children}
     </p>
 }
