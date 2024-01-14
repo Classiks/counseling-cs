@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import { Route } from "react-router-dom";
 
 import { Home, Bookmark, DateRange, Email, ContactPage } from "@mui/icons-material";
 
@@ -80,6 +81,26 @@ const routes: Map<Mode, IRoute[]> = new Map([
     [Mode.STEP, step_routes],
     [Mode.TCM, tcm_routes],
 ],);
+
+const stepRoutes: ReactNode = [
+    <Route key="homepage" path={`/${Mode.STEP}`} element={<HomepageStep />} />,
+    <Route key="courses" path={`/${Mode.STEP}/${PAGES.COURSES.path}`} element={<CoursesStep />} />,
+    <Route key="about" path={`/${Mode.STEP}/${PAGES.ABOUT.path}`} element={<AboutMeStep />} />,
+    <Route key="reading-tips" path={`/${Mode.STEP}/${PAGES.READING_TIPS.path}`} element={<ReadingTipsStep />} />,
+    <Route key="contact" path={`/${Mode.STEP}/${PAGES.CONTACT.path}`} element={<ContactStep />} />,
+]
+
+const tcmRoutes: ReactNode = [
+    <Route key="homepage" path={`/${Mode.TCM}`} element={<HomepageTcm />} />,
+    <Route key="courses" path={`/${Mode.TCM}/${PAGES.COURSES.path}`} element={<CoursesTcm />} />,
+    <Route key="reading-tips" path={`/${Mode.TCM}/${PAGES.READING_TIPS.path}`} element={<ReadingTipsTcm />} />,
+    <Route key="contact" path={`/${Mode.TCM}/${PAGES.CONTACT.path}`} element={<ContactTcm />} />,
+]
+
+export { 
+    stepRoutes ,
+    tcmRoutes,
+};
 
 
 export default routes;
