@@ -125,21 +125,6 @@ export default function Homepage() {
             />
         </div>
 
-
-        <div className="my-10 p-5 [&_ul]:ml-5 [&_ul]:list-disc bg-step-200 rounded-lg m-3">
-            <SectionHeading>Organisatorisches</SectionHeading>
-
-            <div className="bg-gray-200 bg-opacity-30 mt-4 p-4 rounded-lg">
-                <ul>
-                    <li>Kurse differenziert nach Alter der Kinder (bis 6, ab 6, 13-18 Jahre)</li>
-                    <li>Professionelles Trainingsmaterial, STEP Elternbücher, Beltz Verlag</li>
-                    <li>8-10 wöchentliche Treffen</li>
-                    <li>Kompaktkurse möglich!</li>
-                </ul>
-            </div>
-        </div>
-
-
         <div className="flex flex-col p-5 w-full justify-center xl:flex-row xl:justify-between [&_div]:mx-auto [&_div]:xl:mx-5">{
             [
                 [opinionInterfaces, 15000], 
@@ -155,11 +140,20 @@ export default function Homepage() {
             })
         }</div>
 
+        <div className="my-10 p-5 [&_ul]:ml-5 [&_ul]:list-disc bg-step-200 rounded-lg m-3">
+            <SectionHeading>Organisatorisches</SectionHeading>
 
+            <div className="bg-gray-200 bg-opacity-30 mt-4 p-4 rounded-lg">
+                <ul>
+                    <li>Kurse differenziert nach Alter der Kinder (bis 6, ab 6, 13-18 Jahre)</li>
+                    <li>Professionelles Trainingsmaterial, STEP Elternbücher, Beltz Verlag</li>
+                    <li>8-10 wöchentliche Treffen</li>
+                    <li>Kompaktkurse möglich!</li>
+                </ul>
+            </div>
+        </div>
 
-
-
-
+        <div className="h-2" />
 
     </BlendingInDiv>
 }
