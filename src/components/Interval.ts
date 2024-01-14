@@ -30,8 +30,6 @@ export default class Interval {
             return;
         }
 
-        console.log("reset")
-
         this.stop();
         this.start();
     }

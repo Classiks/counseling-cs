@@ -32,8 +32,6 @@ export default function Slideshow({ contents, className, delay }: ISlideshowProp
     }
 
     useEffect(() => {
-        console.log(interval);
-        console.log(delay);
         interval?.start();
         return () => interval?.stop();
     }, []);
