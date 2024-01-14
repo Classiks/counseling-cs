@@ -5,32 +5,38 @@ import BackgroundImageDiv from './BackgroundImageDiv';
 import NavigationButton from './NavigationButton';
 import TabButton from './TabButton';
 
+import Interval from '../components/Interval';
+
 export interface ISlideshowProps {
     className?: string,
     contents: Content[]
-    interval?: number
+    delay?: number
 }
-export default function Slideshow({ contents, className, interval }: ISlideshowProps) {
-    const [currentSlide, setCurrentSlide] = useState(0);
+export default function Slideshow({ contents, className, delay }: ISlideshowProps) {
+    const [currentSlide, setCurrentSlide] = useState<number>(0);
 
-    const handlePrev = useCallback(
-        () => setCurrentSlide((prev) => (prev === 0 ? contents.length - 1 : prev - 1)),
-        [contents.length]
-    );
+    const changeSlide = useCallback((change: number) => {
+        setCurrentSlide((prev) => Math.abs((prev + change) % contents.length));
+    }, [contents.length]);
 
-    const handleNext = useCallback(
-        () => setCurrentSlide((prev) => (prev === contents.length - 1 ? 0 : prev + 1)),
-        [contents.length]
-    );
+    const [ interval ] = useState<Interval|null>(delay !== undefined ? new Interval(() => changeSlide(1), delay) : null);
+
+    const handlePrev = () => {
+        interval?.reset(); 
+        changeSlide(-1);
+    }
+
+    const handleNext = () => {
+        interval?.reset(); 
+        changeSlide(1);
+    }
 
     useEffect(() => {
-        let imageChangeInterval: NodeJS.Timeout;
-        if (interval) {
-            imageChangeInterval = setInterval(handleNext, interval);
-        }
-
-        return () => clearInterval(imageChangeInterval);
-    }, [contents.length, interval, handleNext]);
+        console.log(interval);
+        console.log(delay);
+        interval?.start();
+        return () => interval?.stop();
+    }, []);
 
 
     className = "relative " + className;

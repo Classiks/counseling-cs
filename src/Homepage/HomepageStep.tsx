@@ -96,18 +96,18 @@ export default function Homepage() {
     });
     const scientificInterfaces: Content[] = scientificContent.map(evaluation => {return {content: evaluation}});
 
-    return <BlendingInDiv>
+    return <BlendingInDiv className="space-y-16">
         <div className="md:float-end pt-10 md:p-0 w-fit mx-auto">
             <StepLogoHomepage />
         </div>
 
-        <div className="my-10 p-5 [&_ul]:ml-5 [&_ul]:list-disc bg-step-200 rounded-lg m-3">
+        <div className="p-5 [&_ul]:ml-5 [&_ul]:list-disc bg-step-200 rounded-lg m-3">
             {
                 stepHelps.map((help, i) => <Accordeon 
                     key={i} 
                     {...help} 
                     className="bg-gray-200 bg-opacity-30 mt-4 p-4 rounded-lg"
-                    headingClassName="text-xl md:text-3xl font-bold p-2"
+                    headingClassName="text-xl font-bold p-2"
                 />)
             }
         </div>
@@ -121,9 +121,10 @@ export default function Homepage() {
                     { image: ChildOnArm },
                     { image: NewbornFist },
                 ]}
-                interval={12000}
+                delay={12000}
             />
         </div>
+
 
         <div className="my-10 p-5 [&_ul]:ml-5 [&_ul]:list-disc bg-step-200 rounded-lg m-3">
             <SectionHeading>Organisatorisches</SectionHeading>
@@ -148,7 +149,7 @@ export default function Homepage() {
                     <ContentBubbleSlideshow
                         className="bg-step bg-opacity-70 rounded-[50%] p-12 my-5 text-md"
                         contents={interfacesWithInterval[0] as Content[]}
-                        interval={interfacesWithInterval[1] as number}
+                        delay={interfacesWithInterval[1] as number}
                         />
                     </div>
             })
@@ -174,7 +175,7 @@ function StepLogoHomepage() {
 }
 
 function SectionHeading({ children }: { children: ReactNode }) {
-    return <p className="text-3xl md:text-5xl m-5">
+    return <p className="text-2xl md:text-3xl m-5">
         {children}
     </p>
 }

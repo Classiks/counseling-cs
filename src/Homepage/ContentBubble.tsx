@@ -15,10 +15,10 @@ export function ContentBubble({ className, children }: IContentBubbleProps) {
 interface IContentBubbleSlideshowProps extends ISlideshowProps  {
     className?: string
 }
-export function ContentBubbleSlideshow({ className, contents, interval }: IContentBubbleSlideshowProps) {
+export function ContentBubbleSlideshow({ className, contents, delay }: IContentBubbleSlideshowProps) {
     return <Slideshow
         className={className}
         contents={contents}
-        interval={interval}
+        delay={delay}
     />
 }
