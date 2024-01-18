@@ -10,7 +10,7 @@ export default function Content({ books }: IContentProps) {
     return <div
         className="flex flex-col flex-grow p-5"
     >{
-            books.map(book => <div>
+            books.map(book => <div key={book.title}>
                 <Book {...book} />
                 <hr />
             <div></div>

@@ -31,10 +31,6 @@ interface IDescriptionProps {
 }
 function Description({ className }: IDescriptionProps) {
     return <div className={"[&_p]:mb-4 " + className}>
-        <p className="font-bold text-lg">
-            Hallo und herzlich willkommen auf meiner Profilseite!
-        </p>
-
         <p>
             Ich heiße Cordelia Schulz, bin 1967 in Madrid/Spanien als dritte von sechs Geschwistern geboren und zum Medizinstudium nach Heidelberg gegangen – dort habe ich meinen Mann kennengelernt und lebe seitdem in Deutschland.
         </p>
@@ -45,14 +41,6 @@ function Description({ className }: IDescriptionProps) {
 
         <p>
             Diese Erfahrung bezieht sich sowohl auf das Miteinander in meiner Familie (mit 4 erwachsenen Söhnen), als auch auf meine Tätigkeit als Ärztin.
-        </p>
-
-        <p>
-            Warum ich mich für STEP entschieden habe?
-        </p>
-
-        <p>
-            Das Programm baut auf fundierten wissenschaftlichen Erkenntnissen auf, ist gut strukturiert und arbeitet mit vielen praktischen Übungen. Der Erfahrungsaustausch innerhalb der Kursgruppe ist ein wichtiger Baustein; dabei wird berücksichtigt, dass jede Familie ihre individuellen Wertvorstellungen hat. Es macht richtig Freude, mithilfe des Kurses Schritt für Schritt ein vertrauensvolles und entspanntes Miteinander in der Familie umzusetzen, Humor ist dabei sehr willkommen!
         </p>
 
         <p>
@@ -70,7 +58,7 @@ function Description({ className }: IDescriptionProps) {
         </ul>
 
         <p>
-            Auf diesem Weg möchte ich Sie gerne begleiten.
+            Meine Elternkurse werden über die VHS Offenburg angeboten und sind in zwei aufeinander aufbauenden Kursen aufgeteilt. So kann das Konzept in Ruhe und Schritt für Schritt ausprobiert…. und in Übereinstimmung mit den eigenen Wertvorstellungen umgesetzt werden. 
         </p>
 
 
