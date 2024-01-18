@@ -1,5 +1,4 @@
 import { ReactNode } from "react";
-import { Route } from "react-router-dom";
 
 import { Home, Bookmark, DateRange, Email, ContactPage } from "@mui/icons-material";
 
