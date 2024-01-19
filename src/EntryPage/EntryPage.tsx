@@ -5,7 +5,7 @@ import Logo from "../assets/images/icon_v1_cropped.png";
 import { motion } from "framer-motion";
 
 export default function EntryPage() {
-    return <AppearingDiv className="flex flex-col xl:flex-row w-full h-screen">
+    return <AppearingDiv className="flex flex-col xl:flex-row w-full h-screen relative">
         <GoToButtonArea className="bg-step">
             <SwitchButtonStep />
         </GoToButtonArea>

@@ -1,5 +1,7 @@
 import { ReactNode } from "react";
 
+import Cartoon from "../assets/images/cartoon-family-conference.png";
+
 import StepLogo from "../assets/images/step_6+.jpg";
 import Slideshow from "../Slideshow/Slideshow";
 import BlendingInDiv from "../components/BlendingInDiv";
@@ -22,17 +24,24 @@ const elternmeinungen: string[] = [
 const stepHelps: IAccordeon[] = [
     {
         heading: "Was ist die Grundidee von STEP?",
-        children: <div className="space-y-3">
-            <p>
-                Das Konzept basiert auf der Individualpsychologie, die folgende Ausgangsthese hat: <span className="font-bold">Der Mensch ist ein soziales Wesen. Sein Verhalten ist darauf ausgerichtet, ein Gefühl der Zugehörigkeit zu erlangen.</span> Wenn einem Kind dies auf positive Art nicht gelingt, fühlt es sich entmutig und versucht, das Ziel der Zugehörigkeit mit störendem Verhalten zu erreichen.
-            </p>
+        children: <div className="flex flex-col md:flex-row gap-16">
+            <div className="space-y-3">
+                <p>
+                    Das Konzept basiert auf der Individualpsychologie, die folgende Ausgangsthese hat: <span className="font-bold">Der Mensch ist ein soziales Wesen. Sein Verhalten ist darauf ausgerichtet, ein Gefühl der Zugehörigkeit zu erlangen.</span> Wenn einem Kind dies auf positive Art nicht gelingt, fühlt es sich entmutig und versucht, das Ziel der Zugehörigkeit mit störendem Verhalten zu erreichen.
+                </p>
 
-            <p>
-                Die Individualpsychologie, die Adler und sein bedeutendster Schüler Dreikurs entwickelt haben, unterstützt einen demokratischen Erziehungsstil, der unseren Kindern Selbstdisziplin beibringt. Diese Selbstdisziplin ist notwendig, damit unsere Kinder mit der zunehmenden Verantwortung, der sie gewachsen sein müssen, und dem größeren Freiraum, den sie beanspruchen und brauchen, umgehen können.
-            </p>
-            <p>
-                STEP kommt unserem Bedürfnis entgegen, zu wissen wann und wie wir Grenzen setzen können. Es stellt uns bei der Erziehung unserer Kinder einen roten Faden zur Verfügung und hilft uns damit, unseren Kindern die Sicherheit zu bieten, die sie brauchen, um ihre Grenzen auszutesten, die Konsequenzen ihrer eigenen Entscheidungen zu erfahren und damit die Chance zu haben, daraus zu lernen.
-            </p>
+                <p>
+                    Die Individualpsychologie, die Adler und sein bedeutendster Schüler Dreikurs entwickelt haben, unterstützt einen demokratischen Erziehungsstil, der unseren Kindern Selbstdisziplin beibringt. Diese Selbstdisziplin ist notwendig, damit unsere Kinder mit der zunehmenden Verantwortung, der sie gewachsen sein müssen, und dem größeren Freiraum, den sie beanspruchen und brauchen, umgehen können.
+                </p>
+                <p>
+                    STEP kommt unserem Bedürfnis entgegen, zu wissen wann und wie wir Grenzen setzen können. Es stellt uns bei der Erziehung unserer Kinder einen roten Faden zur Verfügung und hilft uns damit, unseren Kindern die Sicherheit zu bieten, die sie brauchen, um ihre Grenzen auszutesten, die Konsequenzen ihrer eigenen Entscheidungen zu erfahren und damit die Chance zu haben, daraus zu lernen.
+                </p>
+            </div>
+            <img
+                src={Cartoon}
+                alt=""
+                className="rounded-2xl h-96 p-3 bg-white mx-auto"
+            />
         </div>
     },
     {

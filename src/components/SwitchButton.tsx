@@ -16,7 +16,7 @@ export default function SwitchButton({ mode, targetPageTitle, bgColor }: ISwitch
     const location = useLocation()
 
     return <button 
-        className={"py-3 px-5 my-2 mx-5 border-gray-200 rounded-lg cursor-pointer " + bgColor}
+        className={"py-2 md:py-3 px-3 md:px-5 my-1 md:my-2 mx-3 md:mx-5 border-gray-200 rounded-lg cursor-pointer " + bgColor}
         onClick={() => {
             ModeController.setMode(mode);
             
@@ -36,7 +36,7 @@ export function SwitchButtonStep() {
     return <SwitchButton 
         mode={Mode.STEP}
         targetPageTitle="STEP"
-        bgColor="bg-step hover:bg-step-tertiary text-step-text"
+        bgColor="bg-step hover:bg-step-600 active:bg-step-700 text-step-text transition-color duration-300"
     />;
 }
 
@@ -44,6 +44,6 @@ export function SwitchButtonTcm() {
     return <SwitchButton 
         mode={Mode.TCM}
         targetPageTitle="TCM"
-        bgColor="bg-tcm hover:bg-tcm-tertiary text-tcm-text"
+        bgColor="bg-tcm hover:bg-tcm-600 active:bg-tcm-700 text-tcm-text transition-color duration-300"
     />;
 }

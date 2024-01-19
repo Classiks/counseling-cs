@@ -7,7 +7,7 @@ import UrlParser from '../components/UrlParser';
 import ModeController from "../ModeController";
 import Mode from "../components/Mode";
 
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 import routes from "../Routing/Routes";
 
@@ -24,9 +24,17 @@ export default function Navbar({ className }: INavbar) {
         ModeController.subscribe(setMode);
     }, []);
 
+    const navigate = useNavigate();
+
     return <div className={`w-screen fixed bottom-0 md:top-0 z-10 flex items-center shadow-lg border-t md:border-b md:border-t-0 border-white justify-between bg-gradient-to-l ${getBackgroundGradient(mode)} ` + className}>
-        <div className="flex gap-4 items-center">
-            <img src={Logo} alt="logo" className="h-12" />
+        <div className="flex gap-4 items-center ml-4">
+            <img 
+                src={Logo} alt="logo" 
+                className="h-12 cursor-pointer hover:scale-105 active:scale-110 transition-transform duration-500"
+                onClick={() => {
+                    navigate("/");
+                }}
+            />
             <p className="text-3xl font-bold hidden 2xl:block">Dr. med. Cordelia Schulz</p>
         </div>
         <div className="flex items-center">

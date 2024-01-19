@@ -11,8 +11,8 @@ export interface IAccordeon {
 }
 export default function Accordeon({ heading, children, className, headingClassName, childrenClassName }: IAccordeon) {
     const [isOpen, setIsOpen] = useState(false);
-    const openStyle: string = "max-h-screen opacity-100";
-    const closedStyle: string = "max-h-0 opacity-0 overflow-hidden";
+    const openClassName: string = "max-h-[3000px] opacity-100";
+    const closedClassName: string = "max-h-0 opacity-0 overflow-hidden";
 
 
     return <div>
@@ -35,7 +35,7 @@ export default function Accordeon({ heading, children, className, headingClassNa
 
             <div className={childrenClassName}>
                 <div
-                    className={`items-center transition-all duration-1000 ${isOpen ? openStyle : closedStyle}`}
+                    className={`items-center transition-all duration-1000 ${isOpen ? openClassName : closedClassName}`}
                 >
                     {children}
                 </div>
