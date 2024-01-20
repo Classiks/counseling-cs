@@ -10,19 +10,12 @@ export default function ContactTcm() {
 
         <div className="mb-16">
             <p className="mb-4 mt-6 text-lg">
-                Sie können mich gerne telefonisch oder per Email kontaktieren.
+                Sie können mich gerne per Email kontaktieren.
             </p>
 
-            <div className="space-y-1 ml-2">
-                <div>
-                    <Phone className="inline mr-2" />
-                    <a href="tel:+4915159211227">0151 59211227</a>
-                </div>
-
-                <div>
-                    <Mail className="inline mr-2" />
-                    <a href="mailto:tcm.dr.schulz@gmail.com">tcm.dr.schulz@gmail.com</a>
-                </div>
+            <div className="ml-2">
+                <Mail className="inline mr-2" />
+                <a href="mailto:tcm.dr.schulz@gmail.com">tcm.dr.schulz@gmail.com</a>
             </div>
         </div>
 

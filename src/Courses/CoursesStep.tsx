@@ -1,137 +1,92 @@
-// import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
-// import "leaflet/dist/leaflet.css";
-
-// import L from 'leaflet';
-
-import { LocationOn, CalendarMonth } from '@mui/icons-material';
-
-// import icon from 'leaflet/dist/images/marker-icon.png';
-// import iconShadow from 'leaflet/dist/images/marker-shadow.png';
-import { ReactNode } from 'react';
 import BlendingInDiv from '../components/BlendingInDiv';
-// let DefaultIcon = L.icon({
-//     iconUrl: icon,
-//     shadowUrl: iconShadow
-// });
-// L.Marker.prototype.options.icon = DefaultIcon;
-
-// (L.Control.prototype as any)._refocusOnMap = function () {};
+import StepEncouragementGel from "../assets/images/cartoon-encouragement-hairgel.png";
+import StepEncouragementScientist from "../assets/images/cartoon-encouragement-scientist.png";
+import DateAccordeon from './DateAccordeon';
+import Accordeon from '../components/Accordeon';
 
 export default function Courses() {
-    const dates: IDateProps[] = [
-        {
-            date: "Montag, 18. Oktober 2021",
-            time: "9:00 - 12:00 Uhr",
-            location: VHS_Offenburg,
-            title: "Kostenlose Erstberatung"
-        },
-        {
-            date: "Montag, 25. Oktober 2021",
-            time: "9:00 - 12:00 Uhr",
-            location: VHS_Freiburg,
-            title: "Kostenlose Erstberatung"
-        },
-        {
-            date: "Montag, 1. November 2021",
-            time: "9:00 - 12:00 Uhr",
-            location: VHS_Offenburg, 
-            title: "Kostenlose Erstberatung"
-        },
-        {
-            date: "Montag, 8. November 2021",
-            time: "9:00 - 12:00 Uhr",
-            location: VHS_Freiburg,
-            title: "Kostenlose Erstberatung"
-        },
-    ];
+    return <BlendingInDiv className="flex flex-col gap-x-16">
+        <div className="m-3 p-4 rounded-2xl  bg-step-400 flex gap-x-10">
+            <div className="space-y-5">
+                <div className="p-2 pb-0">
+                    <h1 className="text-2xl font-bold italic">STEP-Elternkurs Teil 1</h1>
+                    <h2>VHS-Kursnummer: 241105120</h2>
+                </div>
+                <div>
+                    <p> Termine: Dienstag, 15:00 - 17:00, wöchentlich </p>
+                    <p> Ort: {<VhsLink />}  302 Seminarraum </p>
+                    <p> Kursstart: 09.04.2024 </p>
+                    <p> Kursende: 14.05.2024 </p>
+                </div>
+                <div>
+                    <Accordeon
+                        heading="Inhalte"
+                        className="bg-step-200 p-2 max-w-96"
+                    >
+                        <p className="flex-1">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos excepturi ratione, enim corporis exercitationem ipsa aperiam velit. Itaque porro sint fugiat nam. Dignissimos mollitia nam saepe animi molestias, cupiditate itaque facere illo distinctio explicabo tenetur voluptate error labore porro eum nostrum perspiciatis aspernatur qui, dolores omnis facilis. Explicabo voluptatem possimus assumenda nemo dolore, est eveniet animi ut, dignissimos quos harum.
+                        </p>
+                    </Accordeon>
+                    <DateAccordeon
+                        className="bg-step-200 p-2 max-w-96"
+                        dates={[
+                            { day: "Dienstag", date: "09.04.2024" },
+                            { day: "Dienstag", date: "16.04.2024" },
+                            { day: "Dienstag", date: "30.04.2024" },
+                            { day: "Dienstag", date: "07.05.2024" },
+                            { day: "Dienstag", date: "14.05.2024" },
+                        ]}
+                    />
+                </div>
+            </div>
+            <img src={StepEncouragementGel} alt="course image" className="hidden md:block w-72 rounded-md" />
+        </div>
 
-    return <BlendingInDiv className="p-5">
-        <h1 className="text-3xl mb-2">
-            Termine
-        </h1>
-        <p className="mb-2">
-            Termine können Sie auch telefonisch unter <a href="tel:+497811234567">0781 1234567</a> oder per Email an <a href="mailto:danielschulz1906@gmail.com">danielschulz1906@gmail.com</a> vereinbaren.
-        </p>
-        <hr />
-        {
-            dates.map((date, i) => <Date key={i} {...date} />)
-        }
+        <div className="m-3 p-4 rounded-2xl  bg-step-400 flex gap-x-10">
+            <div className="space-y-5">
+                <div className="p-2 pb-0">
+                    <h1 className="text-2xl font-bold italic">STEP-Elternkurs Teil 2</h1>
+                    <h2>VHS-Kursnummer: 241105121</h2>
+                </div>
+                <div>
+                    <p> Termine: Dienstag, 15:00 - 17:00, wöchentlich </p>
+                    <p> Ort: {<VhsLink />}  302 Seminarraum </p>
+                    <p> Kursstart: 25.06.2024 </p>
+                    <p> Kursende: 23.07.2024 </p>
+                </div>
+                <div>
+                    <Accordeon
+                        heading="Inhalte"
+                        className="bg-step-200 p-2 max-w-96"
+                    >
+                        <p className="flex-1">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos excepturi ratione, enim corporis exercitationem ipsa aperiam velit. Itaque porro sint fugiat nam. Dignissimos mollitia nam saepe animi molestias, cupiditate itaque facere illo distinctio explicabo tenetur voluptate error labore porro eum nostrum perspiciatis aspernatur qui, dolores omnis facilis. Explicabo voluptatem possimus assumenda nemo dolore, est eveniet animi ut, dignissimos quos harum.
+                        </p>
+                    </Accordeon>
+                    <DateAccordeon
+                        className="bg-step-200 p-2 max-w-96"
+                        dates={[
+                            { day: "Dienstag", date: "25.06.2024" },
+                            { day: "Dienstag", date: "02.07.2024" },
+                            { day: "Dienstag", date: "09.07.2024" },
+                            { day: "Dienstag", date: "16.07.2024" },
+                            { day: "Dienstag", date: "23.07.2024" },
+                        ]}
+                    />
+                </div>
+            </div>
+            <img src={StepEncouragementScientist} alt="course image" className="hidden md:block w-72 rounded-md" />
+        </div>
     </BlendingInDiv>
 }
 
-
-
-interface IDateProps {
-    title: string,
-    date: string,
-    time: string,
-    location: ILocation
-}
-function Date({ date, time, location, title }: IDateProps) {
-    return <div className="my-10">
-        <p className="text-3xl">{title}</p>
-        <div className="flex flex-row">
-            <CalendarMonth />
-            <p>{`${date}, ${time}`}</p>
-        </div>
-        <div className="flex flex-row">
-            <LocationOn />
-            <p>{location.name}</p>
-        </div>
-        {/*
-        <MapContainer 
-            key={title}  
-            center={[location.lat, location.lng]} 
-            zoom={15} 
-            scrollWheelZoom={false}
-            className="mt-3"
-            style={{
-                height: 300,
-                width: 500
-            }}
-        >
-            <TileLayer
-                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-            />
-            <Marker position={[location.lat, location.lng]}>
-                <Popup >
-                    {location.name}
-                </Popup>
-            </Marker>
-        </MapContainer>
-        */}
-        <hr />
-        <Button>Anmelden</Button>
-    </div>
-}
-
-interface ILocation {
-    name: string,
-    lat: number,
-    lng: number
-}
-
-const VHS_Offenburg: ILocation = {
-    name: "VHS Offenburg",
-    lat: 48.468920,
-    lng: 7.956870
-}
-
-const VHS_Freiburg: ILocation = {
-    name: "VHS Freiburg",
-    lat: 47.9963,
-    lng: 7.8469
-}
-
-function Button({ children }: { children: ReactNode }) {
-    return <button 
-        className= " bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded my-2"
-        onClick={() => {
-            alert("Happy Birthday!");
-            // window.open("https://www.youtube.com/watch?v=eBGIQ7ZuuiU", "_blank");  // Rick Roll
-        }}
+function VhsLink() {
+    return <a
+        href="https://www.vhs-offenburg.de/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="font-bold text-slate-700"
     >
-        {children}
-    </button>
+        VHS Offenburg
+    </a>
 }
