@@ -12,7 +12,7 @@ import HomepageTcm from "../Homepage/HomepageTcm";
 import ReadingTipsTcm from "../ReadingTips/ReadingTipsTcm";
 import ContactTcm from "../Contact/ContactTcm";
 import CoursesTcm from "../Courses/CoursesTcm";
-import AboutMeTcm from "../AboutMe/AboutMeTCM";
+import AboutMeTcm from "../AboutMe/AboutMeTcm";
 
 import Mode from "../components/Mode";
 import { PAGES } from "../Constants";
