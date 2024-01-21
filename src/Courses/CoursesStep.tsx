@@ -5,8 +5,9 @@ import DateAccordeon from './DateAccordeon';
 import Accordeon from '../components/Accordeon';
 
 export default function Courses() {
+    // TOdO: Image stretches when accordeon
     return <BlendingInDiv className="flex flex-col gap-x-16">
-        <div className="m-3 p-4 rounded-2xl  bg-step-400 flex gap-x-10">
+        <div className="m-3 p-4 rounded-2xl  bg-step-400 flex gap-x-10 items-start justify-between">
             <div className="space-y-5">
                 <div className="p-2 pb-0">
                     <h1 className="text-2xl font-bold italic">STEP-Elternkurs Teil 1</h1>
@@ -39,10 +40,10 @@ export default function Courses() {
                     />
                 </div>
             </div>
-            <img src={StepEncouragementGel} alt="course image" className="hidden md:block w-72 rounded-md" />
+            <img src={StepEncouragementGel} alt="course image" className="hidden md:block w-72 object-contain rounded-md" />
         </div>
 
-        <div className="m-3 p-4 rounded-2xl  bg-step-400 flex gap-x-10">
+        <div className="m-3 p-4 rounded-2xl  bg-step-400 flex gap-x-10 items-start justify-between">
             <div className="space-y-5">
                 <div className="p-2 pb-0">
                     <h1 className="text-2xl font-bold italic">STEP-Elternkurs Teil 2</h1>
@@ -75,7 +76,7 @@ export default function Courses() {
                     />
                 </div>
             </div>
-            <img src={StepEncouragementScientist} alt="course image" className="hidden md:block w-72 rounded-md" />
+            <img src={StepEncouragementScientist} alt="course image" className="hidden md:block w-72 object-contain rounded-md" />
         </div>
     </BlendingInDiv>
 }

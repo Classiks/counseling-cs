@@ -12,6 +12,7 @@ import HomepageTcm from "../Homepage/HomepageTcm";
 import ReadingTipsTcm from "../ReadingTips/ReadingTipsTcm";
 import ContactTcm from "../Contact/ContactTcm";
 import CoursesTcm from "../Courses/CoursesTcm";
+import AboutMeTcm from "../AboutMe/AboutMeTCM";
 
 import Mode from "../components/Mode";
 import { PAGES } from "../Constants";
@@ -61,6 +62,12 @@ const tcm_routes: IRoute[] = [
         element: <CoursesTcm />,
         icon: <DateRange />,
         title: PAGES.COURSES.name,
+    },
+    {
+        path: `/${Mode.TCM}/${PAGES.ABOUT.path}`,
+        element: <AboutMeTcm />,
+        icon: <ContactPage />,
+        title: PAGES.ABOUT.name,
     },
     {
         path: `/${Mode.TCM}/${PAGES.READING_TIPS.path}`,
