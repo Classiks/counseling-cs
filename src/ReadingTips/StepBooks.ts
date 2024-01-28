@@ -1,18 +1,40 @@
 import Book from "./IBookProp";
 
 const STEP_before_6: Book = {
-    title: "Step bis 6",
+    title: "STEP - Das Elternbuch: Die ersten 6 Jahre",
     image: "https://m.media-amazon.com/images/I/71fka7FN7HL._SL1396_.jpg",
     link: "https://www.amazon.de/-/en/Trudi-K%C3%BChn/dp/3407228775/",
     description: "Das Thema Kindererziehung ist zurzeit in aller Munde: \"Was mach ich bloß mit diesem Kind?\" In vielen Familien bestimmen Stress und Streit den Alltag. Eltern reagieren darauf mit einem Trommelfeuer von Ermahnungen, Kinder mit Trotz, Terror und tauben Ohren. Dass es auch anders geht, zeigt das STEP-Elterntraining, das seit drei Jahren auch in Deutschland, in Österreich und der Schweiz erfolgreich in Schulen, in Kindergärten, Praxen und Familienbildungseinrichtungen angeboten wird.\n\nVon der Geburt bis zum 6. Lebensjahr:\ndie kritischste Lebensphase für die soziale und charakterliche Entwicklung des Kindes.\n\nDas Buch hilft Eltern, kleine Kinder in ihrer emotionalen und sozialen Entwicklung zu verstehen und in der Erziehung den Grundstein zu legen für ein harmonisches Miteinander in der Familie.\n\n • Verhaltensmuster von kleinen Kindern verstehen\n • Mit kleinen Kindern kommunizieren: zuhören und sprechen\n • Ermutigen - Selbstbewusstsein entwickeln\n • Mit kleinen Kindern kooperieren\n • Disziplin als Lernprozess"
 }
 
 const STEP_after_6: Book = {
-    title: "Step ab 6",
+    title: "STEP - Das Elternbuch: Kinder ab 6 Jahre",
     image: "https://m.media-amazon.com/images/I/81A0akTGf0L._SL1500_.jpg",
     link: "https://www.amazon.de/-/en/Trudi-K%C3%BChn/dp/3407228759",
     description: "Das Thema Kindererziehung ist zurzeit in aller Munde: \"Was mach ich bloß mit diesem Kind?\" In vielen Familien bestimmen Stress und Streit den Alltag. Eltern reagieren darauf mit einem Trommelfeuer von Ermahnungen, Kinder mit Trotz, Terror und tauben Ohren. Dass es auch anders geht, zeigt das STEP-Elterntraining, das seit drei Jahren auch in Deutschland, in Österreich und der Schweiz erfolgreich in Schulen, in Kindergärten, Praxen und Familienbildungseinrichtungen angeboten wird.\n\nVon der Geburt bis zum 6. Lebensjahr:\ndie kritischste Lebensphase für die soziale und charakterliche Entwicklung des Kindes.\n\nDas Buch hilft Eltern, kleine Kinder in ihrer emotionalen und sozialen Entwicklung zu verstehen und in der Erziehung den Grundstein zu legen für ein harmonisches Miteinander in der Familie.\n\n • Verhaltensmuster von kleinen Kindern verstehen\n • Mit kleinen Kindern kommunizieren: zuhören und sprechen\n • Ermutigen - Selbstbewusstsein entwickeln\n • Mit kleinen Kindern kooperieren\n • Disziplin als Lernprozess"
 }
+
+const STEP_teenager: Book = {
+    title: "Leben mit Teenagern",
+    image: "https://m.media-amazon.com/images/I/71+2IBvBCeL._SL1386_.jpg",
+    link: "https://www.amazon.de/-/en/Trudi-K%C3%BChn/dp/340722883X",
+    description: "Der Schritt von der Erziehung eines Kindes zur Erziehung eines jungen Erwachsenen ist für die meisten Eltern schwierig. Möglicherweise sind die Eltern traurig, ihren Sohn oder ihre Tochter aus den Kinderschuhen herauswachsen zu sehen. Es fällt ihnen schwer, die zunehmende Unabhängigkeit ihres Teenagers zu akzeptieren. Die Eltern machen sich oft Sorgen wegen Schulnoten, Freunden, Essgewohnheiten, Computerspielen, Fernsehen, Gewalt, Drogen und Sex. Sie fürchten grundsätzlich um ihren Einfluss auf ihren Teenager, tendieren gleichzeitig dazu, ihrem oft fremd gewordenen Nachwuchs aus dem Weg zu gehen. \n\nSTEP, \"Leben mit Teenagern\" hilft Eltern, den erzieherischen Herausforderungen während der Teenagerjahre gerecht zu werden und eine bessere Beziehung zu ihrem Teenager aufzubauen - sowohl bei normalen Alltagsschwierigkeiten als auch bei größeren Erziehungsproblemen. Lebensbejahend und wertschätzend ist die Einstellung, die dem STEP-Elternbuch \"Leben mit Teenagern\" zugrunde liegt."
+}
+
+const STEP_erzieher: Book = {
+    title: "STEP - Das Buch für Erzieher und Erzieherinnen: Kinder wertschätzend und kompetent erziehen",
+    image: "https://m.media-amazon.com/images/I/51iYTpUoiEL._SL1000_.jpg",
+    link: "https://www.amazon.de/-/en/InSTEP-Weiterbildungsinstitut/dp/3834650080/",
+    description: "Das erfolgreiche STEP-Programm gibt es auch für Erzieher/-innen - zur Stärkung ihrer Handlungskompetenz und zur Reduzierung von Stress beim Umgang mit einzelnen Kindern oder Gruppen. STEP stärkt die effektive Zusammenarbeit im Team ebenso wie die Erziehungspartnerschaft mit den Eltern."
+}
+
+const STEP_lehrer: Book = {
+    title: "STEP - Das Buch für Lehrer/innen: Wertschätzend und professionell den Schulalltag gestalten",
+    image: "https://m.media-amazon.com/images/I/61xhcsH65RL._SL1375_.jpg",
+    link: "https://www.amazon.de/-/en/InSTEP-Weiterbildungsinstitut/dp/3834650080/",
+    description: "Das erfolgreiche STEP-Programm gibt es auch für Lehrerinnen und Lehrer. Im Vordergrund steht die Verbesserung des Schulklimas für alle Beteiligten: eine Atmosphäre, die geprägt ist von Respekt, Kooperation und weniger Stress im Schulalltag.\n\nSTEP ist ein integriertes Programm zur Erziehung, das sich in Deutschland als Elterntraining bereits breit durchgesetzt hat.Neben Kursen und Büchern für Eltern und Erzieherinnen, gibt es eine nach den bewährten STEP- Prinzipien aufgebaute praxisorientierte Lehrerfortbildung.Auf der Basis einer grundsätzlich wertschätzenden Haltung lernen Lehrerinnen und Lehrer,\n • effektiv und kompetent zu arbeiten, \n • ihr Selbstwirksamkeitsgefühl und ihr Selbstwertgefühl zu stärken und\n • die Zusammenarbeit mit Eltern und Kollegen zu professionalisieren.\n\n In dieser erweiterten Neuauflage wird verstärkt der Umgang mit digitalen Medien thematisiert.\n\n STEP wurde in den USA von den Psychologen Dr.Don Dinkmeyer Sr., Dr.Gary McKay und Dr.Don Dinkmeyer Jr.entwickelt.Für Lehrer / innen aller Schulformen, Referendare, Studenten und Eltern."
+}   
+
 
 const Systemisch_Schlippe: Book = {
     title: "Lehrbuch der systemischen Therapie und Beratung I und II",
@@ -24,5 +46,8 @@ const Systemisch_Schlippe: Book = {
 export {
     STEP_before_6,
     STEP_after_6,
+    STEP_teenager,
+    STEP_erzieher,
+    STEP_lehrer,
     Systemisch_Schlippe
 }

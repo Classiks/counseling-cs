@@ -11,7 +11,7 @@ export default function Book({ title, link, image, description }: IBookProp) {
             className="w-48 h-72 mb-4 cursor-pointer"
             onClick={() => window.open(link, "_blank")}
         />
-        <span className="whitespace-pre-wrap" >
+        <span className="whitespace-pre-wrap bg-gray-100 bg-opacity-80 p-2 rounded-md" >
             {description}
         </span>
     </div>
