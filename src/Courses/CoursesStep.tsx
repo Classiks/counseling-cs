@@ -1,6 +1,6 @@
 import BlendingInDiv from '../components/BlendingInDiv';
 import StepEncouragementGel from "../assets/images/cartoon-encouragement-hairgel.png";
-import StepEncouragementScientist from "../assets/images/cartoon-encouragement-scientist.png";
+// import StepEncouragementScientist from "../assets/images/cartoon-encouragement-scientist.png";
 import StepParentCourse2 from "../assets/images/step-elterkurs-2.png";
 import DateAccordeon from './DateAccordeon';
 import Accordeon from '../components/Accordeon';

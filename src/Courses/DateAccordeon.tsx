@@ -13,7 +13,7 @@ interface IDateAccordeon {
     headingClassName?: string,
     dates: IDateData[]
 }
-export default function DateAccordeon({ className="", headingClassName="", dates }: IDateAccordeon) {
+export default function DateAccordeon({ className="", dates }: IDateAccordeon) {
     return <Accordeon
         className={twMerge("p-2 mt-2", className)}
         heading="Alle Termine"
