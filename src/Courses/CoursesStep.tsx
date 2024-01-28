@@ -1,6 +1,7 @@
 import BlendingInDiv from '../components/BlendingInDiv';
 import StepEncouragementGel from "../assets/images/cartoon-encouragement-hairgel.png";
 import StepEncouragementScientist from "../assets/images/cartoon-encouragement-scientist.png";
+import StepParentCourse2 from "../assets/images/step-elterkurs-2.png";
 import DateAccordeon from './DateAccordeon';
 import Accordeon from '../components/Accordeon';
 
@@ -22,14 +23,20 @@ export default function Courses() {
                 <div>
                     <Accordeon
                         heading="Inhalte"
-                        className="bg-step-200 p-2 max-w-96"
+                        className="bg-step-200 p-2"
+                        headingClassName="font-bold text-lg"
                     >
                         <p className="flex-1">
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos excepturi ratione, enim corporis exercitationem ipsa aperiam velit. Itaque porro sint fugiat nam. Dignissimos mollitia nam saepe animi molestias, cupiditate itaque facere illo distinctio explicabo tenetur voluptate error labore porro eum nostrum perspiciatis aspernatur qui, dolores omnis facilis. Explicabo voluptatem possimus assumenda nemo dolore, est eveniet animi ut, dignissimos quos harum.
+                            <ul className="[&_li]:list-disc [&_li]:ml-5">
+                                <li>Wir lernen, uns und unsere Kinder besser zu verstehen.</li>
+                                <li>Unsere persönlichen Wertvorstellungen, Überzeugungen und Gefühle.</li>
+                                <li>Wir ermutigen unsere Kinder und uns selbst.</li>
+                                <li>Wir hören unseren Kindern zu und reden mit ihnen.</li>
+                            </ul>
                         </p>
                     </Accordeon>
                     <DateAccordeon
-                        className="bg-step-200 p-2 max-w-96"
+                        className="bg-step-200 p-2 w-full"
                         dates={[
                             { day: "Dienstag", date: "09.04.2024" },
                             { day: "Dienstag", date: "16.04.2024" },
@@ -58,11 +65,14 @@ export default function Courses() {
                 <div>
                     <Accordeon
                         heading="Inhalte"
-                        className="bg-step-200 p-2 max-w-96"
+                        className="bg-step-200 p-2"
+                        headingClassName="font-bold text-lg"
                     >
-                        <p className="flex-1">
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos excepturi ratione, enim corporis exercitationem ipsa aperiam velit. Itaque porro sint fugiat nam. Dignissimos mollitia nam saepe animi molestias, cupiditate itaque facere illo distinctio explicabo tenetur voluptate error labore porro eum nostrum perspiciatis aspernatur qui, dolores omnis facilis. Explicabo voluptatem possimus assumenda nemo dolore, est eveniet animi ut, dignissimos quos harum.
-                        </p>
+                        <ul className="[&_li]:list-disc [&_li]:ml-5">
+                            <li>Wir helfen unseren Kindern, zu kooperieren.</li>
+                            <li>Sinnvolle Disziplin</li>
+                            <li>Was machen wir, wenn…?</li>
+                        </ul>
                     </Accordeon>
                     <DateAccordeon
                         className="bg-step-200 p-2 max-w-96"
@@ -76,7 +86,7 @@ export default function Courses() {
                     />
                 </div>
             </div>
-            <img src={StepEncouragementScientist} alt="course image" className="hidden md:block w-72 object-contain rounded-md" />
+            <img src={StepParentCourse2} alt="course image" className="hidden md:block w-72 object-contain rounded-md bg-white" />
         </div>
     </BlendingInDiv>
 }

@@ -1,6 +1,7 @@
 import { ReactNode, useEffect, useState } from "react";
 
-import Logo from "../assets/images/chat_gpt_logo_cropped.png";
+import LogoOne from "../assets/images/Logo_CS_1.png";
+import LogoTwo from "../assets/images/Logo_CS_2.png";
 
 import UrlParser from '../components/UrlParser';
 
@@ -24,17 +25,28 @@ export default function Navbar({ className }: INavbar) {
         ModeController.subscribe(setMode);
     }, []);
 
+    const [ logoPath, setLogoPath ] = useState(LogoOne);
+
     const navigate = useNavigate();
 
     return <div className={`w-screen fixed bottom-0 md:top-0 z-10 flex items-center shadow-lg border-t md:border-b md:border-t-0 border-white justify-between bg-gradient-to-l ${getBackgroundGradient(mode)} ` + className}>
         <div className="flex gap-4 items-center ml-4">
             <img 
-                src={Logo} alt="logo" 
+                src={logoPath} alt="logo" 
                 className="h-12 cursor-pointer hover:scale-105 active:scale-110 transition-transform duration-500"
                 onClick={() => {
                     navigate("/");
+                    // setLogoPath(logoPath === LogoOne ? LogoTwo : LogoOne);
                 }}
             />
+            <button
+                className="text-3xl font-bold"
+                onClick={() => {
+                    setLogoPath(logoPath === LogoOne ? LogoTwo : LogoOne);
+                }}
+            >
+                x
+            </button>
             <p className="text-3xl font-bold hidden 2xl:block">Dr. med. Cordelia Schulz</p>
         </div>
         <div className="flex items-center">

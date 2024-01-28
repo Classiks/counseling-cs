@@ -1,4 +1,4 @@
-import { ReactNode, useState } from "react";
+import { ReactNode, useEffect, useRef, useState } from "react";
 
 import { KeyboardArrowDown, KeyboardArrowUp } from "@mui/icons-material";
 
@@ -13,9 +13,19 @@ export default function Accordeon({ heading, children, className, headingClassNa
     const [isOpen, setIsOpen] = useState(false);
     const openClassName: string = "max-h-[3000px] opacity-100";
     const closedClassName: string = "max-h-0 opacity-0 overflow-hidden";
+    const ref = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        if (isOpen) {
+            ref.current?.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+        }
+    }, [isOpen]);
 
 
-    return <div>
+    return <div ref={ref}>
         <div
             className={"flex flex-col rounded-lg " + className}
         >
@@ -35,7 +45,7 @@ export default function Accordeon({ heading, children, className, headingClassNa
 
             <div className={childrenClassName}>
                 <div
-                    className={`items-center transition-all duration-1000 ${isOpen ? openClassName : closedClassName}`}
+                    className={`items-center transition-all duration-500 ${isOpen ? openClassName : closedClassName}`}
                 >
                     {children}
                 </div>
