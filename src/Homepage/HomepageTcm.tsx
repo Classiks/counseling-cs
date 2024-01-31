@@ -141,11 +141,11 @@ export default function Homepage() {
 
             </div>
 
-            <div className="bg-tcm-100 p-2 bg-opacity-80 rounded-lg">
-                <h2 className="text-2xl">
-                    Kleiner philosophischer Exkurs
-                </h2>
-
+            <Accordeon
+                heading="Kleiner philosophischer Exkurs"
+                className="bg-tcm-100 rounded-lg box-border p-2 bg-opacity-80"
+                headingClassName="text-2xl font-bold mb-2"
+            >
                 <p>Die <span className="font-bold">Drei Lehren</span> des Landes sind der <span className="font-bold">Konfuzianismus, der Daoismus und der Buddhismus</span>.</p>
 
                 <ul className="[&_li]:list-disc [&_li]:ml-5 space-y-1">
@@ -165,7 +165,7 @@ export default function Homepage() {
                         Das „Nicht-Handeln“ oder „Nicht-Erzwingen“ bedeutet genaugenommen die „Enthaltung eines gegen die Natur gerichteten Handelns“.
                     </li>
                 </ul>
-            </div>
+            </Accordeon>
         </div>
     </BlendingInDiv>
 }

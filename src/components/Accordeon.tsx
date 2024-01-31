@@ -16,16 +16,15 @@ export default function Accordeon({ heading, children, className, headingClassNa
     const ref = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
-        if (isOpen) {
-            ref.current?.scrollIntoView({
+        if (isOpen && ref.current) {
+            ref.current.scrollIntoView({
                 behavior: "smooth",
                 block: "start"
             });
         }
     }, [isOpen]);
 
-
-    return <div ref={ref}>
+    return <div ref={ref} className="md:scroll-mt-20">
         <div
             className={"flex flex-col rounded-lg " + className}
         >
