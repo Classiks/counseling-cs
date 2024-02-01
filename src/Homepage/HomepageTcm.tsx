@@ -1,6 +1,7 @@
 import Accordeon from "../components/Accordeon";
 import BlendingInDiv from "../components/BlendingInDiv";
 import AkupunkturImage from "../assets/images/akupunktur.jpg";
+import { HashLink as Link } from "react-router-hash-link";
 
 import YingYang from "../assets/images/yin-yang-green-gpt.png";
 import Midfullness from "../assets/images/mindfulness-svg.svg";
@@ -8,15 +9,45 @@ import Midfullness from "../assets/images/mindfulness-svg.svg";
 export default function Homepage() {
     return <BlendingInDiv>
         <div className="w-full p-5 flex flex-col gap-y-10">
+
             <h1 className="text-3xl font-bold mx-auto w-fit">
                 Traditionelle Chinesische Medizin
             </h1>
 
             <div className="bg-tcm-100 p-2 bg-opacity-80 rounded-lg">
                 <h2 className="text-2xl">
-                    TCM und Chinesische Medizin
+                    Chinesische Tradition und Lebenspflege
                 </h2>
 
+                <div className="flex flex-col md:flex-row gap-3 items-center">
+                    <ul className="[&_li]:list-disc [&_li]:ml-5 space-y-1">
+                        <li>
+                            Der traditionsbewusste chinesische Mensch strebt nicht nach dem Glück, sondern nach dem “Im-Fluss-Sein“, er denkt nicht das Ideal, sondern das Vitale – und dabei sieht er das Leben nicht in den extremen Gegensätzen Glück/Unglück, Geburt/Tod, sondern in dem „Dazwischen“, in dem sich das wahre Leben, Achtsamkeit und Bewusstheit findet.
+                        </li>
+                        <li>
+                            Wir alle sind verantwortlich für die Förderung der eigenen Lebenskräfte und spielen somit die zentrale Rolle bei der Gesunderhaltung oder auch im Heilungsprozess. Lebenspflege (yangsheng) ist ein wichtiges Thema in China und fußt auf den <Link to="/tcm#5-saeulen-tcm" className="font-bold cursor-pointer">klassischen „5 Säulen“</Link>, die auch die Grundlage der chinesischen Medizin bilden. So kann im Alltag mit bewusster Ernährung, Zubereitung von Tees, Qigong und Selbstmassage dazu beigetragen werden, das körperliche und seelische Gleichgewicht zu finden und zu erhalten.
+                        </li>
+                        <li>
+                            „Jade, die nicht bearbeitet wird, wird nicht zu einem Gefäß.“
+                        </li>
+                    </ul>
+
+                    <img
+                        src={Midfullness}
+                        alt=""
+                        className=" w-52 h-52 rounded-lg"
+                    />
+                </div>
+
+            </div>
+
+            <hr className="bg-tcm-300 h-1 w-4/5 rounded mx-auto" />
+
+            <Accordeon
+                heading="TCM und Chinesische Medizin"
+                className="bg-tcm-100 rounded-lg box-border p-2 bg-opacity-80"
+                headingClassName="text-2xl font-bold mb-2"
+            >
                 <div className="flex flex-col md:flex-row gap-3 items-center">
                     <ul className="[&_li]:list-disc [&_li]:ml-5 space-y-1">
                         <li>
@@ -37,9 +68,11 @@ export default function Homepage() {
                     />
 
                 </div>
-            </div>
+            </Accordeon>
 
-            <div className="flex flex-col gap-y-5">
+            <hr className="bg-tcm-300 h-1 w-4/5 rounded mx-auto" />
+
+            <div className="flex flex-col gap-y-5" id="5-saeulen-tcm">
                 <h2 className="text-2xl">
                     Die „5 Säulen“ oder 5 Methoden der Chinesischen Medizin:
                 </h2>
@@ -114,32 +147,7 @@ export default function Homepage() {
 
             </div>
 
-            <div className="bg-tcm-100 p-2 bg-opacity-80 rounded-lg">
-                <h2 className="text-2xl">
-                    Chinesische Tradition und Lebenspflege
-                </h2>
-
-                <div className="flex flex-col md:flex-row gap-3 items-center">
-                    <ul className="[&_li]:list-disc [&_li]:ml-5 space-y-1">
-                        <li>
-                            Der traditionsbewusste chinesische Mensch strebt nicht nach dem Glück, sondern nach dem “Im-Fluss-Sein“, er denkt nicht das Ideal, sondern das Vitale – und dabei sieht er das Leben nicht in den extremen Gegensätzen Glück/Unglück, Geburt/Tod, sondern in dem „Dazwischen“, in dem sich das wahre Leben, Achtsamkeit und Bewusstheit findet.
-                        </li>
-                        <li>
-                            Wir alle sind verantwortlich für die Förderung der eigenen Lebenskräfte und spielen somit die zentrale Rolle bei der Gesunderhaltung oder auch im Heilungsprozess. Lebenspflege (yangsheng) ist ein wichtiges Thema in China und eine bewusste Ernährung, Zubereitung von Tees, Qigong und Selbstmassage helfen dabei, das körperliche und seelische Gleichgewicht zu finden und zu erhalten.
-                        </li>
-                        <li>
-                            „Jade, die nicht bearbeitet wird, wird nicht zu einem Gefäß.“
-                        </li>
-                    </ul>
-
-                    <img
-                        src={Midfullness}
-                        alt=""
-                        className=" w-52 h-52 rounded-lg"
-                    />
-                </div>
-
-            </div>
+            <hr className="bg-tcm-300 h-1 w-4/5 rounded mx-auto" />
 
             <Accordeon
                 heading="Kleiner philosophischer Exkurs"

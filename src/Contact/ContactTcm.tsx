@@ -1,7 +1,6 @@
 import BlendingInDiv from "../components/BlendingInDiv";
 import { Phone, Mail, LocationOn, Public } from "@mui/icons-material";
 
-
 export default function ContactTcm() {
     return <BlendingInDiv className="p-5">
         <h1 className="text-3xl mb-2">
