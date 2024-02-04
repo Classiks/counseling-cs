@@ -1,9 +1,14 @@
 import BlendingInDiv from "../components/BlendingInDiv";
 import { Phone, Mail, LocationOn, Public } from "@mui/icons-material";
+import { Helmet } from "react-helmet";
 
 
 export default function ContactDefault() {
     return <BlendingInDiv className="p-5">
+        <Helmet>
+            <title>Kontakt - STEP-Programm</title>
+            <meta name="description" content="Kontaktieren Sie uns für weitere Informationen zum STEP-Programm, zur Anmeldung für Kurse oder bei Fragen zur Elternbildung und Familienförderung." />
+        </Helmet>
         <h1 className="text-3xl mb-2">
             Kontakt
         </h1>

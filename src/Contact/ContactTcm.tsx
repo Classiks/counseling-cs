@@ -1,8 +1,13 @@
 import BlendingInDiv from "../components/BlendingInDiv";
 import { Phone, Mail, LocationOn, Public } from "@mui/icons-material";
+import { Helmet } from "react-helmet";
 
 export default function ContactTcm() {
     return <BlendingInDiv className="p-5">
+        <Helmet>
+            <title>Kontakt - Traditionelle Chinesische Medizin (TCM)</title>
+            <meta name="description" content="Nehmen Sie Kontakt auf für mehr Informationen zu TCM-Behandlungen, Kursen und Beratungen mit Dr. med. Cordelia Schulz. Beginnen Sie Ihren Weg zu besserer Gesundheit und Lebensqualität." />
+        </Helmet>
         <h1 className="text-3xl mb-2">
             Kontakt
         </h1>

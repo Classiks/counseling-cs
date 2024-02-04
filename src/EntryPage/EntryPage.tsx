@@ -4,8 +4,14 @@ import Logo from "../assets/images/icon_v1_cropped.png";
 
 import { motion } from "framer-motion";
 
+import { Helmet } from "react-helmet";
+
 export default function EntryPage() {
     return <AppearingDiv className="flex flex-col xl:flex-row w-full h-screen relative">
+        <Helmet>
+            <title>Dr. med. Cordelia Schulz - Förderung von Familienleben und ganzheitlicher Gesundheit</title>
+            <meta name="description" content="Entdecken Sie mit Dr. med. Cordelia Schulz Ansätze zur Familienförderung durch das STEP-Programm und zur Steigerung des Wohlbefindens mit Traditioneller Chinesischer Medizin (TCM). Beginnen Sie Ihre Reise zu einem ausgeglichenen und gesunden Lebensstil." />
+        </Helmet>
         <GoToButtonArea className="bg-step">
             <SwitchButtonStep />
         </GoToButtonArea>

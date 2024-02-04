@@ -6,8 +6,14 @@ import { HashLink as Link } from "react-router-hash-link";
 import YingYang from "../assets/images/yin-yang-green-gpt.png";
 import Midfullness from "../assets/images/mindfulness-svg.svg";
 
+import { Helmet } from "react-helmet";
+
 export default function Homepage() {
     return <BlendingInDiv>
+        <Helmet>
+            <title>Traditionelle Chinesische Medizin (TCM) - Dr. med. Cordelia Schulz</title>
+            <meta name="description" content="Tauchen Sie ein in die Welt der Traditionellen Chinesischen Medizin (TCM) mit Dr. med. Cordelia Schulz. Erfahren Sie mehr über Behandlungsmethoden, Kurse und das ganzheitliche Verständnis von Gesundheit." />
+        </Helmet>
         <div className="w-full p-5 flex flex-col gap-y-10">
 
             <h1 className="text-3xl font-bold mx-auto w-fit">

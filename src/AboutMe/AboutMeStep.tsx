@@ -1,9 +1,14 @@
 import BlendingInDiv from "../components/BlendingInDiv"
+import { Helmet } from "react-helmet";
 
 import Portrait from "../assets/images/cs-portrait-standing.jpg";
 
 export default function AboutMeStep() {
     return <BlendingInDiv>
+        <Helmet>
+            <title>Über Cordelia Schulz - Expertin für systemische Elternbildung (STEP)</title>
+            <meta name="description" content="Lernen Sie Cordelia Schulz kennen, Dozentin für das STEP-Programm. Entdecken Sie ihre Philosophie und Ansätze, um Familien zu stärken." />
+        </Helmet>
         <div className="flex flex-col md:flex-row items-center md:items-start gap-10 p-4 md:p-10">
             <div className="w-80 h-80 xs:w-96 xs:h-96 md:w-1/3 md:h-auto rounded-full overflow-hidden">
                 <Image className="-translate-y-8 md:translate-y-0" />

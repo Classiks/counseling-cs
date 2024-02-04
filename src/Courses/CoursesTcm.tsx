@@ -4,9 +4,14 @@ import DailyLife from "../assets/images/tcm-daily-family-life.png";
 import ForYouAndMe from "../assets/images/tcm-for-you-and-me.png";
 import DateAccordeon from './DateAccordeon';
 import Accordeon from '../components/Accordeon';
+import { Helmet } from 'react-helmet';
 
 export default function Courses() {
     return <BlendingInDiv className="flex flex-col gap-x-16">
+        <Helmet>
+            <title>TCM Kurse - Traditionelle Chinesische Medizin</title>
+            <meta name="description" content="Informieren Sie sich über die angebotenen Kurse in Traditioneller Chinesischer Medizin (TCM) für Gesundheitspflege, Selbstfürsorge und präventive Methoden." />
+        </Helmet>
         <div className="m-3 p-4 rounded-2xl  bg-tcm-400 flex gap-x-10 items-start justify-between">
             <div className="space-y-5">
                 <div className="p-2 pb-0">

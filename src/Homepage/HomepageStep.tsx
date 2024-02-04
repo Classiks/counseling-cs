@@ -14,6 +14,8 @@ import ParentChildConcrete from "../assets/images/parent-child-concrete.jpg";
 import ChildOnArm from "../assets/images/adult-child-on-arm-black-white.jpg";
 import NewbornFist from "../assets/images/adult-child-fist.jpg";
 
+import { Helmet } from 'react-helmet';
+
 const elternmeinungen: string[] = [
     "Je mehr ein Kind beginnt Grenzen auszutesten, desto klarer muss man sie abstecken. Aber mit Respekt und Freundlichkeit – das ist die Basis des STEP Programms.“\n- Natalie Bettermann, Interview in „Eltern“",
     "„Meine Erwartungen wurden übertroffen, da es eine nette, offene Elternrunde war mit einer tollen Atmosphäre und viel Zeit zum Austausch über aktuelle Alltagsthemen.“\n- Teilnehmerin, STEP Kurs, Kita Rübenkamp, Hamburg",
@@ -121,6 +123,10 @@ export default function Homepage() {
     const scientificInterfaces: Content[] = scientificContent.map(evaluation => { return { content: evaluation } });
 
     return <BlendingInDiv className="space-y-16">
+        <Helmet>
+            <title>STEP - Systemische Elternbildung und Familienförderung</title>
+            <meta name="description" content="Erfahren Sie mehr über das STEP-Programm für Eltern und Erziehende. Entdecken Sie Kurse, Ressourcen und Techniken für eine wertschätzende und effektive Kindererziehung und Familienkommunikation." />
+        </Helmet>
         <div className="md:float-end pt-10 md:p-0 w-fit mx-auto">
             <StepLogoHomepage />
         </div>

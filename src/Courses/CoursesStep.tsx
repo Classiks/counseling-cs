@@ -4,10 +4,15 @@ import StepEncouragementGel from "../assets/images/cartoon-encouragement-hairgel
 import StepParentCourse2 from "../assets/images/step-elterkurs-2.png";
 import DateAccordeon from './DateAccordeon';
 import Accordeon from '../components/Accordeon';
+import { Helmet } from 'react-helmet';
 
 export default function Courses() {
     // TOdO: Image stretches when accordeon
     return <BlendingInDiv className="flex flex-col gap-x-16">
+        <Helmet>
+            <title>STEP Kurse - Termine und Informationen</title>
+            <meta name="description" content="Finden Sie alle aktuellen Termine und detaillierte Informationen zu den STEP-Elternkursen. Verbessern Sie Ihre Erziehungs- und Kommunikationsfähigkeiten für ein harmonisches Familienleben." />
+        </Helmet>
         <div className="m-3 p-4 rounded-2xl  bg-step-400 flex gap-x-10 items-start justify-between">
             <div className="space-y-5">
                 <div className="p-2 pb-0">
