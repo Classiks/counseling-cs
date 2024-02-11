@@ -6,6 +6,7 @@ import NavigationButton from './NavigationButton';
 import TabButton from './TabButton';
 
 import Interval from '../components/Interval';
+import { twMerge } from 'tailwind-merge';
 
 export interface ISlideshowProps {
     className?: string,
@@ -37,7 +38,7 @@ export default function Slideshow({ contents, className, delay }: ISlideshowProp
     }, []);
 
 
-    className = "relative " + className;
+    const _className: string = twMerge("relative " + className);
 
     return <BackgroundImageDiv className={className} image={contents[currentSlide].image}>
         <div className="px-2">{
