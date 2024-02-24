@@ -109,7 +109,7 @@ export default function Courses() {
                         headingClassName="font-bold text-lg"
                     >
                         <p className="flex-1">
-                            Nach einer kurzen Einführung in die Grundlagen der Chinesischen Medizin werden einfache, aber wirkungsvolle Übungen, Methoden und Rezepte vermittelt, die helfen, das "Gute lange Leben" zu pflegen und in die "eigene Mitte zu finden
+                            Nach einer kurzen Einführung in die Grundlagen der Chinesischen Medizin werden einfache, aber wirkungsvolle Übungen, Methoden und Rezepte vermittelt, die helfen, das "Gute lange Leben" zu pflegen und in die eigene Mitte zu finden
                         </p>
                     </Accordeon>
                 </div>

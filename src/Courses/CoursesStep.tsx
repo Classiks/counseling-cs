@@ -7,9 +7,7 @@ import { Helmet } from 'react-helmet';
 import SignupButton from './SignupButton';
 import VhsLocation from './VhsLocation';
 
-
 export default function Courses() {
-    // TOdO: Image stretches when accordeon
     return <BlendingInDiv className="flex flex-col gap-x-16">
         <Helmet>
             <title>STEP Kurse - Termine und Informationen</title>
@@ -36,10 +34,33 @@ export default function Courses() {
                     >
                         <p className="flex-1">
                             <ul className="[&_li]:list-disc [&_li]:ml-5">
-                                <li>Wir lernen, uns und unsere Kinder besser zu verstehen.</li>
-                                <li>Unsere persönlichen Wertvorstellungen, Überzeugungen und Gefühle.</li>
-                                <li>Wir ermutigen unsere Kinder und uns selbst.</li>
-                                <li>Wir hören unseren Kindern zu und reden mit ihnen.</li>
+                                <li>Einführungstreffen: Kennenlernen und Rahmen abstecken</li>
+                                <li>
+                                    Wir lernen, uns und unsere Kinder besser zu verstehen <br />
+                                    Welcher Erziehungsstil wird uns helfen, unser Ziel zu erreichen? <br />
+                                    Was können wir von unserem Kind erwarten? <br />
+                                    Weshalb zeigt unser Kind Fehlverhalten? <br />
+                                    Wie können wir ein besseres Verhältnis zu unserem Kind entwickeln?
+                                </li>
+                                <li>
+                                    Unsere persönlichen Wertvorstellungen, Überzeugungen und Gefühle <br />
+                                    Was können wir tun, wenn unser Kind Fehlverhalten zeigt? <br />
+                                    Wodurch werden unsere Kinder entmutigt? <br />
+                                    Woher kommen persönliche Wertvorstellungen und Überzeugungen? <br />
+                                    Woher kommen Gefühle? <br />
+                                    Wie können wir uns und unseren Kindern helfen?
+                                </li>
+                                <li>
+                                    Wir ermutigen unsere Kinder und uns selbst <br />
+                                    Wie können wir unser Kind ermutigen? <br />
+                                    Was ist der Unterschied zwischen Lob und Ermutigung? <br />
+                                    Gibt es andere Möglichkeiten der Ermutigung? <br />
+                                    Entwickeln Sie den Mut, nicht perfekt zu sein
+                                </li>
+                                <li>
+                                    Wir hören unseren Kindern zu <br />
+                                    Wie können wir gute Zuhörer sein?
+                                </li>
                             </ul>
                         </p>
                     </Accordeon>
@@ -78,13 +99,36 @@ export default function Courses() {
                         headingClassName="font-bold text-lg"
                     >
                         <ul className="[&_li]:list-disc [&_li]:ml-5">
-                            <li>Wir helfen unseren Kindern, zu kooperieren.</li>
-                            <li>Sinnvolle Disziplin</li>
-                            <li>Was machen wir, wenn…?</li>
+                            <li>
+                                Wir reden mit unseren Kindern <br />
+                                Wie können wir mit unserem Kind sprechen, so dass es uns zuhört?
+                            </li>
+                            <li>
+                                Wir helfen unseren Kindern, zu kooperieren <br />
+                                Wie können wir unseren Kindern helfen, zu kooperieren? <br />
+                                Wie können wir und unser Kind gemeinsam Probleme lösen? <br />
+                                Wie können »Familienkonferenzen« helfen, dass unser Kind kooperiert?
+                            </li>
+                            <li>
+                                Sinnvolle Disziplin <br />
+                                Sind Disziplin ausüben und Strafen das Gleiche? <br />
+                                Wie üben wir Disziplin aus? <br />
+                                Wie können wir Konsequenzen einsetzen?
+                            </li>
+                            <li>
+                                Was machen wir, wenn…? <br />
+                                Wie entscheiden wir, was wir tun sollen? <br />
+                                Wie verhalten wir uns beim Thema »Schule«? <br />
+                                Wie verhalten wir uns beim Umgang mit Medien? <br />
+                                Wie verhalten wir uns bei anderen Problemen?
+                            </li>
+                            <li>
+                                Abschluss: Wie geht es weiter? Gelerntes sichern. Weitere Schritte planen.
+                            </li>
                         </ul>
                     </Accordeon>
                     <DateAccordeon
-                        className="bg-step-200 p-2 max-w-96"
+                        className="bg-step-200 p-2"
                         dates={[
                             { day: "Dienstag", date: "25.06.2024" },
                             { day: "Dienstag", date: "02.07.2024" },
