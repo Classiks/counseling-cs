@@ -5,6 +5,8 @@ import ForYouAndMe from "../assets/images/tcm-for-you-and-me.png";
 import DateAccordeon from './DateAccordeon';
 import Accordeon from '../components/Accordeon';
 import { Helmet } from 'react-helmet';
+import SignupButton from './SignupButton';
+import VhsLocation from './VhsLocation';
 
 export default function Courses() {
     return <BlendingInDiv className="flex flex-col gap-x-16">
@@ -18,11 +20,12 @@ export default function Courses() {
                     <h1 className="text-2xl font-bold italic">Fit für den Sommer</h1>
                     <h2>VHS-Kursnummer: 241303017</h2>
                 </div>
+                <SignupButton link="https://www.vhs-offenburg.de/programm/allgemeinbildung/kurs/Fit-fuer-den-Sommer/241303017" />
                 <div>
                     <p> Termine: Mittwoch, 18:00 - 19:30</p>
-                    <p> Ort: {<VhsLink />}  302 Seminarraum </p>
                     <p> Kursstart: 06.03.2024 </p>
                     <p> Kursende: 08.05.2024 </p>
+                    <VhsLocation room="101" />
                 </div>
                 <div>
                     <Accordeon
@@ -68,9 +71,10 @@ export default function Courses() {
                     <h1 className="text-2xl font-bold italic">Chinesische und naturheilkundliche Medizin einfach im Familienalltag</h1>
                     <h2>VHS-Kursnummer: 241303018</h2>
                 </div>
+                <SignupButton link="https://www.vhs-offenburg.de/programm/allgemeinbildung/kurs/Chinesische-und-naturheilkundliche-Medizin-einfach-im-Familienalltag-umgesetzt/241303018" />
                 <div>
                     <p> Termin: Donnerstag, 11.04.2024, 9:00-11:00 </p>
-                    <p> Ort: {<VhsLink />}  101 Seminarraum </p>
+                    <VhsLocation room="101" />
                 </div>
                 <div>
                     <Accordeon
@@ -93,9 +97,10 @@ export default function Courses() {
                     <h1 className="text-2xl font-bold italic">Online: TCM für dich und mich</h1>
                     <h2>VHS-Kursnummer: 241303019</h2>
                 </div>
+                    <SignupButton link="https://www.vhs-offenburg.de/programm/allgemeinbildung/kurs/Online-TCM-fuer-dich-und-mich/241303019" />
                 <div>
                     <p> Termin: Donnerstag, 16.05.2024, 17:00-18:30 </p>
-                    <p> <span className="font-bold">Online</span>, Webinar Zoom 07, <VhsLink /></p>
+                    <p> <span className="font-bold">Online</span>, Webinar Zoom 07</p>
                 </div>
                 <div>
                     <Accordeon
@@ -114,13 +119,3 @@ export default function Courses() {
     </BlendingInDiv>
 }
 
-function VhsLink() {
-    return <a
-        href="https://www.vhs-offenburg.de/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="font-bold text-slate-700"
-    >
-        VHS Offenburg
-    </a>
-}

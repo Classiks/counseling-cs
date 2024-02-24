@@ -1,10 +1,12 @@
 import BlendingInDiv from '../components/BlendingInDiv';
 import StepEncouragementGel from "../assets/images/cartoon-encouragement-hairgel.png";
-// import StepEncouragementScientist from "../assets/images/cartoon-encouragement-scientist.png";
 import StepParentCourse2 from "../assets/images/step-elterkurs-2.png";
 import DateAccordeon from './DateAccordeon';
 import Accordeon from '../components/Accordeon';
 import { Helmet } from 'react-helmet';
+import SignupButton from './SignupButton';
+import VhsLocation from './VhsLocation';
+
 
 export default function Courses() {
     // TOdO: Image stretches when accordeon
@@ -19,11 +21,12 @@ export default function Courses() {
                     <h1 className="text-2xl font-bold italic">STEP-Elternkurs Teil 1</h1>
                     <h2>VHS-Kursnummer: 241105120</h2>
                 </div>
+                <SignupButton link="https://www.vhs-offenburg.de/programm/allgemeinbildung/kurs/Eltern-VHS-STEP-Elternkurs-Teil-1/241105120" />
                 <div>
                     <p> Termine: Dienstag, 15:00 - 17:00, wöchentlich </p>
-                    <p> Ort: {<VhsLink />}  302 Seminarraum </p>
                     <p> Kursstart: 09.04.2024 </p>
                     <p> Kursende: 14.05.2024 </p>
+                    <VhsLocation room="302" />    
                 </div>
                 <div>
                     <Accordeon
@@ -61,11 +64,12 @@ export default function Courses() {
                     <h1 className="text-2xl font-bold italic">STEP-Elternkurs Teil 2</h1>
                     <h2>VHS-Kursnummer: 241105121</h2>
                 </div>
+                <SignupButton link="https://www.vhs-offenburg.de/programm/allgemeinbildung/kurs/Eltern-VHS-STEP-Elternkurs-Teil-2/241105121" />
                 <div>
                     <p> Termine: Dienstag, 15:00 - 17:00, wöchentlich </p>
-                    <p> Ort: {<VhsLink />}  302 Seminarraum </p>
                     <p> Kursstart: 25.06.2024 </p>
                     <p> Kursende: 23.07.2024 </p>
+                    <VhsLocation room="302" />
                 </div>
                 <div>
                     <Accordeon
@@ -96,13 +100,3 @@ export default function Courses() {
     </BlendingInDiv>
 }
 
-function VhsLink() {
-    return <a
-        href="https://www.vhs-offenburg.de/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="font-bold text-slate-700"
-    >
-        VHS Offenburg
-    </a>
-}

@@ -4,6 +4,11 @@ class PAGES {
         path: ""
     };
 
+    public static CONCEPT: PageInfo = {
+        name: "Konzept",
+        path: "concept"
+    };
+
     public static ABOUT: PageInfo = {
         name: "Über mich",
         path: "about"

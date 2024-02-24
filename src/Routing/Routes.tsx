@@ -1,14 +1,16 @@
 import { ReactNode } from "react";
 
-import { Home, Bookmark, DateRange, Email, ContactPage } from "@mui/icons-material";
+import { Home, Bookmark, DateRange, Email, ContactPage, Info } from "@mui/icons-material";
 
 import HomepageStep from "../Homepage/HomepageStep";
+import ConceptStep from "../ConceptExplained/ConceptStep";
 import ReadingTipsStep from "../ReadingTips/ReadingTipsStep";
 import ContactStep from "../Contact/ContactStep";
 import CoursesStep from "../Courses/CoursesStep";
 import AboutMeStep from "../AboutMe/AboutMeStep";
 
 import HomepageTcm from "../Homepage/HomepageTcm";
+import ConceptTcm from "../ConceptExplained/ConceptTcm";
 import ReadingTipsTcm from "../ReadingTips/ReadingTipsTcm";
 import ContactTcm from "../Contact/ContactTcm";
 import CoursesTcm from "../Courses/CoursesTcm";
@@ -29,6 +31,12 @@ const step_routes: IRoute[] = [
         element: <CoursesStep />,
         icon: <DateRange />,
         title: PAGES.COURSES.name,
+    },
+    {
+        path: `/${Mode.STEP}/${PAGES.CONCEPT.path}`,
+        element: <ConceptStep />,
+        icon: <Info />,
+        title: PAGES.CONCEPT.name,
     },
     {
         path: `/${Mode.STEP}/${PAGES.ABOUT.path}`,
@@ -62,6 +70,12 @@ const tcm_routes: IRoute[] = [
         element: <CoursesTcm />,
         icon: <DateRange />,
         title: PAGES.COURSES.name,
+    },
+    {
+        path: `/${Mode.TCM}/${PAGES.CONCEPT.path}`,
+        element: <ConceptTcm />,
+        icon: <Info />,
+        title: PAGES.CONCEPT.name,
     },
     {
         path: `/${Mode.TCM}/${PAGES.ABOUT.path}`,

@@ -28,7 +28,7 @@ export default function SwitchButton({ mode, targetPageTitle, bgColor }: ISwitch
             navigate(pathExists ? path : `/${mode}`);
         }}
     >
-        {`Zu ${targetPageTitle}`}
+        {targetPageTitle}
     </button>;
 }
 
