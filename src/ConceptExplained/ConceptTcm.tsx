@@ -9,11 +9,11 @@ import Mindfullness from "../assets/images/mindfulness-svg.svg";
 import { Helmet } from "react-helmet";
 import Slideshow from "../Slideshow/Slideshow";
 
-export default function Homepage() {
+export default function Concept() {
     return <BlendingInDiv>
         <Helmet>
             <title>Traditionelle Chinesische Medizin (TCM) - Dr. med. Cordelia Schulz</title>
-            <meta name="description" content="Tauchen Sie ein in die Welt der Traditionellen Chinesischen Medizin (TCM) mit Dr. med. Cordelia Schulz. Erfahren Sie mehr über Behandlungsmethoden, Kurse und das ganzheitliche Verständnis von Gesundheit." />
+            <meta name="description" content="Tauchen Sie ein in die Welt der Traditionellen Chinesischen Medizin (TCM) mit Dr. med. Cordelia Schulz. Erfahren Sie mehr über Präventionsmethoden, Kurse und das ganzheitliche Verständnis von Gesundheit." />
         </Helmet>
         <div className="w-full p-5 flex flex-col gap-y-10">
 

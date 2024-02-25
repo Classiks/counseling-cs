@@ -2,46 +2,54 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://www.cordelia-schulz.de/</loc>
-        <lastmod>2024-02-06</lastmod>
+        <lastmod>2024-02-25</lastmod>
     </url>
     <url>
         <loc>https://www.cordelia-schulz.de/step</loc>
-        <lastmod>2024-02-06</lastmod>
+        <lastmod>2024-02-25</lastmod>
     </url>
     <url>
         <loc>https://www.cordelia-schulz.de/step/courses</loc>
-        <lastmod>2024-02-06</lastmod>
+        <lastmod>2024-02-25</lastmod>
+    </url>
+    <url>
+        <loc>https://www.cordelia-schulz.de/step/concept</loc>
+        <lastmod>2024-02-25</lastmod>
     </url>
     <url>
         <loc>https://www.cordelia-schulz.de/step/about</loc>
-        <lastmod>2024-02-06</lastmod>
+        <lastmod>2024-02-25</lastmod>
     </url>
     <url>
         <loc>https://www.cordelia-schulz.de/step/contact</loc>
-        <lastmod>2024-02-06</lastmod>
+        <lastmod>2024-02-25</lastmod>
     </url>
     <url>
         <loc>https://www.cordelia-schulz.de/step/reading-tips</loc>
-        <lastmod>2024-02-06</lastmod>
+        <lastmod>2024-02-25</lastmod>
     </url>
     <url>
         <loc>https://www.cordelia-schulz.de/tcm</loc>
-        <lastmod>2024-02-06</lastmod>
+        <lastmod>2024-02-25</lastmod>
     </url>
     <url>
         <loc>https://www.cordelia-schulz.de/tcm/courses</loc>
-        <lastmod>2024-02-06</lastmod>
+        <lastmod>2024-02-25</lastmod>
+    </url>
+    <url>
+        <loc>https://www.cordelia-schulz.de/tcm/concept</loc>
+        <lastmod>2024-02-25</lastmod>
     </url>
     <url>
         <loc>https://www.cordelia-schulz.de/tcm/about</loc>
-        <lastmod>2024-02-06</lastmod>
+        <lastmod>2024-02-25</lastmod>
     </url>
     <url>
         <loc>https://www.cordelia-schulz.de/tcm/contact</loc>
-        <lastmod>2024-02-06</lastmod>
+        <lastmod>2024-02-25</lastmod>
     </url>
     <url>
         <loc>https://www.cordelia-schulz.de/tcm/reading-tips</loc>
-        <lastmod>2024-02-06</lastmod>
+        <lastmod>2024-02-25</lastmod>
     </url>
 </urlset>

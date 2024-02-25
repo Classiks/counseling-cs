@@ -99,7 +99,7 @@ const scientificEvaluation: string[] = [
 ]
 
 
-export default function Homepage() {
+export default function Concept() {
     const opinionContents: ReactNode[] = elternmeinungen.map(meinung => {
         return <div>
             <p className="text-xl font-bold mb-2">
@@ -127,19 +127,9 @@ export default function Homepage() {
             <title>STEP - Systemische Elternbildung und Familienförderung</title>
             <meta name="description" content="Erfahren Sie mehr über das STEP-Programm für Eltern und Erziehende. Entdecken Sie Kurse, Ressourcen und Techniken für eine wertschätzende und effektive Kindererziehung und Familienkommunikation." />
         </Helmet>
-        {/* <div className="md:float-end pt-10 md:p-0 w-fit mx-auto">
-            <StepLogoHomepage />
-        </div> */}
 
         <div className="p-5 [&_ul]:ml-5 [&_ul]:list-disc bg-step-200 rounded-lg m-3">
             <div className="space-y-3 mb-10 leading-relaxed">
-                {/* <p>
-                    Als Eltern erleben wir nicht nur das Glück und die Freude, unsere Kinder in ihre Lebenswelt hineinwachsen zu sehen - wir kennen auch Situationen, in denen wir uns hilflos fühlen und uns fragen: Wie weit können die Freiräume in welchem Alter gehen und wie sollen wir Grenzen setzen? Verstehen wir die Bedürfnisse unseres Kindes? Wo liegt die Grenze zwischen Fördern und Überfordern? Welche Haltung und Worte wählen wir bei alltäglichen Auseinandersetzungen?
-                </p>
-                <p>
-                    So viele Ratgeber wir auch lesen mögen… was setzen wir davon im Alltag um? Im Elternkurs setzen wir uns mit den wichtigsten Erziehungsthemen auseinander und durchleben sie in einer wertschätzenden und respektvollen Gruppenatmosphäre mit Hilfe von Rollenspielen, Kleingruppenarbeit und „lebendigem Lehrmaterial“ mit einer neuen Perspektive. Es ist dabei nicht entscheidend, ob der Kurs vorausschauend oder hilfesuchend angesteuert wird. Das STEP-Konzept arbeitet mit vielen praktischen Übungen, ist gut strukturiert und baut auf fundierten wissenschaftlichen Erkenntnissen auf. Der Erfahrungsaustausch innerhalb der Kursgruppe ist ein wichtiger Baustein; dabei wird berücksichtigt, dass jede Familie ihre individuellen Wertvorstellungen hat. Es macht richtig Freude, mithilfe des Kurses Schritt für Schritt ein vertrauensvolles und entspanntes Miteinander in der Familie umzusetzen, Humor ist dabei sehr willkommen!
-                </p> */}
-
                 <div className="flex flex-col md:flex-row items-center">
                     <div className="py-5 md:p-0 w-fit">
                         <StepLogoHomepage />

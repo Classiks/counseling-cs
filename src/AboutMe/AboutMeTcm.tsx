@@ -2,17 +2,17 @@ import BlendingInDiv from "../components/BlendingInDiv"
 import { HashLink as Link } from "react-router-hash-link";
 import { Helmet } from "react-helmet";
 
-import Portrait from "../assets/images/cs-portrait-standing.jpg";
+import Portrait from "../assets/images/cs-portrait-sitting.jpg";
 
 export default function AboutMeTcm() {
     return <BlendingInDiv>
         <Helmet>
             <title>Über Cordelia Schulz - Fachexpertin in Traditioneller Chinesischer Medizin (TCM)</title>
-            <meta name="description" content="Erfahren Sie mehr über Dr. med. Cordelia Schulz, dozentin und Fachexpertin in Traditioneller Chinesischer Medizin (TCM). Entdecken Sie ihren Ansatz bezüglich ganzheitlicher Gesundheit und der Prinzipien der TCM." />
+            <meta name="description" content="Erfahren Sie mehr über Dr. med. Cordelia Schulz, Dozentin und Fachexpertin in Traditioneller Chinesischer Medizin (TCM). Entdecken Sie ihren Ansatz bezüglich ganzheitlicher Gesundheit und der Prinzipien der TCM." />
         </Helmet>
         <div className="flex flex-col md:flex-row items-center md:items-start gap-10 p-4 md:p-10">
             <div className="w-80 h-80 xs:w-96 xs:h-96 md:w-1/3 md:h-auto rounded-full overflow-hidden">
-                <Image className="-translate-y-8 md:translate-y-0" />
+                <Image />
             </div>
             <div className="md:w-2/3 bg-tcm-400 rounded-lg p-4 shadow-lg">
                 <Description />

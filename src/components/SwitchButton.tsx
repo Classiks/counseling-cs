@@ -32,18 +32,18 @@ export default function SwitchButton({ mode, targetPageTitle, bgColor }: ISwitch
     </button>;
 }
 
-export function SwitchButtonStep() {
+export function SwitchButtonStep({ title }: { title?: string }) {
     return <SwitchButton 
         mode={Mode.STEP}
-        targetPageTitle="STEP"
+        targetPageTitle={ title ?? "STEP"}
         bgColor="bg-step hover:bg-step-600 active:bg-step-700 text-step-text transition-color duration-300"
     />;
 }
 
-export function SwitchButtonTcm() {
+export function SwitchButtonTcm({ title }: { title?: string }) {
     return <SwitchButton 
         mode={Mode.TCM}
-        targetPageTitle="TCM"
+        targetPageTitle={ title ?? "TCM"}
         bgColor="bg-tcm hover:bg-tcm-600 active:bg-tcm-700 text-tcm-text transition-color duration-300"
     />;
 }
