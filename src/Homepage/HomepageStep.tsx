@@ -13,7 +13,7 @@ export default function HomepageStep() {
 
         <h1 className="font-bold text-2xl text-center m-10">
             <p className="text-lg text-gray-500">Dr. med Cordelia Schulz</p>
-            <p>Herzlich WIllkommen auf meiner Webseite</p>
+            <p>Herzlich Willkommen auf meiner Webseite</p>
         </h1>
 
         <div className="flex flex-col md:flex-row gap-10">

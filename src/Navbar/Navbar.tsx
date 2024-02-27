@@ -30,7 +30,7 @@ export default function Navbar({ className }: INavbar) {
         <div className="flex gap-4 items-center ml-4">
             <img 
                 src={Logo} alt="logo" 
-                className="h-12 cursor-pointer hover:scale-105 active:scale-110 transition-transform duration-500"
+                className="h-8 w-8 md:h-12 md:w-12 cursor-pointer hover:scale-105 active:scale-110 transition-transform duration-500"
                 onClick={() => {
                     navigate("/");
                 }}
