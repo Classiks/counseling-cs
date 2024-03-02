@@ -13,7 +13,13 @@ export default function EntryPage() {
             <title>Dr. med. Cordelia Schulz - Förderung von Familienleben und ganzheitlicher Gesundheit</title>
             <meta name="description" content="Entdecken Sie mit Dr. med. Cordelia Schulz Ansätze zur Familienförderung durch das STEP-Programm und zur Steigerung des Wohlbefindens mit Traditioneller Chinesischer Medizin (TCM). Entdecken Sie neue Möglichkeiten für einen ausgeglichenen und gesunden Lebensstil." />
         </Helmet>
-        <div className="grid grid-rows-3 md:grid-cols-3 md:grid-rows-1 h-screen w-screen">
+        <div
+            className="grid grid-rows-3 md:grid-cols-3 md:grid-rows-1 w-screen"
+            style={{
+                height: "-webkit-fill-available",
+                maxHeight: "100vh"
+            }}
+        >
             <GoToButtonArea className="bg-step">
                 <p className="flex items-center text-center justify-center text-2xl md:text-4xl p-3 md:p-10">
                     Systematisches Training für Eltern und Pädagogen 
@@ -62,10 +68,6 @@ function AppearingDiv({ children, className }: IAppearingDivProps) {
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
         transition={{ duration: 1 }}
-        style={{
-            height: "-webkit-fill-available",
-            minHeight: "100vh"
-        }}
     >
         {children}
     </motion.div>
