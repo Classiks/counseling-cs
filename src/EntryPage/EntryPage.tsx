@@ -8,7 +8,7 @@ import { Helmet } from "react-helmet";
 import { twMerge } from "tailwind-merge";
 
 export default function EntryPage() {
-    return <AppearingDiv >
+    return <AppearingDiv>
         <Helmet>
             <title>Dr. med. Cordelia Schulz - Förderung von Familienleben und ganzheitlicher Gesundheit</title>
             <meta name="description" content="Entdecken Sie mit Dr. med. Cordelia Schulz Ansätze zur Familienförderung durch das STEP-Programm und zur Steigerung des Wohlbefindens mit Traditioneller Chinesischer Medizin (TCM). Entdecken Sie neue Möglichkeiten für einen ausgeglichenen und gesunden Lebensstil." />
@@ -62,6 +62,10 @@ function AppearingDiv({ children, className }: IAppearingDivProps) {
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
         transition={{ duration: 1 }}
+        style={{
+            height: "-webkit-fill-available",
+            minHeight: "100vh"
+        }}
     >
         {children}
     </motion.div>
