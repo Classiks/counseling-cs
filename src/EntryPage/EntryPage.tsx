@@ -8,17 +8,15 @@ import { Helmet } from "react-helmet";
 import { twMerge } from "tailwind-merge";
 
 export default function EntryPage() {
-    return <AppearingDiv>
+    return <AppearingDiv
+        className="fixed h-full"
+    >
         <Helmet>
             <title>Dr. med. Cordelia Schulz - Förderung von Familienleben und ganzheitlicher Gesundheit</title>
             <meta name="description" content="Entdecken Sie mit Dr. med. Cordelia Schulz Ansätze zur Familienförderung durch das STEP-Programm und zur Steigerung des Wohlbefindens mit Traditioneller Chinesischer Medizin (TCM). Entdecken Sie neue Möglichkeiten für einen ausgeglichenen und gesunden Lebensstil." />
         </Helmet>
         <div
-            className="grid grid-rows-3 md:grid-cols-3 md:grid-rows-1 w-screen"
-            style={{
-                height: "-webkit-fill-available",
-                maxHeight: "100vh"
-            }}
+            className="grid grid-rows-3 md:grid-cols-3 md:grid-rows-1 h-full  w-screen"
         >
             <GoToButtonArea className="bg-step">
                 <p className="flex items-center text-center justify-center text-2xl md:text-4xl p-3 md:p-10">
