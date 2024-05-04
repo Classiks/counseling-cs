@@ -12,11 +12,13 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import Mode from './components/Mode';
 import UrlParser from './components/UrlParser';
+import ScrollToTop from './components/ScrollToTop';
 
 ModeController.setInstance();
 
 export default function App() {
   return <Router>
+    <ScrollToTop />
     <Layout />
   </Router>;
 }
@@ -34,10 +36,10 @@ function Layout() {
 
   return <div className="">
     <Navbar className={`h-${NAVBAR_HEIGHT}`} />
-    <BackgroundImage 
-      className={`mb-${NAVBAR_HEIGHT} mt-0 md:mt-${NAVBAR_HEIGHT} md:mb-0 overflow-auto`}
+    <BackgroundImage
+      className={`mb-${NAVBAR_HEIGHT} mt-0 md:mt-${NAVBAR_HEIGHT} md:mb-0 overflow-auto container-to-scroll`}
       style={{
-        height: `calc(100vh - ${NAVBAR_HEIGHT/4}rem)`,
+        height: `calc(100vh - ${NAVBAR_HEIGHT / 4}rem)`,
       }}
     >
       <div className="flex justify-center min-h-full" >
@@ -48,8 +50,3 @@ function Layout() {
     </BackgroundImage>
   </div>
 }
-
-
-
-
-

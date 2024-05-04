@@ -1,11 +1,12 @@
 import BlendingInDiv from '../components/BlendingInDiv';
 import StepEncouragementGel from "../assets/images/cartoon-encouragement-hairgel.png";
 import StepParentCourse2 from "../assets/images/step-elterkurs-2.png";
-import DateAccordeon from './DateAccordeon';
+// import DateAccordeon from './DateAccordeon';
 import Accordeon from '../components/Accordeon';
 import { Helmet } from 'react-helmet';
-import SignupButton from './SignupButton';
-import VhsLocation from './VhsLocation';
+// import SignupButton from './SignupButton';
+// import VhsLocation from './VhsLocation';
+import CourseNotAvailable from '../components/CourseNotAvailable';
 
 export default function Courses() {
     return <BlendingInDiv className="flex flex-col gap-x-16">
@@ -17,15 +18,15 @@ export default function Courses() {
             <div className="space-y-5">
                 <div className="p-2 pb-0">
                     <h1 className="text-2xl font-bold italic">STEP-Elternkurs Teil 1</h1>
-                    <h2>VHS-Kursnummer: 241105120</h2>
+                    {/* <h2>VHS-Kursnummer: 241105120</h2> */}
                 </div>
-                <SignupButton link="https://www.vhs-offenburg.de/programm/allgemeinbildung/kurs/Eltern-VHS-STEP-Elternkurs-Teil-1/241105120" />
-                <div>
+                {/* <SignupButton link="https://www.vhs-offenburg.de/programm/allgemeinbildung/kurs/Eltern-VHS-STEP-Elternkurs-Teil-1/241105120" /> */}
+                {/* <div>
                     <p> Termine: Dienstag, 15:00 - 17:00, wöchentlich </p>
                     <p> Kursstart: 09.04.2024 </p>
                     <p> Kursende: 14.05.2024 </p>
                     <VhsLocation room="302" />    
-                </div>
+                </div> */}
                 <div>
                     <Accordeon
                         heading="Inhalte"
@@ -64,7 +65,7 @@ export default function Courses() {
                             </ul>
                         </p>
                     </Accordeon>
-                    <DateAccordeon
+                    {/* <DateAccordeon
                         className="bg-step-200 p-2 w-full"
                         dates={[
                             { day: "Dienstag", date: "09.04.2024" },
@@ -73,7 +74,8 @@ export default function Courses() {
                             { day: "Dienstag", date: "07.05.2024" },
                             { day: "Dienstag", date: "14.05.2024" },
                         ]}
-                    />
+                    /> */}
+                    <CourseNotAvailable />
                 </div>
             </div>
             <img src={StepEncouragementGel} alt="course image" className="hidden md:block w-72 object-contain rounded-md" />
@@ -83,15 +85,15 @@ export default function Courses() {
             <div className="space-y-5">
                 <div className="p-2 pb-0">
                     <h1 className="text-2xl font-bold italic">STEP-Elternkurs Teil 2</h1>
-                    <h2>VHS-Kursnummer: 241105121</h2>
+                    {/* <h2>VHS-Kursnummer: 241105121</h2> */}
                 </div>
-                <SignupButton link="https://www.vhs-offenburg.de/programm/allgemeinbildung/kurs/Eltern-VHS-STEP-Elternkurs-Teil-2/241105121" />
+                {/* <SignupButton link="https://www.vhs-offenburg.de/programm/allgemeinbildung/kurs/Eltern-VHS-STEP-Elternkurs-Teil-2/241105121" />
                 <div>
                     <p> Termine: Dienstag, 15:00 - 17:00, wöchentlich </p>
                     <p> Kursstart: 25.06.2024 </p>
                     <p> Kursende: 23.07.2024 </p>
                     <VhsLocation room="302" />
-                </div>
+                </div> */}
                 <div>
                     <Accordeon
                         heading="Inhalte"
@@ -127,7 +129,7 @@ export default function Courses() {
                             </li>
                         </ul>
                     </Accordeon>
-                    <DateAccordeon
+                    {/* <DateAccordeon
                         className="bg-step-200 p-2"
                         dates={[
                             { day: "Dienstag", date: "25.06.2024" },
@@ -136,7 +138,8 @@ export default function Courses() {
                             { day: "Dienstag", date: "16.07.2024" },
                             { day: "Dienstag", date: "23.07.2024" },
                         ]}
-                    />
+                    /> */}
+                    <CourseNotAvailable />
                 </div>
             </div>
             <img src={StepParentCourse2} alt="course image" className="hidden md:block w-72 object-contain rounded-md bg-white" />
