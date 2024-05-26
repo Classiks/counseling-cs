@@ -1,11 +1,11 @@
 import BlendingInDiv from "../components/BlendingInDiv"
 import Content from "./Content"
-import { STEP_before_6, STEP_after_6, STEP_teenager, STEP_erzieher, STEP_lehrer } from "./StepBooks"
+import { STEP_before_6, STEP_after_6, STEP_teenager, STEP_erzieher, STEP_lehrer, GESPR_KINDER, GESPR_JUGDL, FAMILIENRAT, KINDER_FORDERN_HERAUS } from "./StepBooks"
 
 import { Helmet } from "react-helmet";
 
 export default function ReadingTips() {
-    const books = [STEP_before_6, STEP_after_6, STEP_teenager, STEP_erzieher, STEP_lehrer];
+    const books = [STEP_before_6, STEP_after_6, STEP_teenager, STEP_erzieher, STEP_lehrer, GESPR_KINDER, GESPR_JUGDL, FAMILIENRAT, KINDER_FORDERN_HERAUS];
     return <BlendingInDiv className="[&_li]:list-disc [&_li]:ml-5">
         <Helmet>
             <title>Lesetipps - Empfehlungen für Eltern und Erziehende</title>

@@ -87,6 +87,24 @@ const HND_AKKUPR: Book = {
     </div>
 }
 
+const GESETZ_BALANCE: Book = {
+    title: "Das Gesetz der Balance: Chinesisches Gesundheitswissen für ein langes Leben",
+    image: "https://m.media-amazon.com/images/I/91sXFfXL-AL._SL1500_.jpg",
+    link: "https://www.amazon.de/dp/3442221382",
+    description: <div className="space-y-2">
+        <p>Wie kommt es, dass manche Menschen ihre Beschwerden immer dann bekommen, wenn Sie Zeit haben, sich zu entspannen? Der Arzt und Spezialist der Traditionellen Chinesischen Medizin (TCM), Dr. med. Fritz Friedl, Leiter einer anerkannten TCM-Klinik, erklärt, wie das Zusammenspiel von Körper, Geist und Seele funktioniert. Zwar gibt Dr. Friedl auch Hinweise zur Behandlung von Beschwerden, viel wichtiger ist ihm jedoch, dem Leser ein Verständnis für Zusammenhänge zu vermitteln. Das Gesetz der Balance ist ein inspirierendes Buch vom gesunden Leben, das auf der Basis der Lehre von den fünf Funktionskreisen dazu anregt, sich mit sich selbst, seinen Schwachstellen und Stärken zu beschäftigen, um gesünder, ausgeglichener und zufriedener zu werden.</p>
+    </div>
+}
+
+const HND_CHK: Book = {
+    title: "Das Handbuch der Chinesischen Heilkunde: Eine Einführung in die ganzheitliche Chinesische Medizin. Grundlagen, Diagnosen und Wege der Behandlung",
+    image: "https://m.media-amazon.com/images/I/51EVv6Vc8AL._SL1000_.jpg",
+    link: "https://www.amazon.de/dp/3928554190",
+    description: <div className="space-y-2">
+        <p>Eine Einführung in die ganzheitliche Chinesische Medizin Grundlagen - Diagnosen - Behandlungswege</p>
+        <p>Das Handbuch der Chinesischen Heilkunde ist ein Buch für den interessierten Laien sowie ein Patienten-Ratgeber. Es enthält aber ebenso nützliche Informationen für Ärzte, Heilpraktiker und Therapeuten in allen Heilberufen. Die Autoren haben es sich hier zur Aufgabe gemacht, dem Leser ein wenig "chinesisches Denken" beizubringen, um die Zusammenhänge dieser ganzheitlichen Heilkunst besser verstehen zu könnnen. Dabei behandeln sie eingehend die Themen Akupunktur, Kräutermedizin, Ernährung und Qi Gong die Grundpfeiler der Chinesischen Medizin. Mit zahlreichen Beispielen aus der ärztlichen Praxis werden die häufigsten Erkrankungen aus der Sicht dieser östlichen Heilkunde erklärt und die therapeutischen Schritte dargelegt.</p>
+    </div>
+}
 
 
 export {
@@ -95,5 +113,7 @@ export {
     QIGONG_15,
     LEIT_TUNIA,
     LEHR_HEILPFL,
-    HND_AKKUPR
+    HND_AKKUPR,
+    GESETZ_BALANCE,
+    HND_CHK
 }
