@@ -1,11 +1,12 @@
 import BlendingInDiv from '../components/BlendingInDiv';
 import StepEncouragementGel from "../assets/images/cartoon-encouragement-hairgel.png";
 import StepParentCourse2 from "../assets/images/step-elterkurs-2.png";
+import StepEncouragementScientist from "../assets/images/cartoon-encouragement-scientist.png";
 // import DateAccordeon from './DateAccordeon';
 import Accordeon from '../components/Accordeon';
 import { Helmet } from 'react-helmet';
-// import SignupButton from './SignupButton';
-// import VhsLocation from './VhsLocation';
+import SignupButton from './SignupButton';
+import VhsLocation from './VhsLocation';
 import CourseNotAvailable from '../components/CourseNotAvailable';
 
 export default function Courses() {
@@ -14,6 +15,61 @@ export default function Courses() {
             <title>STEP Kurse - Termine und Informationen</title>
             <meta name="description" content="Finden Sie alle aktuellen Termine und detaillierte Informationen zu den STEP-Elternkursen. Verbessern Sie Ihre Erziehungs- und Kommunikationsfähigkeiten für ein harmonisches Familienleben." />
         </Helmet>
+
+        {/*
+1.
+Wie "Zwischen-Menschlichkeit heute“ mit dem STEP-Konzept gut gelebt werden kann… in Familie und Beruf.
+
+Termin: 21.01.2025 von 19:30-21:00 Uhr 
+
+Es ist allgemein bekannt, dass durch das Verinnerlichen des STEP-Trainings Eltern ihre Erziehungskompetenz stärken, gelingende und erfüllende Beziehungen mit ihren Kindern aufbauen, und ein kooperatives, stressfreieres Zusammenleben in der Familie erreichen können.
+
+In dem gut ausgearbeiteten Programm werden u.a. die eigenen Wertevorstellungen, Ressourcen und Stärken (wieder oder neu) entdeckt und Schritt für Schritt hilfreiche „Tools“ angeboten, die ausprobiert und „personalisiert“ werden können.
+
+Genau deshalb ist das Konzept – und das ist weniger bekannt - weit über ein „Familientraninig“ hinaus hilfreich für jede Art zwischenmenschlicher Beziehungen, so auch in der Partnerschaft und am Arbeitsplatz.
+
+Spielerisch und humorvoll, mit Aha-Erlebnissen und Spaß in der Gruppe zeigt der Impulsvortrag auf, wie schon kleine Übungen oder „Tools“ des STEP-Konzepts viel bewegen können.
+        */}
+
+        <div className="m-3 p-4 rounded-2xl  bg-step-400 flex gap-x-10 items-start">
+            <div className="space-y-5">
+                <div className="p-2 pb-0">
+                    <h1 className="text-2xl font-bold italic">Wie "Zwischen-Menschlichkeit heute“ mit dem STEP-Konzept gut gelebt werden kann… in Familie und Beruf.</h1>
+                    <h2>VHS-Kursnummer: 242105123</h2>
+                </div>
+                <SignupButton link="https://www.vhs-offenburg.de/programm/allgemeinbildung/kurs/Eltern-VHS-Wie-Zwischenmenschlichkeit-heute-mit-dem-STEP-Konzept-gut-gelebt/242105123" />
+                <div>
+                    <p> Termin: Dienstag, 21.01.2025, 19:30-21:00 </p>
+                    <VhsLocation room="102" />
+                </div> 
+                <div>
+                    <Accordeon
+                        heading="Inhalte"
+                        className="bg-step-200 p-2"
+                        headingClassName="font-bold text-lg"
+                    >
+                        <div className="flex flex-col space-y-2">
+                            <p>
+                                Es ist allgemein bekannt, dass durch das Verinnerlichen des STEP-Trainings Eltern ihre Erziehungskompetenz stärken, gelingende und erfüllende Beziehungen mit ihren Kindern aufbauen, und ein kooperatives, stressfreieres Zusammenleben in der Familie erreichen können.
+                            </p>
+                            <p>
+                                In dem gut ausgearbeiteten Programm werden u.a. die eigenen Wertevorstellungen, Ressourcen und Stärken (wieder oder neu) entdeckt und Schritt für Schritt hilfreiche „Tools“ angeboten, die ausprobiert und „personalisiert“ werden können.
+                            </p>
+                            <p>
+                                Genau deshalb ist das Konzept - und das ist weniger bekannt - weit über ein „Familientraninig“ hinaus hilfreich für jede Art zwischenmenschlicher Beziehungen, so auch in der Partnerschaft und am Arbeitsplatz.
+                            </p>
+                            <p>
+                                Spielerisch und humorvoll, mit Aha-Erlebnissen und Spaß in der Gruppe zeigt der Impulsvortrag auf, wie schon kleine Übungen oder „Tools“ des STEP-Konzepts viel bewegen können.
+                            </p>
+                        </div>
+                    </Accordeon>
+                </div>
+            </div>
+            <img src={StepEncouragementScientist} alt="course image" className="hidden md:block w-72 object-contain rounded-md" />
+        </div>
+
+
+
         <div className="m-3 p-4 rounded-2xl  bg-step-400 flex gap-x-10 items-start justify-between">
             <div className="space-y-5">
                 <div className="p-2 pb-0">

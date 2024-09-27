@@ -2,11 +2,12 @@ import BlendingInDiv from '../components/BlendingInDiv';
 import FitForSummer from "../assets/images/fit-for-summer-ai.png";
 import DailyLife from "../assets/images/tcm-daily-family-life.png";
 import ForYouAndMe from "../assets/images/tcm-for-you-and-me.png";
-// import DateAccordeon from './DateAccordeon';
+import HealthyWinter from "../assets/images/tcm-healthy-winter.webp";
+import DateAccordeon from './DateAccordeon';
 import Accordeon from '../components/Accordeon';
 import { Helmet } from 'react-helmet';
 import SignupButton from './SignupButton';
-// import VhsLocation from './VhsLocation';
+import VhsLocation from './VhsLocation';
 import CourseNotAvailable from '../components/CourseNotAvailable';
 
 export default function Courses() {
@@ -15,6 +16,51 @@ export default function Courses() {
             <title>TCM Kurse - Traditionelle Chinesische Medizin</title>
             <meta name="description" content="Informieren Sie sich über die angebotenen Kurse in Traditioneller Chinesischer Medizin (TCM) für Gesundheitspflege, Selbstfürsorge und präventive Methoden." />
         </Helmet>
+
+        <div className="m-3 p-4 rounded-2xl  bg-tcm-400 flex gap-x-10 items-start justify-between">
+            <div className="space-y-5">
+                <div className="p-2 pb-0">
+                    <h1 className="text-2xl font-bold italic">Gesund durch den Winter mit den 5 Säulen der Chinesischen Medizin</h1>
+                    <h2>VHS-Kursnummer: 242303074</h2>
+                </div>
+                <SignupButton link="https://www.vhs-offenburg.de/programm/allgemeinbildung/kurs/Gesund-durch-den-Winter/242303074" />
+                <div>
+                    <p> 6 Termine: Mittwochs, 18:00 - 19:30</p>
+                    <p> Kursstart: 15.01.2025 </p>
+                    <p> Kursende: 26.02.2025 </p>
+                    <VhsLocation room="302" />
+                </div> 
+                <div>
+                    <Accordeon
+                        heading="Inhalte"
+                        className="bg-tcm-200 p-2"
+                        headingClassName="font-bold text-lg"
+                    >
+                        <div>
+                            <p>
+                                Das Heilkonzept der Chinesischen Medizin basiert auf den 5 Säulen Akupunktur/Akupressur, Ernährungslehre, Pflanzenheilkunde, Qigong und Tuina-Massage. Im Kurs werden wir diese Methoden an ausgewählten Beispielen theoretisch und praktisch bearbeiten, um gestärkt und gesund durch die Wintermonate zu kommen. Langfristiges Ziel ist es, einfache und zugleich wirkungsvolle Praktiken zu erlernen, sie im Alltag regelmäßig umzusetzen und damit für das „Gute Leben“ zu sorgen.
+                            </p>
+                            <p className="mt-3">
+                                Bitte in bequemer Kleidung kommen.
+                            </p>
+                        </div>
+                    </Accordeon>
+                    <DateAccordeon
+                        className="bg-tcm-200 p-2 w-full"
+                        dates={[
+                            { day: "Mittwoch", date: "15.01.2025" },
+                            { day: "Mittwoch", date: "22.01.2025" },
+                            { day: "Mittwoch", date: "29.01.2025" },
+                            { day: "Mittwoch", date: "12.02.2025" },
+                            { day: "Mittwoch", date: "19.02.2025" },
+                            { day: "Mittwoch", date: "26.02.2025" },
+                        ]}
+                    />
+                </div>
+            </div>
+            <img src={HealthyWinter} alt="course image" className="hidden md:block w-72 object-contain rounded-md" />
+        </div>
+
 
         <div className="m-3 p-4 rounded-2xl  bg-tcm-400 flex gap-x-10 items-start justify-between">
             <div className="space-y-5">
