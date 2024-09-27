@@ -66,14 +66,14 @@ export default function Courses() {
             <div className="space-y-5">
                 <div className="p-2 pb-0">
                     <h1 className="text-2xl font-bold italic">Online: TCM für dich und mich</h1>
-                    <h2>VHS-Kursnummer: 241303019</h2>
+                    {/* <h2>VHS-Kursnummer: 241303019</h2> */}
                 </div>
-                    <SignupButton link="https://www.vhs-offenburg.de/programm/allgemeinbildung/kurs/Online-TCM-fuer-dich-und-mich/241303019" />
+                    {/* <SignupButton link="https://www.vhs-offenburg.de/programm/allgemeinbildung/kurs/Online-TCM-fuer-dich-und-mich/241303019" />
                 <div>
                     <p> Termin: Donnerstag, 16.05.2024, 17:00-18:30 </p>
                     <p> <span className="font-bold">Online</span>, Webinar Zoom 07</p>
                 </div>
-                <div>
+                <div> */}
                     <Accordeon
                         heading="Inhalte"
                         className="bg-tcm-200 p-2"
@@ -83,7 +83,7 @@ export default function Courses() {
                             Nach einer kurzen Einführung in die Grundlagen der Chinesischen Medizin werden einfache, aber wirkungsvolle Übungen, Methoden und Rezepte vermittelt, die helfen, das "Gute lange Leben" zu pflegen und in die eigene Mitte zu finden
                         </p>
                     </Accordeon>
-                </div>
+                <CourseNotAvailable />
             </div>
             <img src={ForYouAndMe} alt="course image" className="hidden md:block w-72 object-contain rounded-md" />
         </div>
