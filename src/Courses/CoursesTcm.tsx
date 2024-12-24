@@ -61,6 +61,68 @@ export default function Courses() {
             <img src={HealthyWinter} alt="course image" className="hidden md:block w-72 object-contain rounded-md" />
         </div>
 
+        <div className="m-3 p-4 rounded-2xl  bg-tcm-400 flex gap-x-10 items-start justify-between">
+            <div className="space-y-5">
+                <div className="p-2 pb-0">
+                    <h1 className="text-2xl font-bold italic">Fit für den Sommer mit den 5 Säulen der Chinesischen Medizin</h1>
+                    <h2>VHS-Kursnummer: 242303075</h2>
+                </div>
+                <SignupButton link="https://www.vhs-offenburg.de/programm/allgemeinbildung/kurs/Fit-fuer-den-Sommer/242303075" />
+                <div>
+                    <p>6 Termine: Mittwochs, 18:00 - 19:30</p>
+                    <p>Kursstart: 02.04.2025</p>
+                    <p>Kursende: 21.05.2025</p>
+                    <VhsLocation room="302" />
+                </div>
+                <div>
+                    <Accordeon
+                        heading="Inhalte"
+                        className="bg-tcm-200 p-2"
+                        headingClassName="font-bold text-lg"
+                    >
+                        <div className="space-y-2">
+                            <p>
+                                In diesem Kurs erfahren Sie mehr über die Chinesische Medizin und wie die hilfreichen Ansätze des
+                                Yang Shen („Leben pflegen") in den Alltag eingefügt werden können.
+                            </p>
+                            <p>
+                                Es geht darum, den Winter gut abzuschließen und die Energien des Frühjahrs zu nutzen, um den
+                                Sommer gestärkt erleben zu können. Unter anderem folgende Fragen werden theoretisch und
+                                praktisch behandelt:
+                            </p>
+                            <ul className="[&_li]:list-disc [&_li]:ml-5">
+                                <li>Welche Dehnungs- und Lockerungsübungen holen meinen Körper aus dem Winterschlaf?</li>
+                                <li>Kann ich von der Chinesischen Diätetik und der 5-Elemente-Küche unter Berücksichtigung
+                                    meiner Essgewohnheiten „Nährendes" übernehmen?</li>
+                                <li>Was ist Chinesische Arzneimitteltherapie und hat sie mit der westlichen Phytotherapie etwas
+                                    gemeinsam… was kann ich praktisch davon umsetzen?</li>
+                                <li>Wie setze ich die Druck- und Punktmassage gezielt ein, um Blockaden zu lösen und um mich
+                                    freier zu bewegen?</li>
+                            </ul>
+                            <p>
+                                Der 6-wöchige Kurs orientiert sich auch an den Interessen der Kursteilnehmer, Neues ist immer
+                                willkommen.
+                            </p>
+                            <p className="font-bold">
+                                Bitte in bequemer Kleidung kommen.
+                            </p>
+                        </div>
+                    </Accordeon>
+                    <DateAccordeon
+                        className="bg-tcm-200 p-2"
+                        dates={[
+                            { day: "Mittwoch", date: "02.04.2025" },
+                            { day: "Mittwoch", date: "09.04.2025" },
+                            { day: "Mittwoch", date: "30.04.2025" },
+                            { day: "Mittwoch", date: "07.05.2025" },
+                            { day: "Mittwoch", date: "14.05.2025" },
+                            { day: "Mittwoch", date: "21.05.2025" },
+                        ]}
+                    />
+                </div>
+            </div>
+            <img src={FitForSummer} alt="course image" className="hidden md:block w-72 object-contain rounded-md" />
+        </div>
 
         <div className="m-3 p-4 rounded-2xl  bg-tcm-400 flex gap-x-10 items-start justify-between">
             <div className="space-y-5">
@@ -86,58 +148,6 @@ export default function Courses() {
                 <CourseNotAvailable />
             </div>
             <img src={ForYouAndMe} alt="course image" className="hidden md:block w-72 object-contain rounded-md" />
-        </div>
-
-        <div className="m-3 p-4 rounded-2xl  bg-tcm-400 flex gap-x-10 items-start justify-between">
-            <div className="space-y-5">
-                <div className="p-2 pb-0">
-                    <h1 className="text-2xl font-bold italic">Fit für den Sommer</h1>
-                    {/* <h2>VHS-Kursnummer: 241303017</h2> */}
-                </div>
-                {/* <SignupButton link="https://www.vhs-offenburg.de/programm/allgemeinbildung/kurs/Fit-fuer-den-Sommer/241303017" />
-                <div>
-                    <p> Termine: Mittwoch, 18:00 - 19:30</p>
-                    <p> Kursstart: 06.03.2024 </p>
-                    <p> Kursende: 08.05.2024 </p>
-                    <VhsLocation room="101" />
-                </div> */}
-                <div>
-                    <Accordeon
-                        heading="Inhalte"
-                        className="bg-tcm-200 p-2"
-                        headingClassName="font-bold text-lg"
-                    >
-                        <div>
-                            <p>
-                                In diesem Kurs erfahren Sie mehr über die chinesische Medizin und wie die hilfreichen Ansätze des Yang Sheng ("Lebenspflege") in den Alltag eingefügt werden können.
-                            </p>
-                            <p>
-                                Es geht darum, den Winter gut abzuschließen und die Energien des Frühjahrs zu nutzen, um den Sommer gestärkt erleben zu können. Unter anderem folgende Fragen werden theoretisch und praktisch behandelt:
-                            </p>
-
-                            <ul className="[&_li]:list-disc [&_li]:ml-5">
-                                <li>Welche Dehnungs- und Lockerungsübungen holen meinen Körper aus dem Winterschlaf?</li>
-                                <li>Kann ich von der chinesischen Diätetik und der 5-Elemente-Küche unter Berücksichtigung meiner Essgewohnheiten "Nährendes" übernehmen?</li>
-                                <li>Was ist chinesische Arzneimitteltherapie und hat sie mit der westlichen Phytotherapie etwas gemeinsam - was kann ich praktisch davon umsetzen?</li>
-                                <li>Wie setze ich die Druck- und Punktmassage gezielt ein, um Blockaden zu lösen und mich freier zu bewegen?</li>
-                            </ul>
-                        </div>
-                    </Accordeon>
-                    {/* <DateAccordeon
-                        className="bg-tcm-200 p-2 w-full"
-                        dates={[
-                            { day: "Mittwoch", date: "06.03.2024" },
-                            { day: "Mittwoch", date: "20.03.2024" },
-                            { day: "Mittwoch", date: "10.04.2024" },
-                            { day: "Mittwoch", date: "17.04.2024" },
-                            { day: "Mittwoch", date: "24.04.2024" },
-                            { day: "Mittwoch", date: "08.05.2024" },
-                        ]}
-                    /> */}
-                    <CourseNotAvailable />
-                </div>
-            </div>
-            <img src={FitForSummer} alt="course image" className="hidden md:block w-72 object-contain rounded-md" />
         </div>
 
         <div className="m-3 p-4 rounded-2xl  bg-tcm-400 flex gap-x-10 items-start">

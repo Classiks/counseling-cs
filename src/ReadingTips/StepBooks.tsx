@@ -103,10 +103,17 @@ const GESPR_JUGDL: Book = {
 }   
 
 const FAMILIENRAT: Book = {
-    title: "Familienrat (Kinder fordern uns heraus, Bd. ?): Der Weg zu einem glücklichen Zusammenleben von Eltern und Kindern",
+    title: "Familienrat (Dreikurs): Der Weg zu einem glücklichen Zusammenleben von Eltern und Kindern",
     image: "https://m.media-amazon.com/images/I/51pDxoUYiCL.jpg",
     link: "https://www.amazon.de/dp/3407857284",
     description: <div className="space-y-2">
+        <ul>
+            <li>Wie sind Spannungen und Konflikte innerhalb von Familien zu lösen?</li>
+            <li>Wie ist eine Gleichberechtigung aller Familienmitglieder zu erreichen?</li>
+        </ul>
+
+        <p>Rudolf Dreikurs hat im Laufe jahrzehntelanger Arbeit mit Eltern und Kindern eine Methode entwickelt, mit der das Zusammenleben in der Familie harmonischer und glücklicher gestaltet werden kann: den »Familienrat«. Dahinter steht sein Gedanke, die Kinder in familiäre Entscheidungen ein-zubinden, ihnen aber auch etwas abzuverlangen und sie damit ein Stück weit erwachsen werden zu lassen.</p>
+        <p>Das Buch leitet Schritt für Schritt zur praktischen Einübung in diese neue Form des Familienlebens an und führt anhand von zahlreichen Beispielen aus dem Alltag und wörtlich wiedergegebenen Gesprächsprotokollen in die praktischen Möglichkeiten des Familienrats ein.</p>
     </div>
 }   
 
