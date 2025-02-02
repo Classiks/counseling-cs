@@ -11,6 +11,10 @@ export default function ReadingTips() {
             <title>Lesetipps - Traditionelle Chinesische Medizin (TCM)</title>
             <meta name="description" content="Erkunden Sie empfohlene Lektüren zur Vertiefung Ihres Wissens in der Traditionellen Chinesischen Medizin (TCM), darunter Grundlagenwerke, praktische Anleitungen und mehr." />
         </Helmet>
+
+        <div className="flex w-full justify-center py-7">
+            <h1 className="text-2xl font-bold italic">Lesetipps</h1>
+        </div>
         <Content books={books} />
     </BlendingInDiv>
 }

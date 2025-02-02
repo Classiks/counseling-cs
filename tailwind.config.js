@@ -8,10 +8,10 @@ export default {
   theme: {
   	extend: {
   		screens: {
-  			'xs': '500px'
+  			xs: '500px'
   		},
   		colors: {
-  			'step': {
+  			step: {
   				'100': '#ffeacc',
   				'200': '#ffd699',
   				'300': '#ffc166',
@@ -22,11 +22,11 @@ export default {
   				'800': '#663d00',
   				'900': '#331e00',
   				DEFAULT: '#FF9800',
-  				'background': '#FFFFFF',
-  				'text': '#2c2c2c',
-  				'textInverted': '#FFFFFF'
+  				background: '#FFFFFF',
+  				text: '#2c2c2c',
+  				textInverted: '#FFFFFF'
   			},
-  			'tcm': {
+  			tcm: {
   				'100': '#d1edd4',
   				'200': '#a3dba9',
   				'300': '#75c97d',
@@ -37,9 +37,9 @@ export default {
   				'800': '#0a4210',
   				'900': '#052108',
   				DEFAULT: '#19a527',
-  				'background': '#FFFFFF',
-  				'text': '#FFFFFF',
-  				'textInverted': '#000000'
+  				background: '#FFFFFF',
+  				text: '#FFFFFF',
+  				textInverted: '#000000'
   			},
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
@@ -80,6 +80,16 @@ export default {
   				'3': 'hsl(var(--chart-3))',
   				'4': 'hsl(var(--chart-4))',
   				'5': 'hsl(var(--chart-5))'
+  			},
+  			sidebar: {
+  				DEFAULT: 'hsl(var(--sidebar-background))',
+  				foreground: 'hsl(var(--sidebar-foreground))',
+  				primary: 'hsl(var(--sidebar-primary))',
+  				'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
+  				accent: 'hsl(var(--sidebar-accent))',
+  				'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
+  				border: 'hsl(var(--sidebar-border))',
+  				ring: 'hsl(var(--sidebar-ring))'
   			}
   		},
   		keyframes: {
@@ -92,10 +102,28 @@ export default {
   					transform: 'scale(1.05)',
   					opacity: 1
   				}
+  			},
+  			'accordion-down': {
+  				from: {
+  					height: '0'
+  				},
+  				to: {
+  					height: 'var(--radix-accordion-content-height)'
+  				}
+  			},
+  			'accordion-up': {
+  				from: {
+  					height: 'var(--radix-accordion-content-height)'
+  				},
+  				to: {
+  					height: '0'
+  				}
   			}
   		},
   		animation: {
-  			pulse: 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite'
+  			pulse: 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+  			'accordion-down': 'accordion-down 0.2s ease-out',
+  			'accordion-up': 'accordion-up 0.2s ease-out'
   		},
   		borderRadius: {
   			lg: 'var(--radius)',

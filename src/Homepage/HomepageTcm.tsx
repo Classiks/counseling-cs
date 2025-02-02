@@ -1,6 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import Portrait from "../assets/images/cs-portrait-standing.jpg";
 import { Helmet } from "react-helmet";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
 
 export default function HomepageTcm() {
     const navigate = useNavigate();
@@ -12,7 +14,7 @@ export default function HomepageTcm() {
         </Helmet>
 
         <h1 className="font-bold text-2xl text-center m-10">
-            <p className="text-lg text-gray-500">Dr. med Cordelia Schulz</p>
+            <p className="text-lg text-muted">Dr. med Cordelia Schulz</p>
             <p>Herzlich Willkommen auf meiner Webseite</p>
         </h1>
 
@@ -22,22 +24,21 @@ export default function HomepageTcm() {
                     <img src={Portrait} alt="Portrait" className="-translate-y-8" />
                 </div>
 
-                <button
-                    className={"py-2 px-3 rounded-lg cursor-pointer bg-tcm-300 text-lg font-bold animate-pulse"}
-                    onClick={() => navigate("/tcm/courses")}
-                >
+                <Button onClick={() => navigate("/tcm/courses")} >
                     Zu den Kursen
-                </button>
-            </div>
+                </Button>
 
-            <div className="p-5 bg-tcm-200 mx-3 space-y-2">
-                <p>
-                    Selbstfürsorge auf der Basis der Naturheilkunde und der chinesischen Medizin liegt mir sehr am Herzen. Mein Arbeitsschwerpunkt besteht darin, die Möglichkeiten der „Hilfe zur Selbsthilfe“ zu vermitteln.
-                </p>
+                <Card>
+                    <CardContent className="p-5 space-y-3">
+                        <p>
+                            Selbstfürsorge auf der Basis der Naturheilkunde und der chinesischen Medizin liegt mir sehr am Herzen. Mein Arbeitsschwerpunkt besteht darin, die Möglichkeiten der „Hilfe zur Selbsthilfe“ zu vermitteln.
+                        </p>
 
-                <p>
-                    Deshalb habe ich nach 20 Jahren ärztlicher Tätigkeit meinen Schwerpunkt in die Prävention in Form von Kursangeboten verlagert. In diesen Kursen werden sowohl allgemeine ganzheitliche Grundlagen nahegebracht als auch für die individuelle Lebenssituation hilfreiche Themenschwerpunkte behandelt.
-                </p>
+                        <p>
+                            Deshalb habe ich nach 20 Jahren ärztlicher Tätigkeit meinen Schwerpunkt in die Prävention in Form von Kursangeboten verlagert. In diesen Kursen werden sowohl allgemeine ganzheitliche Grundlagen nahegebracht als auch für die individuelle Lebenssituation hilfreiche Themenschwerpunkte behandelt.
+                        </p>
+                    </CardContent>
+                </Card>
             </div>
         </div>
     </div >

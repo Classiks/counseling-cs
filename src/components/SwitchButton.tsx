@@ -5,6 +5,7 @@ import ModeController from "../ModeController";
 import UrlParser from "./UrlParser";
 import routes from "../Routing/Routes";
 import { twMerge } from "tailwind-merge";
+import { Button } from "@/components/ui/button";
 
 interface ISwitchButtonProps {
     mode: Mode
@@ -16,8 +17,8 @@ export default function SwitchButton({ mode, targetPageTitle, className }: ISwit
     const navigate = useNavigate();
     const location = useLocation()
 
-    return <button 
-        className={twMerge("py-2 md:py-3 px-3 md:px-5 my-1 md:my-2 mx-3 md:mx-5 border-gray-200 rounded-lg cursor-pointer", className)}
+    return <Button 
+        className={className}
         onClick={() => {
             ModeController.setMode(mode);
             
@@ -30,7 +31,7 @@ export default function SwitchButton({ mode, targetPageTitle, className }: ISwit
         }}
     >
         {targetPageTitle}
-    </button>;
+    </Button>;
 }
 
 interface ISpecificSwitchButtonProps {
@@ -42,15 +43,28 @@ export function SwitchButtonStep({ title, className }: ISpecificSwitchButtonProp
     return <SwitchButton 
         mode={Mode.STEP}
         targetPageTitle={ title ?? "STEP"}
-        className={twMerge("bg-step hover:bg-step-600 active:bg-step-700 text-step-text transition-color duration-300", className)}
-
+        className={className}
     />;
 }
 
-export function SwitchButtonTcm({ title }: { title?: string }) {
+interface ISwitchButtonTcmProps {
+    title?: string;
+    className?: string;
+}
+export function SwitchButtonTcm({ title, className }: ISwitchButtonTcmProps) {
     return <SwitchButton 
         mode={Mode.TCM}
         targetPageTitle={ title ?? "TCM"}
-        className={twMerge("bg-tcm hover:bg-tcm-600 active:bg-tcm-700 text-tcm-text transition-color duration-300")}
+        className={className}
     />;
+}
+
+export function SwitchButtonConditional({ currentMode }: { currentMode: Mode }) {
+    if (currentMode === Mode.STEP) {
+        return <SwitchButtonTcm />;
+    } else if (currentMode === Mode.TCM) {
+        return <SwitchButtonStep />;
+    } else {
+        return null;
+    }
 }

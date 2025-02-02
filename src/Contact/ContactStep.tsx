@@ -9,9 +9,10 @@ export default function ContactDefault() {
             <title>Kontakt - STEP-Programm</title>
             <meta name="description" content="Kontaktieren Sie uns für weitere Informationen zum STEP-Programm, zur Anmeldung für Kurse oder bei Fragen zur Elternbildung und Familienförderung." />
         </Helmet>
-        <h1 className="text-3xl mb-2">
-            Kontakt
-        </h1>
+
+        <div className="flex w-full justify-center py-7">
+            <h1 className="text-2xl font-bold italic">Kontakt</h1>
+        </div>
 
         <div className="mb-16">
             <p className="mb-4 mt-6 text-lg">

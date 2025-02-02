@@ -1,6 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import Portrait from "../assets/images/cs-portrait-standing.jpg";
 import { Helmet } from "react-helmet";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 export default function HomepageStep() {
     const navigate = useNavigate();
@@ -12,7 +14,7 @@ export default function HomepageStep() {
         </Helmet>
 
         <h1 className="font-bold text-2xl text-center m-10">
-            <p className="text-lg text-gray-500">Dr. med Cordelia Schulz</p>
+            <p className="text-lg text-muted">Dr. med Cordelia Schulz</p>
             <p>Herzlich Willkommen auf meiner Webseite</p>
         </h1>
 
@@ -22,27 +24,26 @@ export default function HomepageStep() {
                     <img src={Portrait} alt="Portrait" className="-translate-y-8" />
                 </div>
 
-                <button
-                    className={"py-2 px-3 rounded-lg cursor-pointer bg-step-300 text-lg font-bold animate-pulse"}
-                    onClick={() => navigate("/step/courses")}
-                >
+                <Button onClick={() => navigate("/step/courses")}>
                     Zu den Kursen
-                </button>
+                </Button>
             </div>
 
-            <div className="p-5 bg-step-200 mx-3 space-y-2">
-                <p>
-                    Die Betreuung und Arbeit mit Kindern und Jugendlichen war und ist ein zentraler Teil meines privaten und beruflichen Lebens. Ich erfahre täglich, wie wichtig es ist, früh eine stabile Basis für ein gesundes, verantwortungsvolles und selbstwirksames Leben zu ermöglichen.
-                </p>
+            <Card>
+                <CardContent className="p-5 space-y-3">
+                    <p>
+                        Die Betreuung und Arbeit mit Kindern und Jugendlichen war und ist ein zentraler Teil meines privaten und beruflichen Lebens. Ich erfahre täglich, wie wichtig es ist, früh eine stabile Basis für ein gesundes, verantwortungsvolles und selbstwirksames Leben zu ermöglichen.
+                    </p>
 
-                <p>
-                    Diese Erfahrung bezieht sich sowohl auf das Miteinander in meiner Familie mit 4 erwachsenen Söhnen, als auch auf meine Tätigkeit als Ärztin.
-                </p>
+                    <p>
+                        Diese Erfahrung bezieht sich sowohl auf das Miteinander in meiner Familie mit 4 erwachsenen Söhnen, als auch auf meine Tätigkeit als Ärztin.
+                    </p>
 
-                <p>
-                    Meine Elternkurse sind in zwei aufeinander aufbauende Kurse aufgeteilt. So kann das Konzept in Ruhe und Schritt für Schritt ausprobiert - und in Übereinstimmung mit den eigenen Wertvorstellungen umgesetzt werden.
-                </p>
-            </div>
+                    <p>
+                        Meine Elternkurse sind in zwei aufeinander aufbauende Kurse aufgeteilt. So kann das Konzept in Ruhe und Schritt für Schritt ausprobiert - und in Übereinstimmung mit den eigenen Wertvorstellungen umgesetzt werden.
+                    </p>
+                </CardContent>
+            </Card>
         </div>
     </div >
 }

@@ -1,4 +1,5 @@
 import { ReactNode, useEffect, useState } from "react";
+import { twMerge } from "tailwind-merge";
 
 import Logo from "../assets/images/Logo_CS_1.png";
 
@@ -12,7 +13,8 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import routes from "../Routing/Routes";
 
 import { SwitchButtonStep, SwitchButtonTcm } from "../components/SwitchButton";
-
+import { buttonVariants } from "@/components/ui/button";
+import { SidebarTrigger } from "@/components/ui/sidebar";
 
 interface INavbar {
     className?: string,
@@ -26,8 +28,12 @@ export default function Navbar({ className }: INavbar) {
 
     const navigate = useNavigate();
 
-    return <div className={`w-screen fixed bottom-0 md:top-0 z-10 flex items-center shadow-lg border-t md:border-b md:border-t-0 border-white justify-between bg-gradient-to-l ${getBackgroundGradient(mode)} ` + className}>
+    return <div className={twMerge(
+        "fixed bottom-0 md:top-0 z-10 flex items-center shadow-lg border-t md:border-b md:border-t-0 border-white justify-between bg-gradient-to-l bg-background w-full",
+        className
+    )}>
         <div className="flex gap-4 items-center ml-4">
+            <SidebarTrigger />
             <img 
                 src={Logo} alt="logo" 
                 className="h-8 w-8 md:h-12 md:w-12 cursor-pointer hover:scale-105 active:scale-110 transition-transform duration-500"
@@ -110,7 +116,8 @@ function HeaderItem({ icon, children, target, mode, className }: IHeaderItemProp
 
 
     return <Link to={target}>
-        <div className={className}>
+        {/*<div className={className}>*/}
+        <div className={buttonVariants({ variant: "ghost" })}>
             <div>{icon}</div>
             <div className="hidden lg:block">
                 {children}

@@ -11,6 +11,11 @@ export default function ReadingTips() {
             <title>Lesetipps - Empfehlungen für Eltern und Erziehende</title>
             <meta name="description" content="Entdecken Sie eine sorgfältig zusammengestellte Auswahl an Büchern und Ressourcen für Eltern und Erziehende im Rahmen des STEP-Programms. Finden Sie Inspiration und praktische Ratschläge." />
         </Helmet>
+
+        <div className="flex w-full justify-center py-7">
+            <h1 className="text-2xl font-bold italic">Lesetipps</h1>
+        </div>
+
         <Content books={books} />
     </BlendingInDiv>
 }

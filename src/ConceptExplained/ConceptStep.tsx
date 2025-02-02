@@ -15,6 +15,7 @@ import ChildOnArm from "../assets/images/adult-child-on-arm-black-white.jpg";
 import NewbornFist from "../assets/images/adult-child-fist.jpg";
 
 import { Helmet } from 'react-helmet';
+import { Card, CardContent } from '@/components/ui/card';
 
 const elternmeinungen: string[] = [
     "Je mehr ein Kind beginnt Grenzen auszutesten, desto klarer muss man sie abstecken. Aber mit Respekt und Freundlichkeit – das ist die Basis des STEP Programms.“\n- Natalie Bettermann, Interview in „Eltern“",
@@ -128,54 +129,60 @@ export default function Concept() {
             <meta name="description" content="Erfahren Sie mehr über das STEP-Programm für Eltern und Erziehende. Entdecken Sie Kurse, Ressourcen und Techniken für eine wertschätzende und effektive Kindererziehung und Familienkommunikation." />
         </Helmet>
 
-        <div className="p-5 [&_ul]:ml-5 [&_ul]:list-disc bg-step-200 rounded-lg m-3">
-            <div className="space-y-3 mb-10 leading-relaxed">
-                <div className="flex flex-col md:flex-row items-center">
-                    <div className="py-5 md:p-0 w-fit">
-                        <StepLogoHomepage />
+        <Card>
+            <CardContent className="p-5 [&_ul]:ml-5 [&_ul]:list-disc rounded-lg m-3">
+                <div className="space-y-3 mb-10 leading-relaxed">
+                    <div className="flex flex-col md:flex-row items-center">
+                        <div className="py-5 md:p-0 w-fit">
+                            <StepLogoHomepage />
+                        </div>
+                        <Slideshow
+                            className="px-10 pb-10 h-fit flex-1"
+                            contents={[
+                                {
+                                    content: <div>
+                                        <p>Als Eltern erleben wir nicht nur das Glück und die Freude, unsere Kinder in ihre Lebenswelt hineinwachsen zu sehen - wir kennen auch Situationen, in denen wir uns hilflos fühlen und uns fragen:</p>
+                                        <p className="text-center font-bold font-lg">...</p>
+                                    </div>
+                                },
+                                { content: <p>Wie weit können die Freiräume in welchem Alter gehen und wie sollen wir Grenzen setzen?</p> },
+                                { content: <p>Verstehen wir die Bedürfnisse unseres Kindes?</p> },
+                                { content: <p>Wo liegt die Grenze zwischen Fördern und Überfordern?</p> },
+                                { content: <p>Welche Haltung und Worte wählen wir bei alltäglichen Auseinandersetzungen?</p> },
+                            ]}
+                        />
                     </div>
+
                     <Slideshow
-                        className="px-10 pb-10 h-fit flex-1"
+                        className="px-10 pb-10"
                         contents={[
-                            { content: <div>
-                                <p>Als Eltern erleben wir nicht nur das Glück und die Freude, unsere Kinder in ihre Lebenswelt hineinwachsen zu sehen - wir kennen auch Situationen, in denen wir uns hilflos fühlen und uns fragen:</p>
-                                <p className="text-center font-bold font-lg">...</p>
-                            </div>},
-                            { content: <p>Wie weit können die Freiräume in welchem Alter gehen und wie sollen wir Grenzen setzen?</p> },
-                            { content: <p>Verstehen wir die Bedürfnisse unseres Kindes?</p> },
-                            { content: <p>Wo liegt die Grenze zwischen Fördern und Überfordern?</p> },
-                            { content: <p>Welche Haltung und Worte wählen wir bei alltäglichen Auseinandersetzungen?</p> },
+                            {
+                                content: <div>
+                                    <p>So viele Ratgeber wir auch lesen mögen… was setzen wir davon im Alltag um? </p>
+                                    <p className="text-center font-bold font-lg">...</p>
+                                </div>
+                            },
+                            { content: <p>Im Elternkurs setzen wir uns mit den wichtigsten Erziehungsthemen auseinander und durchleben sie in einer wertschätzenden und respektvollen Gruppenatmosphäre mit Hilfe von Rollenspielen, Kleingruppenarbeit und „lebendigem Lehrmaterial“ mit einer neuen Perspektive.</p> },
+                            { content: <p>Es ist dabei nicht entscheidend, ob der Kurs vorausschauend oder hilfesuchend angesteuert wird. Das STEP-Konzept arbeitet mit vielen praktischen Übungen, ist gut strukturiert und baut auf fundierten wissenschaftlichen Erkenntnissen auf.</p> },
+                            { content: <p>Der Erfahrungsaustausch innerhalb der Kursgruppe ist ein wichtiger Baustein; dabei wird berücksichtigt, dass jede Familie ihre individuellen Wertvorstellungen hat.</p> },
+                            { content: <p>Es macht richtig Freude, mithilfe des Kurses Schritt für Schritt ein vertrauensvolles und entspanntes Miteinander in der Familie umzusetzen, Humor ist dabei sehr willkommen!</p> },
                         ]}
                     />
+
+
+
                 </div>
 
-                <Slideshow
-                    className="px-10 pb-10"
-                    contents={[
-                        { content: <div>
-                            <p>So viele Ratgeber wir auch lesen mögen… was setzen wir davon im Alltag um? </p>
-                            <p className="text-center font-bold font-lg">...</p>
-                        </div>},
-                        { content: <p>Im Elternkurs setzen wir uns mit den wichtigsten Erziehungsthemen auseinander und durchleben sie in einer wertschätzenden und respektvollen Gruppenatmosphäre mit Hilfe von Rollenspielen, Kleingruppenarbeit und „lebendigem Lehrmaterial“ mit einer neuen Perspektive.</p> },
-                        { content: <p>Es ist dabei nicht entscheidend, ob der Kurs vorausschauend oder hilfesuchend angesteuert wird. Das STEP-Konzept arbeitet mit vielen praktischen Übungen, ist gut strukturiert und baut auf fundierten wissenschaftlichen Erkenntnissen auf.</p> },
-                        { content: <p>Der Erfahrungsaustausch innerhalb der Kursgruppe ist ein wichtiger Baustein; dabei wird berücksichtigt, dass jede Familie ihre individuellen Wertvorstellungen hat.</p> },
-                        { content: <p>Es macht richtig Freude, mithilfe des Kurses Schritt für Schritt ein vertrauensvolles und entspanntes Miteinander in der Familie umzusetzen, Humor ist dabei sehr willkommen!</p> },
-                    ]}
-                />
-
-
-
-            </div>
-
-            {
-                stepHelps.map((help, i) => <Accordeon
-                    key={i}
-                    {...help}
-                    className="bg-gray-200 bg-opacity-30 mt-4 p-4 rounded-lg"
-                    headingClassName="text-xl font-bold p-2"
-                />)
-            }
-        </div>
+                {
+                    stepHelps.map((help, i) => <Accordeon
+                        key={i}
+                        {...help}
+                        className="bg-gray-200 bg-opacity-30 mt-4 p-4 rounded-lg"
+                        headingClassName="text-xl font-bold p-2"
+                    />)
+                }
+            </CardContent>
+        </Card>
 
         <div className="w-full flex justify-center">
             <Slideshow
@@ -190,33 +197,38 @@ export default function Concept() {
             />
         </div>
 
-        <div className="flex flex-col p-5 w-full justify-center xl:flex-row xl:justify-between [&_div]:mx-auto [&_div]:xl:mx-5">{
-            [
-                [opinionInterfaces, 15000],
-                [scientificInterfaces, 14000]
-            ].map((interfacesWithInterval, i) => {
-                return <div key={i} className="mx-auto xl:mx-5 w-4/5 xl:w-[45%]">
-                    <ContentBubbleSlideshow
-                        className="bg-step bg-opacity-70 rounded-[50%] p-12 my-5 text-md"
-                        contents={interfacesWithInterval[0] as Content[]}
-                        delay={interfacesWithInterval[1] as number}
-                    />
+        <Card>
+
+            <CardContent className="flex flex-col p-5 w-full justify-center xl:flex-row xl:justify-between [&_div]:mx-auto [&_div]:xl:mx-5">{
+                [
+                    [opinionInterfaces, 15000],
+                    [scientificInterfaces, 14000]
+                ].map((interfacesWithInterval, i) => {
+                    return <div key={i} className="mx-auto xl:mx-5 w-4/5 xl:w-[45%]">
+                        <ContentBubbleSlideshow
+                            className="bg-muted text-muted-foreground rounded-[50%] p-12 my-5 text-md"
+                            contents={interfacesWithInterval[0] as Content[]}
+                            delay={interfacesWithInterval[1] as number}
+                        />
+                    </div>
+                })
+            }</CardContent>
+        </Card>
+
+        <Card>
+            <CardContent className="my-10 p-5 [&_ul]:ml-5 [&_ul]:list-disc rounded-lg m-3">
+                <SectionHeading>Organisatorisches</SectionHeading>
+
+                <div className="bg-muted text-muted-foreground bg-opacity-30 mt-4 p-4 rounded-lg">
+                    <ul>
+                        <li>Kurse differenziert nach Alter der Kinder (bis 6, ab 6, 13-18 Jahre)</li>
+                        <li>Professionelles Trainingsmaterial, STEP Elternbücher, Beltz Verlag</li>
+                        <li>8-10 wöchentliche Treffen</li>
+                        <li>Kompaktkurse möglich!</li>
+                    </ul>
                 </div>
-            })
-        }</div>
-
-        <div className="my-10 p-5 [&_ul]:ml-5 [&_ul]:list-disc bg-step-200 rounded-lg m-3">
-            <SectionHeading>Organisatorisches</SectionHeading>
-
-            <div className="bg-gray-200 bg-opacity-30 mt-4 p-4 rounded-lg">
-                <ul>
-                    <li>Kurse differenziert nach Alter der Kinder (bis 6, ab 6, 13-18 Jahre)</li>
-                    <li>Professionelles Trainingsmaterial, STEP Elternbücher, Beltz Verlag</li>
-                    <li>8-10 wöchentliche Treffen</li>
-                    <li>Kompaktkurse möglich!</li>
-                </ul>
-            </div>
-        </div>
+            </CardContent>
+        </Card>
 
         <div className="h-2" />
 

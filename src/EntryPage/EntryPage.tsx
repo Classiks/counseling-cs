@@ -24,17 +24,17 @@ export default function EntryPage() {
                 </p>
                 <div className="flex items-center justify-center">
                     <ButtonFrame>
-                        <SwitchButtonStep title="Webseite" />
+                        <SwitchButtonStep title="Webseite" className="bg-step" />
                     </ButtonFrame>
                 </div>
             </GoToButtonArea>
-            <div className="flex items-center justify-center bg-gradient-to-b md:bg-gradient-to-r from-step to-tcm overflow-clip">
+            <div className="flex items-center justify-center bg-gradient-to-b md:bg-gradient-to-r from-step to-tcm overflow-clip md:h-screen">
                 <img src={Logo} alt="Logo" className="w-56 h-56 md:h-96 md:w-96 z-20 absolute" />
             </div>
             <GoToButtonArea className="bg-tcm">
                 <div className="flex items-center justify-center md:order-last">
                     <ButtonFrame>
-                        <SwitchButtonTcm title="Webseite" />
+                        <SwitchButtonTcm title="Webseite" className="bg-tcm" />
                     </ButtonFrame>
                 </div>
                 <p className="flex items-center text-center justify-center text-2xl md:text-4xl p-3">

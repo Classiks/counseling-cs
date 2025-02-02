@@ -8,6 +8,7 @@ import Mindfullness from "../assets/images/mindfulness-svg.svg";
 
 import { Helmet } from "react-helmet";
 import Slideshow from "../Slideshow/Slideshow";
+import { Card, CardContent } from "@/components/ui/card";
 
 export default function Concept() {
     return <BlendingInDiv>
@@ -15,41 +16,44 @@ export default function Concept() {
             <title>Traditionelle Chinesische Medizin (TCM) - Dr. med. Cordelia Schulz</title>
             <meta name="description" content="Tauchen Sie ein in die Welt der Traditionellen Chinesischen Medizin (TCM) mit Dr. med. Cordelia Schulz. Erfahren Sie mehr über Präventionsmethoden, Kurse und das ganzheitliche Verständnis von Gesundheit." />
         </Helmet>
+
         <div className="w-full p-5 flex flex-col gap-y-10">
 
             <h1 className="text-3xl font-bold mx-auto w-fit">
                 Traditionelle Chinesische Medizin
             </h1>
 
-            <div className="bg-tcm-100 p-2 bg-opacity-80 rounded-lg">
-                <h2 className="text-2xl">
-                    Chinesische Tradition und Lebenspflege
-                </h2>
+            <Card>
+                <CardContent className="p-2 rounded-lg">
+                    <h2 className="text-2xl">
+                        Chinesische Tradition und Lebenspflege
+                    </h2>
 
-                <div className="flex flex-col md:flex-row gap-3 items-center">
-                    <Slideshow
-                        className="flex-1 mr-0 md:mr-10 pt-3 pb-10 px-10"
-                        contents={[
-                            { content: <p>Wir alle sind verantwortlich für die Förderung der eigenen Lebenskräfte und spielen somit die zentrale Rolle bei der Gesunderhaltung oder auch im Heilungsprozess. Lebenspflege (Yang Sheng) ist ein wichtiges Thema in China und fußt auf den <Link to="/tcm/concept#5-saeulen-tcm" className="font-bold cursor-pointer">klassischen „5 Säulen“</Link>, die auch die Grundlage der chinesischen Medizin bilden. So kann im Alltag mit bewusster Ernährung, Zubereitung von Tees, Qigong und Selbstmassage dazu beigetragen werden, das körperliche und seelische Gleichgewicht zu finden und zu erhalten.</p> },
-                            { content: <p>Der traditionsbewusste chinesische Mensch strebt nicht nach dem Glück, sondern nach dem “Im-Fluss-Sein“, er denkt nicht das Ideal, sondern das Vitale – und dabei sieht er das Leben nicht in den extremen Gegensätzen Glück/Unglück, Geburt/Tod, sondern in dem „Dazwischen“, in dem sich das wahre Leben, Achtsamkeit und Bewusstheit findet.</p> },
-                            { content: <p>„Jade, die nicht bearbeitet wird, wird nicht zu einem Gefäß.“</p> },
-                        ]}
-                    />
+                    <div className="flex flex-col md:flex-row gap-3 items-center">
+                        <Slideshow
+                            className="flex-1 mr-0 md:mr-10 pt-3 pb-10 px-10"
+                            contents={[
+                                { content: <p>Wir alle sind verantwortlich für die Förderung der eigenen Lebenskräfte und spielen somit die zentrale Rolle bei der Gesunderhaltung oder auch im Heilungsprozess. Lebenspflege (Yang Sheng) ist ein wichtiges Thema in China und fußt auf den <Link to="/tcm/concept#5-saeulen-tcm" className="font-bold cursor-pointer">klassischen „5 Säulen“</Link>, die auch die Grundlage der chinesischen Medizin bilden. So kann im Alltag mit bewusster Ernährung, Zubereitung von Tees, Qigong und Selbstmassage dazu beigetragen werden, das körperliche und seelische Gleichgewicht zu finden und zu erhalten.</p> },
+                                { content: <p>Der traditionsbewusste chinesische Mensch strebt nicht nach dem Glück, sondern nach dem “Im-Fluss-Sein“, er denkt nicht das Ideal, sondern das Vitale – und dabei sieht er das Leben nicht in den extremen Gegensätzen Glück/Unglück, Geburt/Tod, sondern in dem „Dazwischen“, in dem sich das wahre Leben, Achtsamkeit und Bewusstheit findet.</p> },
+                                { content: <p>„Jade, die nicht bearbeitet wird, wird nicht zu einem Gefäß.“</p> },
+                            ]}
+                        />
 
-                    <img
-                        src={Mindfullness}
-                        alt=""
-                        className=" w-52 h-52 rounded-lg"
-                    />
-                </div>
+                        <img
+                            src={Mindfullness}
+                            alt=""
+                            className=" w-52 h-52 rounded-lg bg-muted"
+                        />
+                    </div>
 
-            </div>
+                </CardContent>
+            </Card>
 
-            <hr className="bg-tcm-300 h-1 w-4/5 rounded mx-auto" />
+            <hr className="bg-primary h-1 w-4/5 rounded mx-auto" />
 
             <Accordeon
                 heading="TCM und Chinesische Medizin"
-                className="bg-tcm-100 rounded-lg box-border p-2 bg-opacity-80"
+                className="bg-primary rounded-lg box-border p-2"
                 headingClassName="text-2xl font-bold mb-2"
             >
                 <div className="flex flex-col md:flex-row gap-3 items-center">
@@ -74,7 +78,7 @@ export default function Concept() {
                 </div>
             </Accordeon>
 
-            <hr className="bg-tcm-300 h-1 w-4/5 rounded mx-auto" />
+            <hr className="bg-primary h-1 w-4/5 rounded mx-auto" />
 
             <div className="flex flex-col gap-y-5" id="5-saeulen-tcm">
                 <h2 className="text-2xl">
@@ -82,7 +86,7 @@ export default function Concept() {
                 </h2>
                 <Accordeon
                     heading="Akupunktur"
-                    className="bg-tcm-100 rounded-lg box-border p-2 bg-opacity-80"
+                    className="bg-primary rounded-lg box-border p-2"
                     headingClassName="text-2xl font-bold mb-2"
                 >
                     <div className="flex flex-col md:flex-row gap-1 md:gap-3 items-center md:items-start">
@@ -102,7 +106,7 @@ export default function Concept() {
 
                 <Accordeon
                     heading="Qigong"
-                    className="bg-tcm-100 rounded-lg box-border p-2 bg-opacity-80"
+                    className="bg-primary rounded-lg box-border p-2"
                     headingClassName="text-2xl font-bold mb-2"
                 >
                     <p>
@@ -112,7 +116,7 @@ export default function Concept() {
 
                 <Accordeon
                     heading="Diätetik / Ernährungslehre"
-                    className="bg-tcm-100 rounded-lg box-border p-2 bg-opacity-80"
+                    className="bg-primary rounded-lg box-border p-2"
                     headingClassName="text-2xl font-bold mb-2"
                 >
                     <div className="md:w-1/2 mx-auto text-center italic mb-4">
@@ -132,7 +136,7 @@ export default function Concept() {
 
                 <Accordeon
                     heading="Chinesische Arzneimitteltherapie (CAT) und Phytotherapie"
-                    className="bg-tcm-100 rounded-lg box-border p-2 bg-opacity-80"
+                    className="bg-primary rounded-lg box-border p-2"
                     headingClassName="text-2xl font-bold mb-2"
                 >
                     <p>Der klinische Einsatz von Heilkräutern macht ca. 3/4 aller Behandlungen in den TCM-Krankenhäusern in China aus - im Westen ist er viel geringer. Die CAT wird als „inneres Therapieverfahren“ bezeichnet und basiert auf den gleichen Grundlagen wie die chinesische Ernährungslehre. Verwendet werden überwiegend pflanzliche Mittel (Blüten, Blätter, Früchte, Stängel, Rinden, Wurzeln, Samen…), zum kleinen Teil kommen auch mineralische oder tierische Bestandteile vor. Der Artenschutz für bedrohte Pflanzen und Tiere und die Qualität der Produkte wird in Deutschland durch die Apotheken streng beachtet. </p>
@@ -141,7 +145,7 @@ export default function Concept() {
 
                 <Accordeon
                     heading="Tuina (Schub- und Zugmassage)"
-                    className="bg-tcm-100 rounded-lg box-border p-2 bg-opacity-80"
+                    className="bg-primary rounded-lg box-border p-2"
                     headingClassName="text-2xl font-bold mb-2"
                 >
                     <p>
@@ -151,11 +155,11 @@ export default function Concept() {
 
             </div>
 
-            <hr className="bg-tcm-300 h-1 w-4/5 rounded mx-auto" />
+            <hr className="bg-primary h-1 w-4/5 rounded mx-auto" />
 
             <Accordeon
                 heading="Kleiner philosophischer Exkurs"
-                className="bg-tcm-100 rounded-lg box-border p-2 bg-opacity-80"
+                className="bg-primary rounded-lg box-border p-2"
                 headingClassName="text-2xl font-bold mb-2"
             >
                 <p>Die <span className="font-bold">Drei Lehren</span> des Landes sind der <span className="font-bold">Konfuzianismus, der Daoismus und der Buddhismus</span>.</p>

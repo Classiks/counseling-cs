@@ -14,7 +14,7 @@ export default function AboutMeTcm() {
             <div className="w-80 h-80 xs:w-96 xs:h-96 md:w-1/3 md:h-auto rounded-full overflow-hidden">
                 <Image />
             </div>
-            <div className="md:w-2/3 bg-tcm-400 rounded-lg p-4 shadow-lg">
+            <div className="md:w-2/3 bg-muted text-muted-foreground rounded-lg p-4 shadow-lg">
                 <Description />
             </div>
         </div>
