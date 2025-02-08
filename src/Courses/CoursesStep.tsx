@@ -2,6 +2,7 @@ import BlendingInDiv from '../components/BlendingInDiv';
 import StepEncouragementGel from "../assets/images/cartoon-encouragement-hairgel.png";
 import StepParentCourse2 from "../assets/images/step-elterkurs-2.png";
 import StepEncouragementScientist from "../assets/images/cartoon-encouragement-scientist.png";
+import StepUnder6 from "../assets/images/step-under-6.jpg";
 import DateAccordeon from './DateAccordeon';
 import Accordeon from '../components/Accordeon';
 import { Helmet } from 'react-helmet';
@@ -102,7 +103,7 @@ export default function Courses() {
                         />
                     </div>
                 </div>
-                <img src={StepEncouragementGel} alt="course image" className="hidden md:block w-72 object-contain rounded-md" />
+                <img src={StepUnder6} alt="course image" className="hidden md:block w-72 object-contain rounded-md" />
             </CardContent>
         </Card>
 
@@ -177,7 +178,7 @@ export default function Courses() {
                         />
                     </div>
                 </div>
-                <img src={StepEncouragementGel} alt="course image" className="hidden md:block w-72 object-contain rounded-md" />
+                <img src={StepEncouragementScientist} alt="course image" className="hidden md:block w-72 object-contain rounded-md" />
             </CardContent>
         </Card>
 
@@ -287,7 +288,7 @@ export default function Courses() {
                         <CourseNotAvailable />
                     </div>
                 </div>
-                <img src={StepEncouragementScientist} alt="course image" className="hidden md:block w-72 object-contain rounded-md" />
+                <img src={StepEncouragementGel} alt="course image" className="hidden md:block w-72 object-contain rounded-md" />
             </CardContent>
         </Card>
     </BlendingInDiv>
