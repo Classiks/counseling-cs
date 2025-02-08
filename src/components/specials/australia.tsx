@@ -29,7 +29,7 @@ export default function SpecialAustralia() {
                     <span>Do., 27.03.2025, 19:00 - 20:30 Uhr</span>
                     
                     <span className="font-semibold">Kursentgelt:</span>
-                    <span>5,00 €</span>
+                    <span>5,00 € (Abendkasse)</span>
                     
                     <span className="font-semibold">Dauer:</span>
                     <span>1 Termin</span>
@@ -57,7 +57,7 @@ export default function SpecialAustralia() {
 
 export function LinkToAustraliaSpecial({ className }: { className?: string }) {
     return <Link to="/specials/australia" className={className}>
-        <Button className="w-fit py-10 px-10 bg-black hover:bg-black/80 text-white animate-pulse border-2 border-white">
+        <Button className="w-fit py-10 px-10 bg-gradient-to-r from-black to-black/80 hover:bg-black/80 text-white border-2 border-white">
             Spezialvortrag: <br />Auf berühmten Pfaden in Australiens
         </Button>
     </Link>
