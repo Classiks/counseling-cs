@@ -1,10 +1,9 @@
 import { useLocation, useNavigate } from "react-router-dom";
 
-import Mode from "../components/Mode";
-import ModeController from "../ModeController";
+import { Mode } from "@/dataclasses/Mode";
+import { useMode } from "@/components/mode-provider";
 import UrlParser from "./UrlParser";
 import routes from "../Routing/Routes";
-import { twMerge } from "tailwind-merge";
 import { Button } from "@/components/ui/button";
 
 interface ISwitchButtonProps {
@@ -17,17 +16,17 @@ export default function SwitchButton({ mode, targetPageTitle, className }: ISwit
     const navigate = useNavigate();
     const location = useLocation()
 
+    const { setMode } = useMode();
+
     return <Button 
         className={className}
         onClick={() => {
-            ModeController.setMode(mode);
+            setMode(mode);
             
             const page: string = UrlParser.getPageFromUrl(location);
-            const path: string = `/${mode}/${page}`;
-            const pathExists: boolean = routes.get(mode)?.some(route => route.path === path) ?? false;
+            const pathExists: boolean = routes.get(mode)?.some(route => route.path === page) ?? false;
 
-
-            navigate(pathExists ? path : `/${mode}`);
+            navigate(pathExists ? `/${mode}/${page}` : `/${mode}`);
         }}
     >
         {targetPageTitle}

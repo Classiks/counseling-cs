@@ -76,7 +76,7 @@ export default function Courses() {
                         <h1 className="text-2xl font-bold italic">Fit für den Sommer mit den 5 Säulen der Chinesischen Medizin</h1>
                         <h2>VHS-Kursnummer: 242303075</h2>
                     </div>
-                    <SignupButton link="https://www.vhs-offenburg.de/programm/allgemeinbildung/kurs/Fit-fuer-den-Sommer/242303075" />
+                    <SignupButton link="https://www.vhs-offenburg.de/programm/allgemeinbildung/kurs/Fit-fuer-den-Sommer/251303017" />
                     <div>
                         <p>6 Termine: Mittwochs, 18:00 - 19:30</p>
                         <p>Kursstart: 02.04.2025</p>

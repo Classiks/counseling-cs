@@ -51,14 +51,16 @@ function Description({ className }: IDescriptionProps) {
             </p>
 
             <p>1994 - 2002</p>
-            <p className="col-span-4 ">
-                Zeit für die Erziehung der Kinder und für
+            <div className="col-span-4 ">
+                <span>
+                    Zeit für die Erziehung der Kinder und für
+                </span>
                 <ul className="list-disc list-inside">
                     <li>das Unterrichten an Krankenpflegeschulen,</li>
                     <li>die fachliche Weiterbildung (Psychosomatik, Naturheilkunde und Chinesische Medizin),</li>
                     <li>ehrenamtliche Aufgaben (u.a. Organisation eines „Gesunden Schulfrühstücks“).</li>
                 </ul>
-            </p>
+            </div>
 
             <p>2002 - 2019</p>
             <p className="col-span-4">

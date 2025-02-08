@@ -3,6 +3,7 @@ import Portrait from "../assets/images/cs-portrait-standing.jpg";
 import { Helmet } from "react-helmet";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { LinkToAustraliaSpecial } from "@/components/specials/australia";
 
 export default function HomepageTcm() {
     const navigate = useNavigate();
@@ -14,32 +15,36 @@ export default function HomepageTcm() {
         </Helmet>
 
         <h1 className="font-bold text-2xl text-center m-10">
-            <p className="text-lg text-muted">Dr. med Cordelia Schulz</p>
+            <p className="text-lg text-primary">Dr. med Cordelia Schulz</p>
             <p>Herzlich Willkommen auf meiner Webseite</p>
         </h1>
 
         <div className="flex flex-col md:flex-row gap-10">
-            <div className="flex flex-col items-center justify-center gap-5">
-                <div className="w-64 h-64 rounded-full overflow-hidden">
-                    <img src={Portrait} alt="Portrait" className="-translate-y-8" />
+            <div className="flex flex-col gap-10">
+                <div className="flex flex-col items-center justify-center gap-5">
+                    <div className="w-64 h-64 rounded-full overflow-hidden">
+                        <img src={Portrait} alt="Portrait" className="-translate-y-8" />
+                    </div>
+
+                    <Button onClick={() => navigate("/tcm/courses")} >
+                        Zu den Kursen
+                    </Button>
                 </div>
 
-                <Button onClick={() => navigate("/tcm/courses")} >
-                    Zu den Kursen
-                </Button>
-
-                <Card>
-                    <CardContent className="p-5 space-y-3">
-                        <p>
-                            Selbstfürsorge auf der Basis der Naturheilkunde und der chinesischen Medizin liegt mir sehr am Herzen. Mein Arbeitsschwerpunkt besteht darin, die Möglichkeiten der „Hilfe zur Selbsthilfe“ zu vermitteln.
-                        </p>
-
-                        <p>
-                            Deshalb habe ich nach 20 Jahren ärztlicher Tätigkeit meinen Schwerpunkt in die Prävention in Form von Kursangeboten verlagert. In diesen Kursen werden sowohl allgemeine ganzheitliche Grundlagen nahegebracht als auch für die individuelle Lebenssituation hilfreiche Themenschwerpunkte behandelt.
-                        </p>
-                    </CardContent>
-                </Card>
+                <LinkToAustraliaSpecial className="mx-auto" />
             </div>
+
+            <Card>
+                <CardContent className="p-5 space-y-3">
+                    <p>
+                        Selbstfürsorge auf der Basis der Naturheilkunde und der chinesischen Medizin liegt mir sehr am Herzen. Mein Arbeitsschwerpunkt besteht darin, die Möglichkeiten der „Hilfe zur Selbsthilfe“ zu vermitteln.
+                    </p>
+
+                    <p>
+                        Deshalb habe ich nach 20 Jahren ärztlicher Tätigkeit meinen Schwerpunkt in die Prävention in Form von Kursangeboten verlagert. In diesen Kursen werden sowohl allgemeine ganzheitliche Grundlagen nahegebracht als auch für die individuelle Lebenssituation hilfreiche Themenschwerpunkte behandelt.
+                    </p>
+                </CardContent>
+            </Card>
         </div>
     </div >
 }

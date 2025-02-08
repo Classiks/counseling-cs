@@ -5,7 +5,7 @@ import BackgroundImageDiv from './BackgroundImageDiv';
 import NavigationButton from './NavigationButton';
 import TabButton from './TabButton';
 
-import Interval from '../components/Interval';
+import Interval from '../lib/Interval';
 
 export interface ISlideshowProps {
     className?: string,

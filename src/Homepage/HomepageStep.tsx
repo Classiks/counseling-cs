@@ -3,6 +3,7 @@ import Portrait from "../assets/images/cs-portrait-standing.jpg";
 import { Helmet } from "react-helmet";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { LinkToAustraliaSpecial } from "@/components/specials/australia";
 
 export default function HomepageStep() {
     const navigate = useNavigate();
@@ -14,19 +15,23 @@ export default function HomepageStep() {
         </Helmet>
 
         <h1 className="font-bold text-2xl text-center m-10">
-            <p className="text-lg text-muted">Dr. med Cordelia Schulz</p>
+            <p className="text-lg text-primary">Dr. med Cordelia Schulz</p>
             <p>Herzlich Willkommen auf meiner Webseite</p>
         </h1>
 
         <div className="flex flex-col md:flex-row gap-10">
-            <div className="flex flex-col items-center justify-center gap-5">
-                <div className="w-64 h-64 rounded-full overflow-hidden">
-                    <img src={Portrait} alt="Portrait" className="-translate-y-8" />
+            <div className="flex flex-col gap-10">
+                <div className="flex flex-col items-center justify-center gap-5">
+                    <div className="w-64 h-64 rounded-full overflow-hidden">
+                        <img src={Portrait} alt="Portrait" className="-translate-y-8" />
+                    </div>
+
+                    <Button onClick={() => navigate("/step/courses")}>
+                        Zu den Kursen
+                    </Button>
                 </div>
 
-                <Button onClick={() => navigate("/step/courses")}>
-                    Zu den Kursen
-                </Button>
+                <LinkToAustraliaSpecial className="mx-auto" />
             </div>
 
             <Card>

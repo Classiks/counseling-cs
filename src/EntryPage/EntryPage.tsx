@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 
 import { Helmet } from "react-helmet";
 import { twMerge } from "tailwind-merge";
+import { LinkToAustraliaSpecial } from "../components/specials/australia";
 
 export default function EntryPage() {
     return <AppearingDiv
@@ -29,7 +30,10 @@ export default function EntryPage() {
                 </div>
             </GoToButtonArea>
             <div className="flex items-center justify-center bg-gradient-to-b md:bg-gradient-to-r from-step to-tcm overflow-clip md:h-screen">
+                {/*
                 <img src={Logo} alt="Logo" className="w-56 h-56 md:h-96 md:w-96 z-20 absolute" />
+                */}
+                <LinkToAustraliaSpecial />
             </div>
             <GoToButtonArea className="bg-tcm">
                 <div className="flex items-center justify-center md:order-last">

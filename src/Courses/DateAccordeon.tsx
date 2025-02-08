@@ -20,8 +20,8 @@ export default function DateAccordeon({ className="", dates }: IDateAccordeon) {
         headingClassName="text-lg font-bold"
     >
         <ul className="list-disc [&_li]:ml-5 mt-3">{
-            dates.map(date => (
-                <li>
+            dates.map((date, index) => (
+                <li key={index}>
                     {
                         [date.day, date.date, date.time, date.location]
                             .filter( Boolean )

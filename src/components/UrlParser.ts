@@ -1,4 +1,4 @@
-import Mode from "./Mode";
+import { Mode } from "../dataclasses/Mode";
 import { Location } from "react-router-dom";
 
 export default class UrlParser {

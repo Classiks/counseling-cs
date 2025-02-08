@@ -31,44 +31,6 @@ export default function Courses() {
             <h1 className="text-2xl font-bold italic">STEP Kurse</h1>
         </div>
 
-        <Card className="m-3">
-            <CardContent className="p-4 flex gap-x-10 items-start">
-                <div className="space-y-5">
-                    <div className="p-2 pb-0">
-                        <h1 className="text-2xl font-bold italic">Wie "Zwischen-Menschlichkeit heute" mit dem STEP-Konzept gut gelebt werden kann… in Familie und Beruf.</h1>
-                        <h2>VHS-Kursnummer: 242105123</h2>
-                    </div>
-                    <SignupButton link="https://www.vhs-offenburg.de/programm/allgemeinbildung/kurs/Eltern-VHS-Wie-Zwischenmenschlichkeit-heute-mit-dem-STEP-Konzept-gut-gelebt/242105123" />
-                    <div>
-                        <p> Termin: Dienstag, 21.01.2025, 19:30-21:00 </p>
-                        <VhsLocation room="102" />
-                    </div>
-                    <div>
-                        <Accordeon
-                            heading="Inhalte"
-                            className="bg-primary p-2"
-                            headingClassName="font-bold text-lg"
-                        >
-                            <div className="flex flex-col space-y-2">
-                                <p>
-                                    Es ist allgemein bekannt, dass durch das Verinnerlichen des STEP-Trainings Eltern ihre Erziehungskompetenz stärken, gelingende und erfüllende Beziehungen mit ihren Kindern aufbauen, und ein kooperatives, stressfreieres Zusammenleben in der Familie erreichen können.
-                                </p>
-                                <p>
-                                    In dem gut ausgearbeiteten Programm werden u.a. die eigenen Wertevorstellungen, Ressourcen und Stärken (wieder oder neu) entdeckt und Schritt für Schritt hilfreiche "Tools" angeboten, die ausprobiert und "personalisiert" werden können.
-                                </p>
-                                <p>
-                                    Genau deshalb ist das Konzept - und das ist weniger bekannt - weit über ein "Familientraninig" hinaus hilfreich für jede Art zwischenmenschlicher Beziehungen, so auch in der Partnerschaft und am Arbeitsplatz.
-                                </p>
-                                <p>
-                                    Spielerisch und humorvoll, mit Aha-Erlebnissen und Spaß in der Gruppe zeigt der Impulsvortrag auf, wie schon kleine Übungen oder "Tools" des STEP-Konzepts viel bewegen können.
-                                </p>
-                            </div>
-                        </Accordeon>
-                    </div>
-                </div>
-                <img src={StepEncouragementScientist} alt="course image" className="hidden md:block w-72 object-contain rounded-md" />
-            </CardContent>
-        </Card>
 
         {/* --- STEP-Elternkurs für Eltern von Kindern unter 6 Jahren (Teil 1) --- */}
         <Card className="m-3">
@@ -80,7 +42,7 @@ export default function Courses() {
                         </h1>
                         <h2>VHS-Kursnummer: 241105120</h2>
                     </div>
-                    <SignupButton link="https://www.vhs-offenburg.de/programm/allgemeinbildung/kurs/Eltern-VHS-STEP-Elternkurs-für-Eltern-von-Kindern-unter-6-Jahren-Teil-1/241105120" />
+                    <SignupButton link="https://www.vhs-offenburg.de/programm/allgemeinbildung/kurs/Eltern-VHS-STEP-Elternkurs-für-Eltern-von-Kindern-unter-6-Jahren-Teil-1/251105120" />
                     <div>
                         <p>5 Termine: Dienstags, 20:00 - 22:00</p>
                         <p>Kursstart: 25.03.2025</p>
@@ -154,7 +116,7 @@ export default function Courses() {
                         </h1>
                         <h2>VHS-Kursnummer: 241105121</h2>
                     </div>
-                    <SignupButton link="https://www.vhs-offenburg.de/programm/allgemeinbildung/kurs/Eltern-VHS-STEP-Elternkurs-für-Eltern-von-Kindern-zwischen-6-und-12-Jahren-Teil-1/241105121" />
+                    <SignupButton link="https://www.vhs-offenburg.de/programm/allgemeinbildung/kurs/Eltern-VHS-STEP-Elternkurs-für-Eltern-von-Kindern-zwischen-6-und-12-Jahren-Teil-1/251105121" />
                     <div>
                         <p>5 Termine: Mittwochs, 20:00 - 22:00</p>
                         <p>Kursstart: 26.03.2025</p>
@@ -219,7 +181,6 @@ export default function Courses() {
             </CardContent>
         </Card>
 
-
         <Card className="m-3">
             <CardContent className="p-4 flex gap-x-10 items-start justify-between">
                 <div className="space-y-5">
@@ -283,6 +244,50 @@ export default function Courses() {
                     </div>
                 </div>
                 <img src={StepParentCourse2} alt="course image" className="hidden md:block w-72 object-contain rounded-md bg-white" />
+            </CardContent>
+        </Card>
+
+
+        {/* --- Wie "Zwischen-Menschlichkeit heute" mit dem STEP-Konzept gut gelebt werden kann… in Familie und Beruf. --- */}
+        <Card className="m-3">
+            <CardContent className="p-4 flex gap-x-10 items-start">
+                <div className="space-y-5">
+                    <div className="p-2 pb-0">
+                        <h1 className="text-2xl font-bold italic">Wie "Zwischen-Menschlichkeit heute" mit dem STEP-Konzept gut gelebt werden kann… in Familie und Beruf.</h1>
+                        <h2>VHS-Kursnummer: 242105123</h2>
+                    </div>
+                    <SignupButton link="https://www.vhs-offenburg.de/programm/allgemeinbildung/kurs/Eltern-VHS-Wie-Zwischenmenschlichkeit-heute-mit-dem-STEP-Konzept-gut-gelebt/242105123" />
+                    {/*
+                    <div>
+                        <p> Termin: Dienstag, 21.01.2025, 19:30-21:00 </p>
+                        <VhsLocation room="102" />
+                    </div>
+                    */}
+                    <div>
+                        <Accordeon
+                            heading="Inhalte"
+                            className="bg-primary p-2"
+                            headingClassName="font-bold text-lg"
+                        >
+                            <div className="flex flex-col space-y-2">
+                                <p>
+                                    Es ist allgemein bekannt, dass durch das Verinnerlichen des STEP-Trainings Eltern ihre Erziehungskompetenz stärken, gelingende und erfüllende Beziehungen mit ihren Kindern aufbauen, und ein kooperatives, stressfreieres Zusammenleben in der Familie erreichen können.
+                                </p>
+                                <p>
+                                    In dem gut ausgearbeiteten Programm werden u.a. die eigenen Wertevorstellungen, Ressourcen und Stärken (wieder oder neu) entdeckt und Schritt für Schritt hilfreiche "Tools" angeboten, die ausprobiert und "personalisiert" werden können.
+                                </p>
+                                <p>
+                                    Genau deshalb ist das Konzept - und das ist weniger bekannt - weit über ein "Familientraninig" hinaus hilfreich für jede Art zwischenmenschlicher Beziehungen, so auch in der Partnerschaft und am Arbeitsplatz.
+                                </p>
+                                <p>
+                                    Spielerisch und humorvoll, mit Aha-Erlebnissen und Spaß in der Gruppe zeigt der Impulsvortrag auf, wie schon kleine Übungen oder "Tools" des STEP-Konzepts viel bewegen können.
+                                </p>
+                            </div>
+                        </Accordeon>
+                        <CourseNotAvailable />
+                    </div>
+                </div>
+                <img src={StepEncouragementScientist} alt="course image" className="hidden md:block w-72 object-contain rounded-md" />
             </CardContent>
         </Card>
     </BlendingInDiv>

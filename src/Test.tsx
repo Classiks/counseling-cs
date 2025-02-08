@@ -1,6 +1,6 @@
 import { ReactNode, useState } from "react";
 import Logo from "./assets/images/chat_gpt_logo_cropped.png";
-import Mode from "./components/Mode";
+import { Mode } from "./dataclasses/Mode";
 
 import routes from "./Routing/Routes";
 
