@@ -10,7 +10,6 @@ import SignupButton from './SignupButton';
 import VhsLocation from './VhsLocation';
 import CourseNotAvailable from '../components/CourseNotAvailable';
 import { Card, CardContent } from '@/components/ui/card';
-import { Accordion } from '@/components/ui/accordion';
 
 export default function Courses() {
     return <BlendingInDiv className="flex flex-col gap-x-16">

@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import { SwitchButtonStep, SwitchButtonTcm } from "../components/SwitchButton";
-import Logo from "../assets/images/icon_v1_cropped.png";
+// import Logo from "../assets/images/icon_v1_cropped.png";
 
 import { motion } from "framer-motion";
 
