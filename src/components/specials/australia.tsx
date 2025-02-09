@@ -57,7 +57,7 @@ export default function SpecialAustralia() {
 
 export function LinkToAustraliaSpecial({ className }: { className?: string }) {
     return <Link to="/specials/australia" className={className}>
-        <Button className="w-fit py-10 px-10 bg-gradient-to-r from-black to-black/80 hover:bg-black/80 text-white border-2 border-white flex-col gap-0 text-wrap">
+        <Button className="w-fit h-fit py-10 px-10 bg-gradient-to-r from-black to-black/80 hover:bg-black/80 text-white border-2 border-white flex-col gap-0 text-wrap">
             <p>Aktuell - Bildvortrag:</p>
             <span className="md:hidden">Auf berühmten Pfaden in Australien</span>
             <span className="hidden md:block">Auf berühmten Pfaden und abgelegenen Wanderwegen in Australiens Südosten unterwegs</span>
