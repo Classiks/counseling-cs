@@ -34,9 +34,6 @@ export default function Router({ children }: { children: ReactNode}) {
                     />
                 )}
             </Route>
-
-            {/* Specials */}
-            <Route path="/specials/australia" element={<SpecialAustralia />} />
         </Routes>
     </BrowserRouter>
 }
