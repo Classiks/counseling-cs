@@ -10,6 +10,9 @@ import SignupButton from './SignupButton';
 import VhsLocation from './VhsLocation';
 import CourseNotAvailable from '../components/CourseNotAvailable';
 import { Card, CardContent } from '@/components/ui/card';
+import MenopauseImg from "../assets/images/menopause.png";
+import CookingImg from "../assets/images/maechtig-kochen.png"
+import PreventionImg from "../assets/images/gesndheitspraevention.png"
 
 export default function Courses() {
     return <BlendingInDiv className="flex flex-col gap-x-16">
@@ -22,6 +25,128 @@ export default function Courses() {
             <h1 className="text-2xl font-bold italic">Kurse</h1>
         </div>
 
+        {/* --- Menopause - Jahre des Wechsels und der Selbstermächtigung --- */}
+        <Card className="m-3">
+            <CardContent className="p-4 flex gap-x-10 items-start justify-between">
+                <div className="space-y-5">
+                    <div className="p-2 pb-0">
+                        <h1 className="text-2xl font-bold italic">Menopause - Jahre des Wechsels und der Selbstermächtigung</h1>
+                        <h2>VHS-Kursnummer: 252303008</h2>
+                    </div>
+                    <SignupButton link="https://www.vhs-offenburg.de/programm/semesterschwerpunkt-maechtig/kurs/Menopause-Jahre-des-Wechsels-und-der-Selbstermaechtigung/252303008" />
+                    <div>
+                        <p>1 Termin: Samstag, 22.11.2025, 09:00 - 12:00</p>
+                        <VhsLocation room="113 Bewegung" />
+                    </div>
+                    <div>
+                        <Accordeon
+                            heading="Inhalte"
+                            className="bg-primary p-2"
+                            headingClassName="font-bold text-lg"
+                        >
+                            <div className="flex flex-col space-y-2">
+                                <p>
+                                    Was ist die Menopause? Was geschieht in den Wechseljahren? Wie können wir diese wichtige Phase gut leben und aktiv gestalten? Selbstermächtigung und Hilfe zur Selbsthilfe sind Themen dieses Workshops, in dem
+                                </p>
+                                <ul className="[&_li]:list-disc [&_li]:ml-5">
+                                    <li>Grundlagen erklärt,</li>
+                                    <li>Standpunkte geteilt,</li>
+                                    <li>Körperwahrnehmung vertieft,</li>
+                                    <li>Fragen ausgesprochen und</li>
+                                    <li>naturheilkundliche und praktische Lösungswege aufgezeigt werden.</li>
+                                </ul>
+                            </div>
+                        </Accordeon>
+                    </div>
+                </div>
+                <img src={MenopauseImg} alt="course image" className="hidden md:block w-72 object-contain rounded-md" />
+            </CardContent>
+        </Card>
+
+        {/* --- Mächtig kochen --- */}
+        <Card className="m-3">
+            <CardContent className="p-4 flex gap-x-10 items-start justify-between">
+                <div className="space-y-5">
+                    <div className="p-2 pb-0">
+                        <h1 className="text-2xl font-bold italic">Mächtig kochen: Gerichte mit hohem Getreide-, Gemüse- und gesundem Fettanteil</h1>
+                        <h2>VHS-Kursnummer: 252305514</h2>
+                    </div>
+                    <SignupButton link="https://www.vhs-offenburg.de/programm/semesterschwerpunkt-maechtig/kurs/Maechtig-kochen-Gerichte-mit-hohem-Getreide--Gemuese--und-gesundem-Fettanteil/252305514" />
+                    <div>
+                        <p>1 Termin: Donnerstag, 06.11.2025, 18:00 - 20:00</p>
+                        <VhsLocation room="201 Kochstudio" />
+                    </div>
+                    <div>
+                        <Accordeon
+                            heading="Inhalte"
+                            className="bg-primary p-2"
+                            headingClassName="font-bold text-lg"
+                        >
+                            <div className="flex flex-col space-y-2">
+                                <p>
+                                    Wenn wertvolle Zutaten in gut abgestimmten Mengen verwendet werden, darf ein Essen gerne „mächtig“ sein. In diesem Kurs werden wichtige Ernährungsgrundlagen einer vollwertigen Küche mit Bereicherungen aus der chinesischen Diätetik vermittelt und praktisch umgesetzt. Eine Morgen-, Mittags- und Abendmahlzeit werden als Menü zubereitet und verzehrt. Hinweis: Es wird kein glutenhaltiges Getreide verwendet.
+                                </p>
+                                <p className="font-bold">Wichtig für Kochkurse</p>
+                                <p>
+                                    Bitte bringen Sie Schürze, Behältnisse für Kostproben und ein Getränk mit. Die Lebensmittel werden von der Kursleitung eingekauft und anteilig im Kurs abgerechnet. Bitte teilen Sie bei der Anmeldung Unverträglichkeiten oder vegetarische/vegane Ernährung mit.
+                                </p>
+                            </div>
+                        </Accordeon>
+                    </div>
+                </div>
+                <img src={CookingImg} alt="course image" className="hidden md:block w-72 object-contain rounded-md" />
+            </CardContent>
+        </Card>
+
+        {/* --- Gesundheitsprävention mit Chinesischer Medizin und Naturheilkunde --- */}
+        <Card className="m-3">
+            <CardContent className="p-4 flex gap-x-10 items-start justify-between">
+                <div className="space-y-5">
+                    <div className="p-2 pb-0">
+                        <h1 className="text-2xl font-bold italic">Gesundheitsprävention mit Chinesischer Medizin und Naturheilkunde</h1>
+                        <h2>VHS-Kursnummer: 252303006</h2>
+                    </div>
+                    <SignupButton link="https://www.vhs-offenburg.de/programm/semesterschwerpunkt-maechtig/kurs/Gesundheitspraevention-mit-Chinesischer-Medizin-und-Naturheilkunde/252303006" />
+                    <div>
+                        <p>Beginn: Dienstag, 14.10.2025, 18:00 - 19:30</p>
+                        <p>Dauer: 6 Termine</p>
+                        <VhsLocation room="101 Seminarraum" />
+                    </div>
+                    <div>
+                        <Accordeon
+                            heading="Inhalte"
+                            className="bg-primary p-2"
+                            headingClassName="font-bold text-lg"
+                        >
+                            <div className="flex flex-col space-y-2">
+                                <p>
+                                    Das Heilkonzept der Chinesischen Medizin basiert auf den 5 Säulen Akupunktur/Akupressur, Ernährungslehre, Pflanzenheilkunde, Qigong und Tuina-Massage. An ausgewählten Beispielen werden diese Methoden theoretisch und praktisch erarbeitet, um gestärkt und gesund durch die Wintermonate zu kommen.
+                                </p>
+                                <p>
+                                    Langfristiges Ziel ist es, einfache und zugleich wirkungsvolle Praktiken zu erlernen und regelmäßig im Alltag umzusetzen, um für das „Gute Leben“ zu sorgen.
+                                </p>
+                                <p className="text-sm opacity-80">
+                                    Hinweis: Die Traditionelle Chinesische Medizin ist eine Methode ohne wissenschaftlichen Nachweis und als Ergänzung der Schulmedizin zu verstehen.
+                                </p>
+                            </div>
+                        </Accordeon>
+                        <DateAccordeon
+                            className="bg-primary p-2 w-full"
+                            dates={[
+                                { day: "Dienstag", date: "14.10.2025" },
+                                { day: "Dienstag", date: "21.10.2025" },
+                                { day: "Dienstag", date: "04.11.2025" },
+                                { day: "Dienstag", date: "11.11.2025" },
+                                { day: "Dienstag", date: "18.11.2025" },
+                                { day: "Dienstag", date: "25.11.2025" },
+                            ]}
+                        />
+                    </div>
+                </div>
+                <img src={PreventionImg} alt="course image" className="hidden md:block w-72 object-contain rounded-md" />
+            </CardContent>
+        </Card>
+
         <Card className="m-3">
             <CardContent className="p-4 flex gap-x-10 items-start justify-between">
                 <div className="space-y-5">
@@ -31,10 +156,10 @@ export default function Courses() {
                     </div>
                     <SignupButton link="https://www.vhs-offenburg.de/programm/allgemeinbildung/kurs/Gesund-durch-den-Winter/242303074" />
                     <div>
-                        <p> 6 Termine: Mittwochs, 18:00 - 19:30</p>
+                        {/* <p> 6 Termine: Mittwochs, 18:00 - 19:30</p>
                         <p> Kursstart: 15.01.2025 </p>
                         <p> Kursende: 26.02.2025 </p>
-                        <VhsLocation room="302" />
+                        <VhsLocation room="302" /> */}
                     </div> 
                     <div>
                         <Accordeon
@@ -51,7 +176,7 @@ export default function Courses() {
                                 </p>
                             </div>
                         </Accordeon>
-                        <DateAccordeon
+                        {/* <DateAccordeon
                             className="bg-primary p-2 w-full"
                             dates={[
                                 { day: "Mittwoch", date: "15.01.2025" },
@@ -61,7 +186,8 @@ export default function Courses() {
                                 { day: "Mittwoch", date: "19.02.2025" },
                                 { day: "Mittwoch", date: "26.02.2025" },
                             ]}
-                        />
+                        /> */}
+                        <CourseNotAvailable />
                     </div>
                 </div>
                 <img src={HealthyWinter} alt="course image" className="hidden md:block w-72 object-contain rounded-md" />
@@ -77,10 +203,10 @@ export default function Courses() {
                     </div>
                     <SignupButton link="https://www.vhs-offenburg.de/programm/allgemeinbildung/kurs/Fit-fuer-den-Sommer/251303017" />
                     <div>
-                        <p>6 Termine: Mittwochs, 18:00 - 19:30</p>
+                        {/* <p>6 Termine: Mittwochs, 18:00 - 19:30</p>
                         <p>Kursstart: 02.04.2025</p>
                         <p>Kursende: 21.05.2025</p>
-                        <VhsLocation room="302" />
+                        <VhsLocation room="302" /> */}
                     </div>
                     <div>
                         <Accordeon
@@ -116,7 +242,7 @@ export default function Courses() {
                                 </p>
                             </div>
                         </Accordeon>
-                        <DateAccordeon
+                        {/* <DateAccordeon
                             className="bg-primary p-2"
                             dates={[
                                 { day: "Mittwoch", date: "02.04.2025" },
@@ -126,7 +252,8 @@ export default function Courses() {
                                 { day: "Mittwoch", date: "14.05.2025" },
                                 { day: "Mittwoch", date: "21.05.2025" },
                             ]}
-                        />
+                        /> */}
+                        <CourseNotAvailable />
                     </div>
                 </div>
                 <img src={FitForSummer} alt="course image" className="hidden md:block w-72 object-contain rounded-md" />
