@@ -5,7 +5,6 @@ import { Mode } from '../dataclasses/Mode';
 import existingRoutes, { IRoute } from './Routes';
 import EntryPage from '../EntryPage/EntryPage';
 import Test from '../Test';
-import SpecialAustralia from '../components/specials/australia';
 
 export default function Router({ children }: { children: ReactNode}) {
     const routes: Map<Mode, IRoute[]> = existingRoutes;
@@ -34,9 +33,6 @@ export default function Router({ children }: { children: ReactNode}) {
                     />
                 )}
             </Route>
-
-            {/* Specials */}
-            <Route path="/specials/australia" element={<SpecialAustralia />} />
         </Routes>
     </BrowserRouter>
 }

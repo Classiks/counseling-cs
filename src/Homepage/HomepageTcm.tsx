@@ -3,7 +3,6 @@ import Portrait from "../assets/images/cs-portrait-standing.jpg";
 import { Helmet } from "react-helmet";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { LinkToAustraliaSpecial } from "@/components/specials/australia";
 
 export default function HomepageTcm() {
     const navigate = useNavigate();
@@ -30,8 +29,6 @@ export default function HomepageTcm() {
                         Zu den Kursen
                     </Button>
                 </div>
-
-                <LinkToAustraliaSpecial className="mx-auto" />
             </div>
 
             <Card>

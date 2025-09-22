@@ -11,15 +11,7 @@ import VhsLocation from './VhsLocation';
 import CourseNotAvailable from '../components/CourseNotAvailable';
 import { Card, CardContent } from '@/components/ui/card';
 
-/*
-TODO:
-- neue Bilder
-- VHS Kursnummer
-- Seminarraum
-- Richtige Links
-- Mama Check
-- Deploment
-*/
+ 
 
 export default function Courses() {
     return <BlendingInDiv className="flex flex-col gap-x-16">
@@ -32,6 +24,66 @@ export default function Courses() {
             <h1 className="text-2xl font-bold italic">STEP Kurse</h1>
         </div>
 
+        {/* --- Online: STEP-Elternkurs für Eltern von Kindern zwischen 2–12 Jahren --- */}
+        <Card className="m-3">
+            <CardContent className="p-4 flex gap-x-10 items-start justify-between">
+                <div className="space-y-5">
+                    <div className="p-2 pb-0">
+                        <h1 className="text-2xl font-bold italic">
+                            Online: STEP-Elternkurs zur Ermutigung und Ermächtigung in der Erziehung
+                        </h1>
+                        <h2>für Eltern von Kindern zwischen 2–12 Jahren</h2>
+                        <h2>VHS-Kursnummer: 252105121</h2>
+                    </div>
+                    <SignupButton link="https://www.vhs-offenburg.de/programm/semesterschwerpunkt-maechtig/kurs/Online-STEP-Elternkurs-zur-Ermutigung-und-Ermaechtigung-in-der-Erziehung/252105121" />
+                    <div>
+                        <p>8 Termine: Mittwochs, 17:00 - 19:00</p>
+                        <p>Kursstart: 15.10.2025</p>
+                        <p><span className="font-bold">Online</span> via Zoom</p>
+                    </div>
+                    <div>
+                        <Accordeon
+                            heading="Inhalte"
+                            className="bg-primary p-2"
+                            headingClassName="font-bold text-lg"
+                        >
+                            <div className="flex flex-col space-y-2">
+                                <p>
+                                    In diesem Kurs setzen wir uns mit den wichtigsten Erziehungsthemen auseinander und durchleben sie in einer wertschätzenden und respektvollen Gruppenatmosphäre. Der Erfahrungsaustausch innerhalb der Gruppe ist ein wichtiger Baustein; dabei wird berücksichtigt, dass jede Familie ihre individuellen Wertvorstellungen hat.
+                                </p>
+                                <p>
+                                    Es ist nicht entscheidend, ob der Kurs vorausschauend oder hilfesuchend angesteuert wird. Es macht Freude, Schritt für Schritt die Familienatmosphäre aufzuwerten und in die Zukunft zu investieren.
+                                </p>
+                                <p>
+                                    Der Erwerb (in eigener Verantwortung) des STEP-Elternbuches und des Arbeitsheftes sind notwendig, der Kurs wird finanziell durch das Landesprogramm STÄRKE unterstützt
+                                    (<a href="https://www.ortenaukreis.de/output/download.php?fid=3406.3794.1.PDF" 
+                                        target="_blank" 
+                                        rel="noopener noreferrer" 
+                                        className="underline hover:text-step-600">
+                                        siehe Ortenauer-STÄRKE-Flyer
+                                    </a>).
+                                </p>
+                            </div>
+                        </Accordeon>
+                        <DateAccordeon
+                            className="bg-primary p-2 w-full"
+                            dates={[
+                                { day: "Mittwoch", date: "15.10.2025" },
+                                { day: "Mittwoch", date: "22.10.2025" },
+                                { day: "Mittwoch", date: "05.11.2025" },
+                                { day: "Mittwoch", date: "12.11.2025" },
+                                { day: "Mittwoch", date: "19.11.2025" },
+                                { day: "Mittwoch", date: "26.11.2025" },
+                                { day: "Mittwoch", date: "03.12.2025" },
+                                { day: "Mittwoch", date: "10.12.2025" },
+                            ]}
+                        />
+                    </div>
+                </div>
+                <img src={StepEncouragementScientist} alt="course image" className="hidden md:block w-72 object-contain rounded-md bg-white" />
+            </CardContent>
+        </Card>
+
 
         {/* --- STEP-Elternkurs für Eltern von Kindern unter 6 Jahren (Teil 1) --- */}
         <Card className="m-3">
@@ -43,7 +95,7 @@ export default function Courses() {
                         </h1>
                         <h2>VHS-Kursnummer: 241105120</h2>
                     </div>
-                    <SignupButton link="https://www.vhs-offenburg.de/programm/allgemeinbildung/kurs/Eltern-VHS-STEP-Elternkurs-für-Eltern-von-Kindern-unter-6-Jahren-Teil-1/251105120" />
+                    {/* <SignupButton link="https://www.vhs-offenburg.de/programm/allgemeinbildung/kurs/Eltern-VHS-STEP-Elternkurs-für-Eltern-von-Kindern-unter-6-Jahren-Teil-1/251105120" /> */}
                     <div>
                         <p>5 Termine: Dienstags, 20:00 - 22:00</p>
                         <p>Kursstart: 25.03.2025</p>
@@ -91,7 +143,7 @@ export default function Courses() {
                                 </p>
                             </div>
                         </Accordeon>
-                        <DateAccordeon
+                        {/* <DateAccordeon
                             className="bg-primary p-2 w-full"
                             dates={[
                                 { day: "Dienstag", date: "25.03.2025" },
@@ -100,7 +152,8 @@ export default function Courses() {
                                 { day: "Dienstag", date: "29.04.2025" },
                                 { day: "Dienstag", date: "06.05.2025" },
                             ]}
-                        />
+                        /> */}
+                        <CourseNotAvailable />
                     </div>
                 </div>
                 <img src={StepUnder6} alt="course image" className="hidden md:block w-72 object-contain rounded-md" />
@@ -117,7 +170,7 @@ export default function Courses() {
                         </h1>
                         <h2>VHS-Kursnummer: 241105121</h2>
                     </div>
-                    <SignupButton link="https://www.vhs-offenburg.de/programm/allgemeinbildung/kurs/Eltern-VHS-STEP-Elternkurs-für-Eltern-von-Kindern-zwischen-6-und-12-Jahren-Teil-1/251105121" />
+                    {/* <SignupButton link="https://www.vhs-offenburg.de/programm/allgemeinbildung/kurs/Eltern-VHS-STEP-Elternkurs-für-Eltern-von-Kindern-zwischen-6-und-12-Jahren-Teil-1/251105121" /> */}
                     <div>
                         <p>5 Termine: Mittwochs, 20:00 - 22:00</p>
                         <p>Kursstart: 26.03.2025</p>
@@ -166,7 +219,7 @@ export default function Courses() {
                                 </p>
                             </div>
                         </Accordeon>
-                        <DateAccordeon
+                        {/* <DateAccordeon
                             className="bg-primary p-2 w-full"
                             dates={[
                                 { day: "Mittwoch", date: "26.03.2025" },
@@ -175,7 +228,8 @@ export default function Courses() {
                                 { day: "Mittwoch", date: "30.04.2025" },
                                 { day: "Mittwoch", date: "07.05.2025" },
                             ]}
-                        />
+                        /> */}
+                        <CourseNotAvailable />
                     </div>
                 </div>
                 <img src={StepEncouragementScientist} alt="course image" className="hidden md:block w-72 object-contain rounded-md" />

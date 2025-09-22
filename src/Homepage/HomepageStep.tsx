@@ -3,7 +3,6 @@ import Portrait from "../assets/images/cs-portrait-standing.jpg";
 import { Helmet } from "react-helmet";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { LinkToAustraliaSpecial } from "@/components/specials/australia";
 
 export default function HomepageStep() {
     const navigate = useNavigate();
@@ -30,8 +29,6 @@ export default function HomepageStep() {
                         Zu den Kursen
                     </Button>
                 </div>
-
-                <LinkToAustraliaSpecial className="mx-auto" />
             </div>
 
             <Card>
