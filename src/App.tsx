@@ -37,7 +37,8 @@ function Layout() {
 	return <SidebarProvider>
 		<AppSidebar />
 		<main className="relative w-full">
-			<MySidebar />
+			<MobileHeader />
+			<DesktopTrigger />
 			<div className="flex justify-center min-h-full w-full overflow-hidden bg-gradient-to-br from-background to-muted/20">
 				<div className="bg-muted/10 rounded-xl min-h-full w-full lg:w-3/4 2xl:w-[60%] max-w-[2000px] container-to-scroll overflow-auto" style={{ height: 'calc(100vh - 2rem)' }}>
 					<Outlet />
@@ -50,8 +51,14 @@ function Layout() {
 
 function AppSidebar() {
 	const { mode } = useMode();
-
+	const { setOpenMobile, isMobile } = useSidebar();
 	const navigate = useNavigate();
+
+	const handleNavClick = () => {
+		if (isMobile) {
+			setOpenMobile(false);
+		}
+	};
 
 	return <Sidebar>
 		<SidebarHeader className="bg-background text-foreground border-b border-border">
@@ -71,7 +78,7 @@ function AppSidebar() {
 			<SidebarGroup>
 				<SidebarMenu>
 					{routes.get(mode)?.map((route) => (
-						<Link to={route.path} key={route.path}>
+						<Link to={route.path} key={route.path} onClick={handleNavClick}>
 							<SidebarMenuItem className={twMerge(buttonVariants({ variant: "outline" }), "w-full")}>
 								{route.title}
 							</SidebarMenuItem>
@@ -88,10 +95,28 @@ function AppSidebar() {
 }
 
 
+function MobileHeader() {
+	const navigate = useNavigate();
+	
+	return <div className="sticky top-0 z-40 md:hidden bg-background border-b border-border">
+		<div className="flex items-center justify-between px-4 py-3">
+			<SidebarTrigger className="bg-background p-2 border border-border" size="icon" />
+			<img
+				src={Logo} 
+				alt="logo" 
+				className="w-8 h-8 cursor-pointer" 
+				onClick={() => navigate("/")}
+			/>
+		</div>
+	</div>
+}
+
+
 // todo dependency: Sidebar width as defined in @/components/ui/sidebar.tsx
-function MySidebar() {
-	const { open, isMobile } = useSidebar();
-	return <div className={`fixed bottom-5 right-8 md:fixed md:top-5 md:left-5  bg-muted/10 p-3 flex items-center justify-center w-fit h-fit rounded-lg z-50 transition-transform duration-300 ${(open && !isMobile) ? 'md:transform translate-x-[calc(16rem+1.25rem)]' : 'md:transform translate-x-5'}`}>
+function DesktopTrigger() {
+	const { open } = useSidebar();
+	
+	return <div className={`hidden md:block fixed top-5 z-50 bg-muted/10 p-3 rounded-lg transition-all duration-300 ${open ? 'left-[calc(16rem+1.25rem)]' : 'left-5'}`}>
 		<SidebarTrigger className="bg-background p-5 border border-border" size="lg" />
 	</div>
 }
