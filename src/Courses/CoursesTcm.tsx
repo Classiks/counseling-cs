@@ -25,6 +25,63 @@ export default function Courses() {
             <h1 className="text-2xl font-bold italic">Kurse</h1>
         </div>
 
+        {/* --- Energiereich durch den Sommer --- */}
+        <Card className="m-3">
+            <CardContent className="p-4 flex gap-x-10 items-start justify-between">
+                <div className="space-y-5">
+                    <div className="p-2 pb-0">
+                        <h1 className="text-2xl font-bold italic">Energiereich durch den Sommer – mit Naturheilkunde und Chinesischer Medizin</h1>
+                        <h2>VHS-Kursnummer: 261303006</h2>
+                    </div>
+                    <SignupButton link="https://www.vhs-offenburg.de/programm/allgemeinbildung/kurs/Energiereich-durch-den-Sommer-mit-Naturheilkunde-und-Chinesischer-Medizin/261303006" />
+                    <div>
+                        <p>Beginn: Mi., 17.06.2026, 18:00 - 19:30 Uhr</p>
+                        <p>Dauer: 6 Termine</p>
+                        <p>Bemerkungen: Bequeme Kleidung und Neugierde.Unterlagen für jeden Kurstag werden im Kurs ausgehändigt.</p>
+                        <p>Kursort: Offenburg VHS 101 Seminarraum</p>
+                    </div>
+                    <div>
+                        <Accordeon
+                            heading="Inhalte"
+                            className="bg-primary p-2"
+                            headingClassName="font-bold text-lg"
+                        >
+                            <div className="space-y-2">
+                                <p>
+                                    In diesem Kurs erfahren Sie mehr über die Chinesische Medizin und wie die hilfreichen Ansätze des Yang Shen („Leben pflegen“) Teil des Alltags werden können – und wo die Überschneidungen, aber auch die Verschiedenheit zur Naturheilkunde liegen.
+                                </p>
+                                <p>Unter anderem folgende Fragen werden theoretisch und praktisch behandelt:</p>
+                                <ul className="[&_li]:list-disc [&_li]:ml-5">
+                                    <li>Wie setze ich die Druck- und Punktmassage gezielt ein, um Blockaden zu lösen und um mich freier zu bewegen?</li>
+                                    <li>Was ist „Chinesische Arzneimitteltherapie“ und hat sie mit der westlichen Phytotherapie etwas gemeinsam - was kann ich praktisch davon umsetzen?</li>
+                                    <li>Kann ich von der Chinesischen Ernährungslehre und der 5-Elemente-Küche unter Berücksichtigung meiner Essgewohnheiten „Nährendes“ übernehmen?</li>
+                                    <li>Welche Dehnungs- und Lockerungsübungen eignen sich speziell für mich und die Jahreszeit?</li>
+                                </ul>
+                                <p>
+                                    Der 6-wöchige Kurs kann als Folgekurs (Gesund durch den Winter) oder als Neueinstieg wahrgenommen werden.
+                                </p>
+                                <p>
+                                    Die praktischen Inhalte richten sich auch an den Interessen der Kursteilnehmenden aus, neue Impulse sind immer willkommen.
+                                </p>
+                            </div>
+                        </Accordeon>
+                        <DateAccordeon
+                            className="bg-primary p-2 w-full"
+                            dates={[
+                                { date: "17.06.2026", time: "18:00 - 19:30 Uhr", location: "Offenburg VHS 101 Seminarraum" },
+                                { date: "24.06.2026", time: "18:00 - 19:30 Uhr", location: "Offenburg VHS 101 Seminarraum" },
+                                { date: "01.07.2026", time: "18:00 - 19:30 Uhr", location: "Offenburg VHS 101 Seminarraum" },
+                                { date: "08.07.2026", time: "18:00 - 19:30 Uhr", location: "Offenburg VHS 101 Seminarraum" },
+                                { date: "15.07.2026", time: "18:00 - 19:30 Uhr", location: "Offenburg VHS 101 Seminarraum" },
+                                { date: "22.07.2026", time: "18:00 - 19:30 Uhr", location: "Offenburg VHS 101 Seminarraum" },
+                            ]}
+                        />
+                    </div>
+                </div>
+                <img src={FitForSummer} alt="Illustration zum Sommerkurs" className="hidden md:block w-72 object-contain rounded-md" />
+            </CardContent>
+        </Card>
+
         {/* --- Menopause - Jahre des Wechsels und der Selbstermächtigung --- */}
         <Card className="m-3">
             <CardContent className="p-4 flex gap-x-10 items-start justify-between">
@@ -33,7 +90,7 @@ export default function Courses() {
                         <h1 className="text-2xl font-bold italic">Menopause - Jahre des Wechsels und der Selbstermächtigung</h1>
                         <h2>VHS-Kursnummer: 252303008</h2>
                     </div>
-                    <SignupButton link="https://www.vhs-offenburg.de/programm/semesterschwerpunkt-maechtig/kurs/Menopause-Jahre-des-Wechsels-und-der-Selbstermaechtigung/252303008" />
+                    {/* <SignupButton link="https://www.vhs-offenburg.de/programm/semesterschwerpunkt-maechtig/kurs/Menopause-Jahre-des-Wechsels-und-der-Selbstermaechtigung/252303008" /> */}
                     <div>
                         <p>1 Termin: Samstag, 22.11.2025, 09:00 - 12:00</p>
                         <VhsLocation room="113 Bewegung" />
@@ -57,9 +114,10 @@ export default function Courses() {
                                 </ul>
                             </div>
                         </Accordeon>
+                        <CourseNotAvailable />
                     </div>
                 </div>
-                <img src={MenopauseImg} alt="course image" className="hidden md:block w-72 object-contain rounded-md" />
+                <img src={MenopauseImg} alt="Illustration zum Menopause-Workshop" className="hidden md:block w-72 object-contain rounded-md" />
             </CardContent>
         </Card>
 
@@ -71,7 +129,7 @@ export default function Courses() {
                         <h1 className="text-2xl font-bold italic">Mächtig kochen: Gerichte mit hohem Getreide-, Gemüse- und gesundem Fettanteil</h1>
                         <h2>VHS-Kursnummer: 252305514</h2>
                     </div>
-                    <SignupButton link="https://www.vhs-offenburg.de/programm/semesterschwerpunkt-maechtig/kurs/Maechtig-kochen-Gerichte-mit-hohem-Getreide--Gemuese--und-gesundem-Fettanteil/252305514" />
+                    {/* <SignupButton link="https://www.vhs-offenburg.de/programm/semesterschwerpunkt-maechtig/kurs/Maechtig-kochen-Gerichte-mit-hohem-Getreide--Gemuese--und-gesundem-Fettanteil/252305514" /> */}
                     <div>
                         <p>1 Termin: Donnerstag, 06.11.2025, 18:00 - 20:00</p>
                         <VhsLocation room="201 Kochstudio" />
@@ -92,9 +150,10 @@ export default function Courses() {
                                 </p>
                             </div>
                         </Accordeon>
+                        <CourseNotAvailable />
                     </div>
                 </div>
-                <img src={CookingImg} alt="course image" className="hidden md:block w-72 object-contain rounded-md" />
+                <img src={CookingImg} alt="Illustration zum Kochkurs" className="hidden md:block w-72 object-contain rounded-md" />
             </CardContent>
         </Card>
 
@@ -106,7 +165,7 @@ export default function Courses() {
                         <h1 className="text-2xl font-bold italic">Gesundheitsprävention mit Chinesischer Medizin und Naturheilkunde</h1>
                         <h2>VHS-Kursnummer: 252303006</h2>
                     </div>
-                    <SignupButton link="https://www.vhs-offenburg.de/programm/semesterschwerpunkt-maechtig/kurs/Gesundheitspraevention-mit-Chinesischer-Medizin-und-Naturheilkunde/252303006" />
+                    {/* <SignupButton link="https://www.vhs-offenburg.de/programm/semesterschwerpunkt-maechtig/kurs/Gesundheitspraevention-mit-Chinesischer-Medizin-und-Naturheilkunde/252303006" /> */}
                     <div>
                         <p>Beginn: Dienstag, 14.10.2025, 18:00 - 19:30</p>
                         <p>Dauer: 6 Termine</p>
@@ -141,9 +200,10 @@ export default function Courses() {
                                 { day: "Dienstag", date: "25.11.2025" },
                             ]}
                         />
+                        <CourseNotAvailable />
                     </div>
                 </div>
-                <img src={PreventionImg} alt="course image" className="hidden md:block w-72 object-contain rounded-md" />
+                <img src={PreventionImg} alt="Illustration zum Praeventionskurs" className="hidden md:block w-72 object-contain rounded-md" />
             </CardContent>
         </Card>
 
@@ -154,7 +214,7 @@ export default function Courses() {
                         <h1 className="text-2xl font-bold italic">Gesund durch den Winter mit den 5 Säulen der Chinesischen Medizin</h1>
                         <h2>VHS-Kursnummer: 242303074</h2>
                     </div>
-                    <SignupButton link="https://www.vhs-offenburg.de/programm/allgemeinbildung/kurs/Gesund-durch-den-Winter/242303074" />
+                    {/* <SignupButton link="https://www.vhs-offenburg.de/programm/allgemeinbildung/kurs/Gesund-durch-den-Winter/242303074" /> */}
                     <div>
                         {/* <p> 6 Termine: Mittwochs, 18:00 - 19:30</p>
                         <p> Kursstart: 15.01.2025 </p>
@@ -190,7 +250,7 @@ export default function Courses() {
                         <CourseNotAvailable />
                     </div>
                 </div>
-                <img src={HealthyWinter} alt="course image" className="hidden md:block w-72 object-contain rounded-md" />
+                <img src={HealthyWinter} alt="Illustration zum Winterkurs" className="hidden md:block w-72 object-contain rounded-md" />
             </CardContent>
         </Card>
 
@@ -201,7 +261,7 @@ export default function Courses() {
                         <h1 className="text-2xl font-bold italic">Fit für den Sommer mit den 5 Säulen der Chinesischen Medizin</h1>
                         <h2>VHS-Kursnummer: 242303075</h2>
                     </div>
-                    <SignupButton link="https://www.vhs-offenburg.de/programm/allgemeinbildung/kurs/Fit-fuer-den-Sommer/251303017" />
+                    {/* <SignupButton link="https://www.vhs-offenburg.de/programm/allgemeinbildung/kurs/Fit-fuer-den-Sommer/251303017" /> */}
                     <div>
                         {/* <p>6 Termine: Mittwochs, 18:00 - 19:30</p>
                         <p>Kursstart: 02.04.2025</p>
@@ -256,7 +316,7 @@ export default function Courses() {
                         <CourseNotAvailable />
                     </div>
                 </div>
-                <img src={FitForSummer} alt="course image" className="hidden md:block w-72 object-contain rounded-md" />
+                <img src={FitForSummer} alt="Illustration zum Fruehjahrs- und Sommerkurs" className="hidden md:block w-72 object-contain rounded-md" />
             </CardContent>
         </Card>
 
@@ -284,7 +344,7 @@ export default function Courses() {
                         </Accordeon>
                     <CourseNotAvailable />
                 </div>
-                <img src={ForYouAndMe} alt="course image" className="hidden md:block w-72 object-contain rounded-md" />
+                <img src={ForYouAndMe} alt="Illustration zum Online-TCM-Kurs" className="hidden md:block w-72 object-contain rounded-md" />
             </CardContent>
         </Card>
 
@@ -314,7 +374,7 @@ export default function Courses() {
                     
                     <CourseNotAvailable />
                 </div>
-                <img src={DailyLife} alt="course image" className="hidden md:block w-72 object-contain rounded-md" />
+                <img src={DailyLife} alt="Illustration zum Familienalltagskurs" className="hidden md:block w-72 object-contain rounded-md" />
             </CardContent>
         </Card>
 

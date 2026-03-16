@@ -24,6 +24,127 @@ export default function Courses() {
             <h1 className="text-2xl font-bold italic">STEP Kurse</h1>
         </div>
 
+        {/* --- Infoabend Elternkurs STEP --- */}
+        <Card className="m-3">
+            <CardContent className="p-4 flex gap-x-10 items-start justify-between">
+                <div className="space-y-5">
+                    <div className="p-2 pb-0">
+                        <h1 className="text-2xl font-bold italic">
+                            Impulsvortag für Eltern von Kindern von 2-12 Jahren:
+                        </h1>
+                        <h2>Gut genug ist wirklich gut!</h2>
+                        <h2>VHS-Kursnummer: 261105120</h2>
+                    </div>
+                    <SignupButton link="https://www.vhs-offenburg.de/programm/allgemeinbildung/kurs/Infoabend-Elternkurs-STEP/261105120" />
+                    <div>
+                        <p>Beginn: Di., 05.05.2026, 20:00 - 21:00 Uhr</p>
+                        <p>Dauer: 1 Termin</p>
+                        <p>Kursort: Offenburg VHS 101 Seminarraum</p>
+                    </div>
+                    <div>
+                        <Accordeon
+                            heading="Inhalte"
+                            className="bg-primary p-2"
+                            headingClassName="font-bold text-lg"
+                        >
+                            <div className="flex flex-col space-y-2">
+                                <p>
+                                    Erziehende stellen oft hohe Ansprüche an sich selbst – und Erziehung ist auch nicht immer einfach. Letztlich geht es darum, nicht perfekt, sondern gut genug zu sein. Dabei hilft das STEP-Konzept, das an diesem Abend vorgestellt wird und das im Sommer als Elternkurs an der VHS Offenburg angeboten wird.
+                                </p>
+                                <p>
+                                    Das Programm baut auf fundierten wissenschaftlichen Erkenntnissen auf, ist gut strukturiert und arbeitet mit vielen praktischen Übungen. Unser Familienleben ist und wird nie perfekt sein, aber es ist viel gewonnen, wenn wir das "gut genug" anstreben. Wie überall gilt: Übung macht den Meister!
+                                </p>
+                                <p>Blitzlichtartig beleuchten wir einen Ausschnitt der im Kurs enthaltenen Themen:</p>
+                                <ul className="[&_li]:list-disc [&_li]:ml-5">
+                                    <li>gut zuhören,</li>
+                                    <li>respektvoll miteinander umgehen,</li>
+                                    <li>freundlich und bestimmt Grenzen setzen,</li>
+                                    <li>uns und unsere Kinder ermutigen können.</li>
+                                </ul>
+                                <p>
+                                    Bringen Sie Offenheit und Humor für den Abend mit.
+                                </p>
+                            </div>
+                        </Accordeon>
+                        <DateAccordeon
+                            className="bg-primary p-2 w-full"
+                            dates={[
+                                {
+                                    date: "05.05.2026",
+                                    time: "20:00 - 21:00 Uhr",
+                                    location: "Amand-Goegg-Straße 2 - 4, Offenburg VHS 301 Seminarraum"
+                                },
+                            ]}
+                        />
+                    </div>
+                </div>
+                <img src={StepEncouragementGel} alt="Illustration zum Infoabend" className="hidden md:block w-72 object-contain rounded-md" />
+            </CardContent>
+        </Card>
+
+        {/* --- STEP-Elternkurs Teil 1 fuer Eltern von Kindern zwischen 2-12 Jahren --- */}
+        <Card className="m-3">
+            <CardContent className="p-4 flex gap-x-10 items-start justify-between">
+                <div className="space-y-5">
+                    <div className="p-2 pb-0">
+                        <h1 className="text-2xl font-bold italic">
+                            „Gut genug ist wirklich gut“ – Elternkurs STEP (Teil 1)
+                        </h1>
+                        <h2>für Eltern von Kindern zwischen 2-12 Jahren</h2>
+                        <h2>VHS-Kursnummer: 261105121</h2>
+                    </div>
+                    <SignupButton link="https://www.vhs-offenburg.de/programm/allgemeinbildung/kurs/Gut-genug-ist-wirklich-gut-Elternkurs-STEP-Teil-1/261105121" />
+                    <div>
+                        <p>Beginn: Do., 18.06.2026, 09:00 - 11:00 Uhr</p>
+                        <p>Dauer: 5 Termine</p>
+                        <p>Kursort: Offenburg VHS 101 Seminarraum</p>
+                    </div>
+                    <div>
+                        <Accordeon
+                            heading="Inhalte"
+                            className="bg-primary p-2"
+                            headingClassName="font-bold text-lg"
+                        >
+                            <div className="flex flex-col space-y-2">
+                                <p>
+                                    Erziehende stellen oft hohe Ansprüche an sich selbst – und Erziehung ist auch nicht immer einfach. Im Kern geht es darum, nicht perfekt, sondern gut genug zu sein. Der Kurs regt im Austausch mit anderen Eltern und mit Hilfe von STEP dazu an, die eigene Wertevorstellung und das individuelle Familienkonzept zu durchdenken und eventuelle Problembereiche lösungsorientiert anzugehen. Eine gute Möglichkeit, den Alltag bewusst und gelassen zu gestalten und wichtige Bausteine für die Zukunft zu legen.
+                                </p>
+                                <p>
+                                    Das STEP-Konzept überzeugt, weil es gut strukturiert ist, mit vielen praktischen Übungen arbeitet, auf wissenschaftlichen Erkenntnissen aufbaut und einen Weg aufzeigt, wie wir z.B.
+                                </p>
+                                <ul className="[&_li]:list-disc [&_li]:ml-5">
+                                    <li>uns und unsere Kinder ermutigen,</li>
+                                    <li>gut zuhören und respektvoll miteinander umgehen,</li>
+                                    <li>im Miteinander Probleme lösen,</li>
+                                    <li>freundlich und bestimmt Grenzen setzen können.</li>
+                                </ul>
+                                <p>
+                                    In der Gruppe lernen wir uns selbst besser kennen, erleben ähnliche und andere Familienstrukturen und bekommen hilfreiche Tools an die Hand. Mut, nicht perfekt zu sein, Offenheit und Humor sind willkommen!
+                                </p>
+                                <p>
+                                    Der STEP-Kurs (Systematisches Training für Eltern und Pädagogen) wird durch das STÄRKE-Programm finanziell gefördert.
+                                </p>
+                                <p>
+                                    Für den Kurs wird ein Übungsbuch und das STEP-Elternbuch benötigt - je nach Alter der Kinder „Die ersten 6 Jahre“ oder „6-12 Jahre". Gerne auch schon vorab besorgen.
+                                </p>
+                            </div>
+                        </Accordeon>
+                        <DateAccordeon
+                            className="bg-primary p-2 w-full"
+                            dates={[
+                                { date: "18.06.2026", time: "09:00 - 11:00 Uhr", location: "Offenburg VHS 101 Seminarraum" },
+                                { date: "25.06.2026", time: "09:00 - 11:00 Uhr", location: "Offenburg VHS 101 Seminarraum" },
+                                { date: "02.07.2026", time: "09:00 - 11:00 Uhr", location: "Offenburg VHS 101 Seminarraum" },
+                                { date: "09.07.2026", time: "09:00 - 11:00 Uhr", location: "Offenburg VHS 101 Seminarraum" },
+                                { date: "16.07.2026", time: "09:00 - 11:00 Uhr", location: "Offenburg VHS 101 Seminarraum" },
+                            ]}
+                        />
+                    </div>
+                </div>
+                <img src={StepEncouragementScientist} alt="Illustration zum STEP-Elternkurs" className="hidden md:block w-72 object-contain rounded-md bg-white" />
+            </CardContent>
+        </Card>
+
         {/* --- Online: STEP-Elternkurs für Eltern von Kindern zwischen 2–12 Jahren --- */}
         <Card className="m-3">
             <CardContent className="p-4 flex gap-x-10 items-start justify-between">
@@ -35,10 +156,11 @@ export default function Courses() {
                         <h2>für Eltern von Kindern zwischen 2–12 Jahren</h2>
                         <h2>VHS-Kursnummer: 252105121</h2>
                     </div>
-                    <SignupButton link="https://www.vhs-offenburg.de/programm/semesterschwerpunkt-maechtig/kurs/Online-STEP-Elternkurs-zur-Ermutigung-und-Ermaechtigung-in-der-Erziehung/252105121" />
+                    {/* <SignupButton link="https://www.vhs-offenburg.de/programm/semesterschwerpunkt-maechtig/kurs/Online-STEP-Elternkurs-zur-Ermutigung-und-Ermaechtigung-in-der-Erziehung/252105121" /> */}
                     <div>
                         <p>8 Termine: Mittwochs, 17:00 - 19:00</p>
                         <p>Kursstart: 15.10.2025</p>
+                        <p>Kursende: 10.12.2025</p>
                         <p><span className="font-bold">Online</span> via Zoom</p>
                     </div>
                     <div>
@@ -78,9 +200,10 @@ export default function Courses() {
                                 { day: "Mittwoch", date: "10.12.2025" },
                             ]}
                         />
+                        <CourseNotAvailable />
                     </div>
                 </div>
-                <img src={StepEncouragementScientist} alt="course image" className="hidden md:block w-72 object-contain rounded-md bg-white" />
+                <img src={StepEncouragementScientist} alt="Illustration zum Online-STEP-Kurs" className="hidden md:block w-72 object-contain rounded-md bg-white" />
             </CardContent>
         </Card>
 
@@ -156,7 +279,7 @@ export default function Courses() {
                         <CourseNotAvailable />
                     </div>
                 </div>
-                <img src={StepUnder6} alt="course image" className="hidden md:block w-72 object-contain rounded-md" />
+                <img src={StepUnder6} alt="Illustration zum STEP-Kurs fuer Eltern mit kleinen Kindern" className="hidden md:block w-72 object-contain rounded-md" />
             </CardContent>
         </Card>
 
@@ -232,7 +355,7 @@ export default function Courses() {
                         <CourseNotAvailable />
                     </div>
                 </div>
-                <img src={StepEncouragementScientist} alt="course image" className="hidden md:block w-72 object-contain rounded-md" />
+                <img src={StepEncouragementScientist} alt="Illustration zum STEP-Kurs fuer Eltern von Schulkindern" className="hidden md:block w-72 object-contain rounded-md" />
             </CardContent>
         </Card>
 
@@ -298,7 +421,7 @@ export default function Courses() {
                         <CourseNotAvailable />
                     </div>
                 </div>
-                <img src={StepParentCourse2} alt="course image" className="hidden md:block w-72 object-contain rounded-md bg-white" />
+                <img src={StepParentCourse2} alt="Illustration zum STEP-Elternkurs Teil 2" className="hidden md:block w-72 object-contain rounded-md bg-white" />
             </CardContent>
         </Card>
 
@@ -311,7 +434,7 @@ export default function Courses() {
                         <h1 className="text-2xl font-bold italic">Wie "Zwischen-Menschlichkeit heute" mit dem STEP-Konzept gut gelebt werden kann… in Familie und Beruf.</h1>
                         <h2>VHS-Kursnummer: 242105123</h2>
                     </div>
-                    <SignupButton link="https://www.vhs-offenburg.de/programm/allgemeinbildung/kurs/Eltern-VHS-Wie-Zwischenmenschlichkeit-heute-mit-dem-STEP-Konzept-gut-gelebt/242105123" />
+                    {/* <SignupButton link="https://www.vhs-offenburg.de/programm/allgemeinbildung/kurs/Eltern-VHS-Wie-Zwischenmenschlichkeit-heute-mit-dem-STEP-Konzept-gut-gelebt/242105123" /> */}
                     {/*
                     <div>
                         <p> Termin: Dienstag, 21.01.2025, 19:30-21:00 </p>
@@ -342,7 +465,7 @@ export default function Courses() {
                         <CourseNotAvailable />
                     </div>
                 </div>
-                <img src={StepEncouragementGel} alt="course image" className="hidden md:block w-72 object-contain rounded-md" />
+                <img src={StepEncouragementGel} alt="Illustration zum STEP-Impulsvortrag" className="hidden md:block w-72 object-contain rounded-md" />
             </CardContent>
         </Card>
     </BlendingInDiv>
