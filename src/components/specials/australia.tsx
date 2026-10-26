@@ -1,6 +1,6 @@
 import { Button } from "../ui/button";
-import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 export default function SpecialAustralia() {
     const navigate = useNavigate();
@@ -13,6 +13,11 @@ export default function SpecialAustralia() {
     ]
 
     return <div className="h-screen p-5 md:p-10 flex flex-col gap-10">
+        <Helmet>
+            <title>Archiv: Bildvortrag Australien - Cordelia Schulz</title>
+            <meta name="robots" content="noindex" />
+        </Helmet>
+        <p className="text-sm">Archivierter Bildvortrag vom 27.03.2025. Die Veranstaltung ist bereits vergangen.</p>
         <div className="w-full flex flex-col md:flex-row justify-between gap-3">
             <h1 className="text-2xl font-bold">Auf berühmten Pfaden und abgelegenen Wanderwegen in Australiens Südosten unterwegs</h1>
             <Button onClick={() => navigate("/")} className="w-fit">
@@ -53,14 +58,4 @@ export default function SpecialAustralia() {
             </div>
         </div>
     </div>
-}
-
-export function LinkToAustraliaSpecial({ className }: { className?: string }) {
-    return <Link to="/specials/australia" className={className}>
-        <Button className="w-fit h-fit py-10 px-10 bg-gradient-to-r from-black to-black/80 hover:bg-black/80 text-white border-2 border-white flex-col gap-0 text-wrap">
-            <p>Aktuell - Bildvortrag:</p>
-            <span className="md:hidden">Auf berühmten Pfaden in Australien</span>
-            <span className="hidden md:block">Auf berühmten Pfaden und abgelegenen Wanderwegen in Australiens Südosten unterwegs</span>
-        </Button>
-    </Link>
 }

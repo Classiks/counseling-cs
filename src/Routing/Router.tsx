@@ -5,6 +5,7 @@ import { Mode } from '../dataclasses/Mode';
 import existingRoutes, { IRoute } from './Routes';
 import EntryPage from '../EntryPage/EntryPage';
 import Test from '../Test';
+import SpecialAustralia from '../components/specials/australia';
 
 export default function Router({ children }: { children: ReactNode}) {
     const routes: Map<Mode, IRoute[]> = existingRoutes;
@@ -13,6 +14,7 @@ export default function Router({ children }: { children: ReactNode}) {
         <Routes>
             <Route path="/" element={<EntryPage />} />
             <Route path="/test" element={<Test />} />
+            <Route path="/specials/australia" element={<SpecialAustralia />} />
             
             <Route path={`/${Mode.STEP}/*`} element={children}>
                 {routes.get(Mode.STEP)?.map(subRoute => 

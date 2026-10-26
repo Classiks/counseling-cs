@@ -4,9 +4,7 @@ interface ISignupButton {
     link: string;
 }
 export default function SignupButton({ link }: ISignupButton) {
-    return <Button
-        onClick={() => { window.open(link, "_blank") }}
-    >
-        Anmelden
+    return <Button asChild>
+        <a href={link} target="_blank" rel="noopener noreferrer">Anmelden</a>
     </Button>
 }

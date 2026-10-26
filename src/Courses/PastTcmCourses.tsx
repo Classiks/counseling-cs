@@ -1,0 +1,362 @@
+import FitForSummer from "../assets/images/fit-for-summer-ai.png";
+import DailyLife from "../assets/images/tcm-daily-family-life.png";
+import ForYouAndMe from "../assets/images/tcm-for-you-and-me.png";
+import HealthyWinter from "../assets/images/tcm-healthy-winter.webp";
+import DateAccordeon from './DateAccordeon';
+import Accordeon from '../components/Accordeon';
+import VhsLocation from './VhsLocation';
+import { Card, CardContent } from '@/components/ui/card';
+import MenopauseImg from "../assets/images/menopause.png";
+import CookingImg from "../assets/images/maechtig-kochen.png"
+import PreventionImg from "../assets/images/gesndheitspraevention.png"
+
+export default function PastTcmCourses() {
+    return <>
+        <Card className="m-3">
+            <CardContent className="p-4 flex gap-x-10 items-start justify-between">
+                <div className="min-w-0 flex-1 space-y-5">
+                    <div className="p-2 pb-0">
+                        <h3 className="text-2xl font-bold italic">Energiereich durch den Sommer – mit Naturheilkunde und Chinesischer Medizin</h3>
+                        <p>VHS-Kursnummer: 261303006</p>
+                    </div>
+
+                    <div>
+                        <p>Beginn: Mi., 17.06.2026, 18:00 - 19:30 Uhr</p>
+                        <p>Dauer: 6 Termine</p>
+                        <p>Bemerkungen: Bequeme Kleidung und Neugierde.Unterlagen für jeden Kurstag werden im Kurs ausgehändigt.</p>
+                        <p>Kursort: Offenburg VHS 101 Seminarraum</p>
+                    </div>
+                    <div>
+                        <Accordeon
+                            heading="Inhalte"
+                            className="bg-primary p-2"
+                            headingClassName="font-bold text-lg"
+                        >
+                            <div className="space-y-2">
+                                <p>
+                                    In diesem Kurs erfahren Sie mehr über die Chinesische Medizin und wie die hilfreichen Ansätze des Yang Shen („Leben pflegen“) Teil des Alltags werden können – und wo die Überschneidungen, aber auch die Verschiedenheit zur Naturheilkunde liegen.
+                                </p>
+                                <p>Unter anderem folgende Fragen werden theoretisch und praktisch behandelt:</p>
+                                <ul className="[&_li]:list-disc [&_li]:ml-5">
+                                    <li>Wie setze ich die Druck- und Punktmassage gezielt ein, um Blockaden zu lösen und um mich freier zu bewegen?</li>
+                                    <li>Was ist „Chinesische Arzneimitteltherapie“ und hat sie mit der westlichen Phytotherapie etwas gemeinsam - was kann ich praktisch davon umsetzen?</li>
+                                    <li>Kann ich von der Chinesischen Ernährungslehre und der 5-Elemente-Küche unter Berücksichtigung meiner Essgewohnheiten „Nährendes“ übernehmen?</li>
+                                    <li>Welche Dehnungs- und Lockerungsübungen eignen sich speziell für mich und die Jahreszeit?</li>
+                                </ul>
+                                <p>
+                                    Der 6-wöchige Kurs kann als Folgekurs (Gesund durch den Winter) oder als Neueinstieg wahrgenommen werden.
+                                </p>
+                                <p>
+                                    Die praktischen Inhalte richten sich auch an den Interessen der Kursteilnehmenden aus, neue Impulse sind immer willkommen.
+                                </p>
+                            </div>
+                        </Accordeon>
+                        <DateAccordeon
+                            className="bg-primary p-2 w-full"
+                            dates={[
+                                { date: "17.06.2026", time: "18:00 - 19:30 Uhr", location: "Offenburg VHS 101 Seminarraum" },
+                                { date: "24.06.2026", time: "18:00 - 19:30 Uhr", location: "Offenburg VHS 101 Seminarraum" },
+                                { date: "01.07.2026", time: "18:00 - 19:30 Uhr", location: "Offenburg VHS 101 Seminarraum" },
+                                { date: "08.07.2026", time: "18:00 - 19:30 Uhr", location: "Offenburg VHS 101 Seminarraum" },
+                                { date: "15.07.2026", time: "18:00 - 19:30 Uhr", location: "Offenburg VHS 101 Seminarraum" },
+                                { date: "22.07.2026", time: "18:00 - 19:30 Uhr", location: "Offenburg VHS 101 Seminarraum" },
+                            ]}
+                        />
+                    </div>
+                </div>
+                <img loading="lazy" src={FitForSummer} alt="Illustration zum Sommerkurs" className="hidden md:block w-72 max-w-[35%] shrink-0 object-contain rounded-md" />
+            </CardContent>
+        </Card>
+
+        {/* --- Menopause - Jahre des Wechsels und der Selbstermächtigung --- */}
+        <Card className="m-3">
+            <CardContent className="p-4 flex gap-x-10 items-start justify-between">
+                <div className="min-w-0 flex-1 space-y-5">
+                    <div className="p-2 pb-0">
+                        <h3 className="text-2xl font-bold italic">Menopause - Jahre des Wechsels und der Selbstermächtigung</h3>
+                        <p>VHS-Kursnummer: 252303008</p>
+                    </div>
+                    <div>
+                        <p>1 Termin: Samstag, 22.11.2025, 09:00 - 12:00</p>
+                        <VhsLocation room="113 Bewegung" />
+                    </div>
+                    <div>
+                        <Accordeon
+                            heading="Inhalte"
+                            className="bg-primary p-2"
+                            headingClassName="font-bold text-lg"
+                        >
+                            <div className="flex flex-col space-y-2">
+                                <p>
+                                    Was ist die Menopause? Was geschieht in den Wechseljahren? Wie können wir diese wichtige Phase gut leben und aktiv gestalten? Selbstermächtigung und Hilfe zur Selbsthilfe sind Themen dieses Workshops, in dem
+                                </p>
+                                <ul className="[&_li]:list-disc [&_li]:ml-5">
+                                    <li>Grundlagen erklärt,</li>
+                                    <li>Standpunkte geteilt,</li>
+                                    <li>Körperwahrnehmung vertieft,</li>
+                                    <li>Fragen ausgesprochen und</li>
+                                    <li>naturheilkundliche und praktische Lösungswege aufgezeigt werden.</li>
+                                </ul>
+                            </div>
+                        </Accordeon>
+
+                    </div>
+                </div>
+                <img loading="lazy" src={MenopauseImg} alt="Illustration zum Menopause-Workshop" className="hidden md:block w-72 max-w-[35%] shrink-0 object-contain rounded-md" />
+            </CardContent>
+        </Card>
+
+        {/* --- Mächtig kochen --- */}
+        <Card className="m-3">
+            <CardContent className="p-4 flex gap-x-10 items-start justify-between">
+                <div className="min-w-0 flex-1 space-y-5">
+                    <div className="p-2 pb-0">
+                        <h3 className="text-2xl font-bold italic">Mächtig kochen: Gerichte mit hohem Getreide-, Gemüse- und gesundem Fettanteil</h3>
+                        <p>VHS-Kursnummer: 252305514</p>
+                    </div>
+                    <div>
+                        <p>1 Termin: Donnerstag, 06.11.2025, 18:00 - 20:00</p>
+                        <VhsLocation room="201 Kochstudio" />
+                    </div>
+                    <div>
+                        <Accordeon
+                            heading="Inhalte"
+                            className="bg-primary p-2"
+                            headingClassName="font-bold text-lg"
+                        >
+                            <div className="flex flex-col space-y-2">
+                                <p>
+                                    Wenn wertvolle Zutaten in gut abgestimmten Mengen verwendet werden, darf ein Essen gerne „mächtig“ sein. In diesem Kurs werden wichtige Ernährungsgrundlagen einer vollwertigen Küche mit Bereicherungen aus der chinesischen Diätetik vermittelt und praktisch umgesetzt. Eine Morgen-, Mittags- und Abendmahlzeit werden als Menü zubereitet und verzehrt. Hinweis: Es wird kein glutenhaltiges Getreide verwendet.
+                                </p>
+                                <p className="font-bold">Wichtig für Kochkurse</p>
+                                <p>
+                                    Bitte bringen Sie Schürze, Behältnisse für Kostproben und ein Getränk mit. Die Lebensmittel werden von der Kursleitung eingekauft und anteilig im Kurs abgerechnet. Bitte teilen Sie bei der Anmeldung Unverträglichkeiten oder vegetarische/vegane Ernährung mit.
+                                </p>
+                            </div>
+                        </Accordeon>
+
+                    </div>
+                </div>
+                <img loading="lazy" src={CookingImg} alt="Illustration zum Kochkurs" className="hidden md:block w-72 max-w-[35%] shrink-0 object-contain rounded-md" />
+            </CardContent>
+        </Card>
+
+        {/* --- Gesundheitsprävention mit Chinesischer Medizin und Naturheilkunde --- */}
+        <Card className="m-3">
+            <CardContent className="p-4 flex gap-x-10 items-start justify-between">
+                <div className="min-w-0 flex-1 space-y-5">
+                    <div className="p-2 pb-0">
+                        <h3 className="text-2xl font-bold italic">Gesundheitsprävention mit Chinesischer Medizin und Naturheilkunde</h3>
+                        <p>VHS-Kursnummer: 252303006</p>
+                    </div>
+                    <div>
+                        <p>Beginn: Dienstag, 14.10.2025, 18:00 - 19:30</p>
+                        <p>Dauer: 6 Termine</p>
+                        <VhsLocation room="101 Seminarraum" />
+                    </div>
+                    <div>
+                        <Accordeon
+                            heading="Inhalte"
+                            className="bg-primary p-2"
+                            headingClassName="font-bold text-lg"
+                        >
+                            <div className="flex flex-col space-y-2">
+                                <p>
+                                    Das Heilkonzept der Chinesischen Medizin basiert auf den 5 Säulen Akupunktur/Akupressur, Ernährungslehre, Pflanzenheilkunde, Qigong und Tuina-Massage. An ausgewählten Beispielen werden diese Methoden theoretisch und praktisch erarbeitet, um gestärkt und gesund durch die Wintermonate zu kommen.
+                                </p>
+                                <p>
+                                    Langfristiges Ziel ist es, einfache und zugleich wirkungsvolle Praktiken zu erlernen und regelmäßig im Alltag umzusetzen, um für das „Gute Leben“ zu sorgen.
+                                </p>
+                                <p className="text-sm opacity-80">
+                                    Hinweis: Die Traditionelle Chinesische Medizin ist eine Methode ohne wissenschaftlichen Nachweis und als Ergänzung der Schulmedizin zu verstehen.
+                                </p>
+                            </div>
+                        </Accordeon>
+                        <DateAccordeon
+                            className="bg-primary p-2 w-full"
+                            dates={[
+                                { day: "Dienstag", date: "14.10.2025" },
+                                { day: "Dienstag", date: "21.10.2025" },
+                                { day: "Dienstag", date: "04.11.2025" },
+                                { day: "Dienstag", date: "11.11.2025" },
+                                { day: "Dienstag", date: "18.11.2025" },
+                                { day: "Dienstag", date: "25.11.2025" },
+                            ]}
+                        />
+
+                    </div>
+                </div>
+                <img loading="lazy" src={PreventionImg} alt="Illustration zum Praeventionskurs" className="hidden md:block w-72 max-w-[35%] shrink-0 object-contain rounded-md" />
+            </CardContent>
+        </Card>
+
+        <Card className="m-3">
+            <CardContent className="p-4 flex gap-x-10 items-start justify-between">
+                <div className="min-w-0 flex-1 space-y-5">
+                    <div className="p-2 pb-0">
+                        <h3 className="text-2xl font-bold italic">Gesund durch den Winter mit den 5 Säulen der Chinesischen Medizin</h3>
+                        <p>VHS-Kursnummer: 242303074</p>
+                    </div>
+                    <div>
+                        {/* <p> 6 Termine: Mittwochs, 18:00 - 19:30</p>
+                        <p> Kursstart: 15.01.2025 </p>
+                        <p> Kursende: 26.02.2025 </p>
+                        <VhsLocation room="302" /> */}
+                    </div>
+                    <div>
+                        <Accordeon
+                            heading="Inhalte"
+                            className="bg-primary p-2"
+                            headingClassName="font-bold text-lg"
+                        >
+                            <div>
+                                <p>
+                                    Das Heilkonzept der Chinesischen Medizin basiert auf den 5 Säulen Akupunktur/Akupressur, Ernährungslehre, Pflanzenheilkunde, Qigong und Tuina-Massage. Im Kurs werden wir diese Methoden an ausgewählten Beispielen theoretisch und praktisch bearbeiten, um gestärkt und gesund durch die Wintermonate zu kommen. Langfristiges Ziel ist es, einfache und zugleich wirkungsvolle Praktiken zu erlernen, sie im Alltag regelmäßig umzusetzen und damit für das „Gute Leben" zu sorgen.
+                                </p>
+                                <p className="mt-3">
+                                    Bitte in bequemer Kleidung kommen.
+                                </p>
+                            </div>
+                        </Accordeon>
+                        {/* <DateAccordeon
+                            className="bg-primary p-2 w-full"
+                            dates={[
+                                { day: "Mittwoch", date: "15.01.2025" },
+                                { day: "Mittwoch", date: "22.01.2025" },
+                                { day: "Mittwoch", date: "29.01.2025" },
+                                { day: "Mittwoch", date: "12.02.2025" },
+                                { day: "Mittwoch", date: "19.02.2025" },
+                                { day: "Mittwoch", date: "26.02.2025" },
+                            ]}
+                        /> */}
+
+                    </div>
+                </div>
+                <img loading="lazy" src={HealthyWinter} alt="Illustration zum Winterkurs" className="hidden md:block w-72 max-w-[35%] shrink-0 object-contain rounded-md" />
+            </CardContent>
+        </Card>
+
+        <Card className="m-3">
+            <CardContent className="p-4 flex gap-x-10 items-start justify-between">
+                <div className="min-w-0 flex-1 space-y-5">
+                    <div className="p-2 pb-0">
+                        <h3 className="text-2xl font-bold italic">Fit für den Sommer mit den 5 Säulen der Chinesischen Medizin</h3>
+                        <p>VHS-Kursnummer: 242303075</p>
+                    </div>
+                    <div>
+                        {/* <p>6 Termine: Mittwochs, 18:00 - 19:30</p>
+                        <p>Kursstart: 02.04.2025</p>
+                        <p>Kursende: 21.05.2025</p>
+                        <VhsLocation room="302" /> */}
+                    </div>
+                    <div>
+                        <Accordeon
+                            heading="Inhalte"
+                            className="bg-primary p-2"
+                            headingClassName="font-bold text-lg"
+                        >
+                            <div className="space-y-2">
+                                <p>
+                                    In diesem Kurs erfahren Sie mehr über die Chinesische Medizin und wie die hilfreichen Ansätze des
+                                    Yang Shen ("Leben pflegen") in den Alltag eingefügt werden können.
+                                </p>
+                                <p>
+                                    Es geht darum, den Winter gut abzuschließen und die Energien des Frühjahrs zu nutzen, um den
+                                    Sommer gestärkt erleben zu können. Unter anderem folgende Fragen werden theoretisch und
+                                    praktisch behandelt:
+                                </p>
+                                <ul className="[&_li]:list-disc [&_li]:ml-5">
+                                    <li>Welche Dehnungs- und Lockerungsübungen holen meinen Körper aus dem Winterschlaf?</li>
+                                    <li>Kann ich von der Chinesischen Diätetik und der 5-Elemente-Küche unter Berücksichtigung
+                                        meiner Essgewohnheiten "Nährendes" übernehmen?</li>
+                                    <li>Was ist Chinesische Arzneimitteltherapie und hat sie mit der westlichen Phytotherapie etwas
+                                        gemeinsam… was kann ich praktisch davon umsetzen?</li>
+                                    <li>Wie setze ich die Druck- und Punktmassage gezielt ein, um Blockaden zu lösen und um mich
+                                        freier zu bewegen?</li>
+                                </ul>
+                                <p>
+                                    Der 6-wöchige Kurs orientiert sich auch an den Interessen der Kursteilnehmer, Neues ist immer
+                                    willkommen.
+                                </p>
+                                <p className="font-bold">
+                                    Bitte in bequemer Kleidung kommen.
+                                </p>
+                            </div>
+                        </Accordeon>
+                        {/* <DateAccordeon
+                            className="bg-primary p-2"
+                            dates={[
+                                { day: "Mittwoch", date: "02.04.2025" },
+                                { day: "Mittwoch", date: "09.04.2025" },
+                                { day: "Mittwoch", date: "30.04.2025" },
+                                { day: "Mittwoch", date: "07.05.2025" },
+                                { day: "Mittwoch", date: "14.05.2025" },
+                                { day: "Mittwoch", date: "21.05.2025" },
+                            ]}
+                        /> */}
+
+                    </div>
+                </div>
+                <img loading="lazy" src={FitForSummer} alt="Illustration zum Fruehjahrs- und Sommerkurs" className="hidden md:block w-72 max-w-[35%] shrink-0 object-contain rounded-md" />
+            </CardContent>
+        </Card>
+
+        <Card className="m-3">
+            <CardContent className="p-4 flex gap-x-10 items-start justify-between">
+                <div className="min-w-0 flex-1 space-y-5">
+                    <div className="p-2 pb-0">
+                        <h3 className="text-2xl font-bold italic">Online: TCM für dich und mich</h3>
+                        {/* <p>VHS-Kursnummer: 241303019</p> */}
+                    </div>
+                        {/*
+                    <div>
+                        <p> Termin: Donnerstag, 16.05.2024, 17:00-18:30 </p>
+                        <p> <span className="font-bold">Online</span>, Webinar Zoom 07</p>
+                    </div>
+                    <div> */}
+                        <Accordeon
+                            heading="Inhalte"
+                            className="bg-primary p-2"
+                            headingClassName="font-bold text-lg"
+                        >
+                            <p className="flex-1">
+                                Nach einer kurzen Einführung in die Grundlagen der Chinesischen Medizin werden einfache, aber wirkungsvolle Übungen, Methoden und Rezepte vermittelt, die helfen, das "Gute lange Leben" zu pflegen und in die eigene Mitte zu finden
+                            </p>
+                        </Accordeon>
+
+                </div>
+                <img loading="lazy" src={ForYouAndMe} alt="Illustration zum Online-TCM-Kurs" className="hidden md:block w-72 max-w-[35%] shrink-0 object-contain rounded-md" />
+            </CardContent>
+        </Card>
+
+        <Card className="m-3">
+            <CardContent className="p-4 flex gap-x-10 items-start">
+                <div className="min-w-0 flex-1 space-y-5">
+                    <div className="p-2 pb-0">
+                        <h3 className="text-2xl font-bold italic">Chinesische und naturheilkundliche Medizin einfach im Familienalltag</h3>
+                        {/* <p>VHS-Kursnummer: 241303018</p> */}
+                    </div>
+                    {/*
+                    <div>
+                        <p> Termin: Donnerstag, 11.04.2024, 9:00-11:00 </p>
+                        <VhsLocation room="101" />
+                    </div> */}
+                    <div>
+                        <Accordeon
+                            heading="Inhalte"
+                            className="bg-primary p-2"
+                            headingClassName="font-bold text-lg"
+                        >
+                            <p className="flex-1">
+                                Nach einer kurzen Einführung in die 5 Säulen der Chinesischen Medizin werden ganzheitliche Methoden und Rezepte vermittelt, um gesund zu bleiben und gesund zu werden. Mit Hilfe von ausgewählten Qigong-Übungen, Ernährung nach den 5 Elementen, gezieltem Heilpflanzeneinsatz, Akupressur und Tuina (chinesischer Massage) kommen Groß und Klein gut durch die Erkältungszeit!
+                            </p>
+                        </Accordeon>
+                    </div>
+
+
+                </div>
+                <img loading="lazy" src={DailyLife} alt="Illustration zum Familienalltagskurs" className="hidden md:block w-72 max-w-[35%] shrink-0 object-contain rounded-md" />
+            </CardContent>
+        </Card>
+    </>;
+}

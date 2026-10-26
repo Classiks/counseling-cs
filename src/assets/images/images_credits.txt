@@ -1,0 +1,17 @@
+TCM course images, generated 2026-10-26 using the built-in image_gen tool.
+Stored as 768 x 768 WebP files, quality 85.
+
+Shared prompt prefix:
+Use case: photorealistic-natural. Asset type: square course card image for a German adult education website about Traditional Chinese Medicine and self-care. Style: calm authentic editorial photography, soft natural daylight, warm neutral cream and muted sage green palette, real textures, uncluttered composition legible at 288 pixels. No text, logos, watermark, graphic overlays, medical promises or mystical symbols.
+
+tcm-cold-season.webp
+Prompt after shared prefix:
+A comforting winter still life on a light wooden table beside a softly lit window: a steaming ceramic cup of herbal tea, a small teapot, fresh thyme, sage leaves and folded linen. Close composition, cozy but restrained, natural herbal self-care during cold season.
+
+tcm-healthy-knees.webp
+Prompt after shared prefix:
+An older adult in comfortable sage green exercise clothing seated on a sturdy chair in a bright calm room, performing a gentle seated knee extension, one foot resting on the floor and the other leg softly extended forward, full legs and feet visible, anatomically natural. Focus on everyday mobility and gentle exercise, no pain graphics, no medical devices.
+
+tcm-honey-cake.webp
+Prompt after shared prefix:
+A homemade wholegrain spelt Christmas honey cake on a wooden board, a few cut slices showing raisins and walnuts, a small jar of honey and a spoon, walnuts, cinnamon and small pieces of candied citrus peel arranged naturally nearby. Warm kitchen background, subtle winter greenery, inviting adult baking workshop photography, no icing text.
